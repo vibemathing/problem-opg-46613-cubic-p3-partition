@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "aadae0bf4828e112405f778a689389b33069a82e",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-root",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-root-r03",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": 12,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/12"
+  },
+  "objective": "Prove full-signature composition and a residue-preserving adjacent-brick compression; separate valid replacement from boundary-preserving lifting of a prescribed factor through three triangle expansions.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-root-r03-paired-compression",
+      "kind": "proof",
+      "locator": "research/artifacts/candidates/opg46613-root-r03/paired-bricks.md",
+      "sha256": "16b5b20159c23c2eaee7ef7ac3ddca76bba60d19a9220b8a873f7e6aa8e22e2e"
+    },
+    {
+      "candidate_id": "candidate:opg46613-root-r03-triangle-control",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-root-r03/triangle-control.json",
+      "sha256": "fc07385ff4a337920aa0aa15da68e17d9419508b64ff0bd867ae155ad43ebd55"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-root-r03-full-composition",
+      "text": "A connected network of actual full-signature bricks realizes exactly all externally balanced port words.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r03-pair-interface",
+      "text": "Two full residue-two three-port bricks joined by one edge realize all 27 balanced four-port words with a uniquely determined internal edge state.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r03-compression",
+      "text": "A smallest root counterexample cannot contain the specified adjacent full residue-two brick pair: replacing it with the explicit four-cycle preserves cubic 3-connectivity and order modulo six and lifts every factor.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r03-triangle-control",
+      "text": "The specified K3,3 factor cannot lift boundary-preservingly after expanding one part into three triangles, although the displayed twelve-vertex expansion has a different P3-factor.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "Finite simple graphs and selected two-edge paths, not induced paths.",
+    "Each full brick must realize all nine residue-allowed words; no universal full-signature hypothesis is assumed.",
+    "The compressed pair consists of disjoint induced three-cut sides with exactly one joining edge.",
+    "The triangle control fixes both selected incidence status and vertex role on unexpanded vertices.",
+    "Allowed axioms: finite-graph-basic and finite-combinatorics."
+  ],
+  "risks": [
+    "Partial root results only; no general center selection or cyclic-4-connectivity conclusion.",
+    "The legacy DAG dependency on the false strengthening still requires trusted repair.",
+    "ROOT-R01 dependencies are candidate proofs; there is no registered mathematical verification.",
+    "The local 79 deletion checks concern one explicit twelve-vertex graph, not a census.",
+    "Old partial order-eighteen data is unavailable here and has not been completed.",
+    "The earlier blocked executable upload is not retried or repackaged."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-root",
+    "obligation:opg46613-divisible-two-factor"
+  ],
+  "failed_route_proposal": {
+    "route_fingerprint": "fa2caeb4004e212b6394fb401a1d4942f5f757c98dc76ccca890095f4fb66eda",
+    "failure_class": "counterexample",
+    "blocker": "The explicit K3,3 factor forces residue-one words at three expanded triangles, whereas triangle realizations have residue zero. Only boundary-preserving lifting of that specified factor fails; the expanded graph has a displayed positive factor.",
+    "evidence_locators": [
+      "research/artifacts/candidates/opg46613-root-r03/paired-bricks.md",
+      "research/artifacts/candidates/opg46613-root-r03/triangle-control.json"
+    ],
+    "next_obligation": "obligation:opg46613-root"
+  },
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "aadae0bf4828e112405f778a689389b33069a82e",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-root-r01/boundary-theorem.md",
+      "revision": "aadae0bf4828e112405f778a689389b33069a82e",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-root-r01/proof-addendum.md",
+      "revision": "aadae0bf4828e112405f778a689389b33069a82e",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/source-notes/opg46613-root-r03-composition.md",
+      "revision": "69f45cacb881ff56706e741b7fa4aef05d4a722a",
+      "relation": "prior_art"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T14:00:12.588791Z"
+}
