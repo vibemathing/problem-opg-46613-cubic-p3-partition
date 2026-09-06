@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-a01-c03",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 6,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/6"
   },
   "objective": "C03: rule out fixed-defect repairs by an exact bipartite-frame spectrum formula, and eliminate all 341 eligible labeled Petersen triangle expansions by an explicit divisible-cycle construction.",
   "candidate_artifacts": [
