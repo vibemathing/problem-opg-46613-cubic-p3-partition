@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "fe3c4aa3161dfc103f366a0df271e37bbbbce731",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-divisible-two-factor",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-a01-c05",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": 8,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/8"
+  },
+  "objective": "C05: replace the nine-retained quotient search by the exact published nine-point theorem and a fully explicit common-cycle P3 gluing construction, with bounded adversarial tests.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-c05-nine-retained",
+      "kind": "proof",
+      "locator": "research/artifacts/candidates/opg46613-c05/nine-retained.md",
+      "sha256": "8b47f193a61e12df2fd56eed2d6de2f3677fddd08338299ad5d72f595d6a491c"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c05-cycle-glue",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c05/cycle_glue.py",
+      "sha256": "2354f0c11e331053bc4d9003515430e4f92d5c7062dcc09fcda93208ec075ad8"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c05-output",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c05/cycle-glue-output.json",
+      "sha256": "d04e3a21fbe299ffba3e7b2e3b6bf460c649c976643ee2250ffa6365528ca396"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c05-execution-observation",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c05/execution-observation.json",
+      "sha256": "aec09b747c74e3a39bc819fa5f37266f42f15c73cccd0fe7105755afdc91e0d0"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-c05-common-cycle",
+      "text": "For any finite simple cubic frame and a retained set of size divisible by three on one supplied simple cycle, the Petersen-brick expansion has a P3-factor for arbitrary terminal attachment bijections.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c05-nine-retained",
+      "text": "The published nine-point cyclability theorem applied to a 3-connected cubic frame supplies that cycle when exactly nine vertices are retained, eliminating the need for the preceding nine-retained quotient enumeration.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c05-finite-tests",
+      "text": "The local construction produced checked P3-factors in 10890 supplied-cycle cases, covered all seven needed local signatures, and rejected four specified invalid-input classes. This is not a test of universal cyclability.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c05-divisible-implication",
+      "text": "Consecutive vertex triples on each cycle of a supplied divisible-cycle 2-factor give a P3-factor; extra graph edges are unselected, not required to be absent.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "Finite simple graphs; cubic means every vertex has degree three; 3-connected means vertex connectivity at least three.",
+    "P3 is a selected two-edge path on three distinct vertices, not necessarily induced.",
+    "Petersen-minus-vertex bricks have the explicitly specified edges and port bijections.",
+    "Allowed axioms remain finite-graph-basic and finite-combinatorics; the published cyclability theorem is an external proof dependency, not a newly admitted axiom."
+  ],
+  "risks": [
+    "The nine-point publisher abstract and metadata were checked, but its full proof was not audited.",
+    "The finite code checks explicit supplied cycles, not the universal source theorem or all cubic frames.",
+    "Six deterministic heterogeneous port assignments per retained subset were tested; arbitrary assignments are covered by the local proof, not global enumeration.",
+    "The twelve-point publisher abstract gives a conditional characterization, not an unconditional extension; its actual condition remains unread.",
+    "Candidate proof, local computation, source attribution and transport success do not create EvidenceLinks or close the root."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-divisible-two-factor",
+    "obligation:opg46613-root"
+  ],
+  "failed_route_proposal": null,
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "fe3c4aa3161dfc103f366a0df271e37bbbbce731",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/records/obligation-graphs.jsonl",
+      "revision": "fe3c4aa3161dfc103f366a0df271e37bbbbce731",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-c04/p3-interface.md",
+      "revision": "fe3c4aa3161dfc103f366a0df271e37bbbbce731",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-c04/six-retained.md",
+      "revision": "fe3c4aa3161dfc103f366a0df271e37bbbbce731",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/source-notes/opg46613-c05-cyclability.md",
+      "revision": "89037275ba26882f802e94af7ee732c5f5e73ecf",
+      "relation": "prior_art"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T11:44:19Z"
+}
