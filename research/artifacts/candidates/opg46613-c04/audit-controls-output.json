@@ -1,0 +1,186 @@
+{
+  "certificate_sha256": "57e0f9d1365ad6a053c9c35b3cc1c005470f4c469d2f8882dcb89c5773403960",
+  "limitations": [
+    "generator-side audit; no registered verifier receipt or root admission"
+  ],
+  "negative_control": {
+    "deletion_sets": 172,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        17
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        16
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        17
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ]
+    ],
+    "order": 18,
+    "p3_factor": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        4,
+        7,
+        5
+      ],
+      [
+        3,
+        8,
+        6
+      ],
+      [
+        9,
+        10,
+        11
+      ],
+      [
+        12,
+        13,
+        14
+      ],
+      [
+        15,
+        16,
+        17
+      ]
+    ],
+    "perfect_matchings": 26,
+    "spectra": [
+      {
+        "count": 6,
+        "lengths": [
+          4,
+          5,
+          9
+        ]
+      },
+      {
+        "count": 4,
+        "lengths": [
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "count": 16,
+        "lengths": [
+          5,
+          13
+        ]
+      }
+    ]
+  },
+  "rejected_mutations": {
+    "bad-complement-witness": "witness has a nondivisible component",
+    "duplicate-first-case": "duplicate input key",
+    "incorrect-footer": "footer counts disagree with complete regeneration",
+    "missing-DONE": "missing complete-run marker",
+    "omitted-first-case": "certificate omits a retained matching/cycle union"
+  },
+  "verdict": "candidate_only"
+}
