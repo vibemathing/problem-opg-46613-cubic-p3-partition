@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "c9ba094ce8240cf3b02c02cab67ca7265275c232",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-divisible-two-factor",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-a01-c02",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": 5,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/5"
+  },
+  "objective": "C02: reduce the stronger-route obstruction from 30 to 18 vertices, classify all 26 matching complements, and prove an infinite order-18+12q family that nevertheless has explicit P3-factors.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-c02-small-obstruction",
+      "kind": "counterexample",
+      "locator": "research/artifacts/candidates/opg46613-c02/proof.md",
+      "sha256": "adefecbcb53362b57c9dc5326e4284a64c61db5b9e27046bc5f9b9af8a091275"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c02-witness",
+      "kind": "counterexample",
+      "locator": "research/artifacts/candidates/opg46613-c02/witness.json",
+      "sha256": "8bdb94d4f3447138d47045d0c9fcd99a1100be97cae84d6f4b241da1c698a8aa"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c02-screen",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c02/screen18.py",
+      "sha256": "c15254d57004f0b6904c432eddd327b4da1e70bd9a09663affaadd58d805535f"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-c02-cut-obstruction",
+      "text": "Joining P-a0 to B-x across the three ports, for any simple cubic 3-connected bipartite B, forces every 2-factor to contain an internal Petersen 5-cycle.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c02-infinite-family",
+      "text": "For each q>=0 the explicit Mobius-ladder specialization has order 18+12q, is simple cubic 3-connected, and has a P3-factor using no joining edge, while no complementary 2-factor has all lengths divisible by three.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c02-exact-spectrum",
+      "text": "The order-18 specialization has exactly 26 perfect matchings with complementary spectra (5,13) occurring 16 times, (4,5,9) six times, and (5,6,7) four times, by complete case classification.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c02-screen",
+      "text": "The bounded generator-side CPython 3.13.5 screen checked all 172 deletion sets of size at most two and all 26 matchings, agreeing with the explicit six-path witness and the structural spectrum calculation.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "All graphs are finite and simple; 3-connected means vertex connectivity at least three.",
+    "P3 means a selected two-edge path on three distinct vertices, not necessarily an induced subgraph.",
+    "Allowed axioms: finite-graph-basic and finite-combinatorics."
+  ],
+  "risks": [
+    "All proofs and finite screening remain candidate-only; no verifier receipt, EvidenceLink or Result is produced.",
+    "C01 Petersen and connectivity lemmas are frozen candidate dependencies, not admitted Evidence.",
+    "No minimum-order or novelty claim is made; the order-12 graph space has not yet been exhaustively audited.",
+    "The examples have cyclic three-edge cuts and do not address the strengthening under cyclic 4-edge-connectivity.",
+    "The unchanged stronger universal assertion is not retried: this cycle improves its obstruction and proves a family-level separation from the root."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-divisible-two-factor",
+    "obligation:opg46613-root"
+  ],
+  "failed_route_proposal": null,
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "c9ba094ce8240cf3b02c02cab67ca7265275c232",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/records/obligation-graphs.jsonl",
+      "revision": "c9ba094ce8240cf3b02c02cab67ca7265275c232",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-c01/proof.md",
+      "revision": "c9ba094ce8240cf3b02c02cab67ca7265275c232",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/source-notes/opg46613-c01-statements.md",
+      "revision": "c9ba094ce8240cf3b02c02cab67ca7265275c232",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "arxiv",
+      "path": "https://arxiv.org/abs/0910.2766v2",
+      "revision": "0910.2766v2, Section 2",
+      "relation": "prior_art"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T07:45:16Z"
+}
