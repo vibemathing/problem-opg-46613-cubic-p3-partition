@@ -1,0 +1,120 @@
+{
+  "all_cases_produce_p3_factors": true,
+  "factor_stream_sha256": "78d640672b386d84f8c6e9d66b095edc24a56b47e02276e63e48ffdc930d611b",
+  "frame_counts_by_order": {
+    "10": 2046,
+    "12": 8196,
+    "6": 132,
+    "8": 510
+  },
+  "limitations": [
+    "supplied-cycle construction tests, not a test of universal cyclability",
+    "no registered verifier receipt or mathematical admission",
+    "six heterogeneous port assignments per retained subset, not all global assignments"
+  ],
+  "petersen_example": [
+    [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    [
+      [
+        3,
+        -1
+      ],
+      [
+        8,
+        -1
+      ],
+      [
+        6,
+        -1
+      ]
+    ],
+    [
+      [
+        4,
+        -1
+      ],
+      [
+        7,
+        -1
+      ],
+      [
+        5,
+        -1
+      ]
+    ],
+    [
+      [
+        9,
+        0
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        9,
+        2
+      ]
+    ],
+    [
+      [
+        9,
+        3
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        9,
+        6
+      ]
+    ],
+    [
+      [
+        9,
+        4
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        9,
+        5
+      ]
+    ]
+  ],
+  "petersen_nine_cycle_cases": 6,
+  "python": "3.13.5",
+  "rejected_inputs": [
+    "nonmultiple",
+    "off-cycle",
+    "repeated-cycle-vertex",
+    "nonedge-cycle"
+  ],
+  "seven_local_signature_counts": {
+    "A0B3": 5662,
+    "A0B4": 5662,
+    "A3B0": 5662,
+    "A3B4": 5662,
+    "A4B0": 5662,
+    "A4B3": 5662,
+    "UUU": 27870
+  },
+  "total_cases": 10890,
+  "verdict": "candidate_only"
+}
