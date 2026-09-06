@@ -1,0 +1,66 @@
+{
+  "assumptions": [],
+  "atomic_claims": [],
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "base_revision": "b15ecfcfbda7ddf426eafc8ae3dd7163920db209",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg-46613-cubic-p3-partition-transport-smoke-v1",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/candidate-opg-46613-cubic-p3-partition-transport-smoke.md",
+      "sha256": "b48dd5024016f1fa896c5e901bdf02ecb30d282546a1cdb87790be975d0300d3"
+    }
+  ],
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "created_at": "2026-09-06T05:25:00Z",
+  "failed_route_proposal": null,
+  "generator": {
+    "model_fingerprint_status": "unverified",
+    "model_label": "non-mathematical-transport-smoke",
+    "principal": "trusted-transport-smoke"
+  },
+  "graph_id": "graph:opg46613-initial-v1",
+  "harness_snapshot_sha256": "eaa83d384a39b4f0cd7c1b692f644a818aacbf5800698972561244c8a6b8a46a",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "objective": "Exercise the candidate-only transport without making a mathematical claim.",
+  "obligation_id": "obligation:opg46613-divisible-two-factor",
+  "open_obligations": [
+    "obligation:opg46613-divisible-two-factor",
+    "obligation:opg46613-root"
+  ],
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "default_branch": "main",
+    "node_id": "R_kgDOUP0SaQ"
+  },
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "risks": [
+    "This artifact is a transport smoke only and must not be interpreted as mathematical evidence."
+  ],
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "schema_version": "1.1.0",
+  "source_refs": [
+    {
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "relation": "exact",
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "revision": "b15ecfcfbda7ddf426eafc8ae3dd7163920db209"
+    }
+  ],
+  "transport": {
+    "branch": "web/attempt-web-20260906-opg46613-a01-transport-smoke",
+    "issue_number": 1,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/1",
+    "pull_request_number": null,
+    "pull_request_url": null
+  },
+  "verdict": "candidate_only"
+}
