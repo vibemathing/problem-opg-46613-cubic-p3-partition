@@ -74,7 +74,27 @@ This file is generated from repository truth and bounded for the web channel. It
       "web_status": "active"
     }
   ],
-  "attempts": [],
+  "attempts": [
+    {
+      "artifacts": [],
+      "attempt_id": "attempt:web-20260906-opg46613-a01",
+      "claims": [],
+      "completed_at": null,
+      "generator": "chatgpt-web-github",
+      "inputs": [
+        "problem-library/records/canonical-problems.jsonl",
+        "research/records/failed-routes.jsonl"
+      ],
+      "lifecycle": "running",
+      "method": "proof",
+      "objective": "证明或反驳强化路线：每个 3-connected cubic graph G（|V(G)| 可被 3 整除）是否存在 perfect matching M，使 2-factor G-M 的每个圈长度都可被 3 整除；同时严格证明这种 M 蕴含 G 存在 P3-factor。",
+      "obligation_graph_id": "graph:opg46613-initial-v1",
+      "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+      "problem_id": "problem:opg-46613-cubic-p3-partition",
+      "route_id": "route:two-factor-divisible-cycles-v1",
+      "started_at": "2026-09-06T05:03:30Z"
+    }
+  ],
   "failed_routes": [],
   "knowledge_operators": [
     {
@@ -203,7 +223,40 @@ This file is generated from repository truth and bounded for the web channel. It
       "source_id": "sagemath"
     }
   ],
-  "obligation_graphs": [],
+  "obligation_graphs": [
+    {
+      "attempt_id": "attempt:web-20260906-opg46613-a01",
+      "graph_id": "graph:opg46613-initial-v1",
+      "obligations": [
+        {
+          "dependencies": [
+            "obligation:opg46613-divisible-two-factor"
+          ],
+          "kind": "root_claim",
+          "obligation_id": "obligation:opg46613-root",
+          "statement": {
+            "formal_declaration": null,
+            "language": "en",
+            "text": "For every positive integer k, does every finite 3-connected cubic graph on 3k vertices admit a partition of its vertices into k paths of length 2?"
+          },
+          "statement_sha256": "b60fa005c4468b3e88e027ac6f2b5091bc7d69a8f2f9eabf84559ffd4bf59fef"
+        },
+        {
+          "dependencies": [],
+          "kind": "lemma",
+          "obligation_id": "obligation:opg46613-divisible-two-factor",
+          "statement": {
+            "formal_declaration": null,
+            "language": "zh",
+            "text": "证明或反驳强化路线：每个 3-connected cubic graph G（|V(G)| 可被 3 整除）是否存在 perfect matching M，使 2-factor G-M 的每个圈长度都可被 3 整除；同时严格证明这种 M 蕴含 G 存在 P3-factor。"
+          },
+          "statement_sha256": "7a1aee92d3243b1c740a23ff950edcc0c069dd244bb8bb09b22f7d0916eb3463"
+        }
+      ],
+      "root_obligation_id": "obligation:opg46613-root",
+      "route_id": "route:two-factor-divisible-cycles-v1"
+    }
+  ],
   "problem_contract": {
     "acceptance": {
       "policy": "solution-admission-v1"

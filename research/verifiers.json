@@ -9,6 +9,13 @@
       "capabilities": []
     },
     {
+      "id": "chatgpt-web-github",
+      "role": "generator",
+      "trust_domain": "web-candidate-generation",
+      "policy": null,
+      "capabilities": []
+    },
+    {
       "id": "sympy-generator",
       "role": "generator",
       "trust_domain": "candidate-generation",

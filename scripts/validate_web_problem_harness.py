@@ -384,6 +384,14 @@ def validate(root: Path) -> list[str]:
             errors.append("candidate workflow lacks read-only checkout controls")
         if "pip install --require-hashes -r requirements-web-harness.txt" not in workflow_text:
             errors.append("candidate workflow dependencies are not hash-pinned")
+        if "cache-dependency-path: requirements-web-harness.txt" not in workflow_text:
+            errors.append("candidate workflow lacks an explicit pip cache dependency path")
+        required_check_jobs = set(profile.get("branch_policy", {}).get("required_checks", []))
+        for check_name in sorted(required_check_jobs):
+            job_pattern = rf"(?m)^  {re.escape(check_name)}:\s*$"
+            name_pattern = rf"(?m)^    name:\s*{re.escape(check_name)}\s*$"
+            if not re.search(job_pattern, workflow_text) or not re.search(name_pattern, workflow_text):
+                errors.append(f"candidate workflow lacks required status-check job: {check_name}")
         if "${{ secrets." in workflow_text:
             errors.append("candidate workflow must not receive secrets")
         for action_ref in re.findall(r"uses:\s*[^@\s]+@([^\s#]+)", workflow_text):
