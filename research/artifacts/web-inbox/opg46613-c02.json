@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-a01-c02",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 5,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/5"
   },
   "objective": "C02: reduce the stronger-route obstruction from 30 to 18 vertices, classify all 26 matching complements, and prove an infinite order-18+12q family that nevertheless has explicit P3-factors.",
   "candidate_artifacts": [
