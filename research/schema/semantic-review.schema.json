@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/semantic-review.v1.json",
+  "title": "Vibe Mathing Structured Semantic Review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "problem_id",
+    "attempt_id",
+    "graph_id",
+    "obligation_id",
+    "candidate_id",
+    "problem_contract_sha256",
+    "statement_sha256",
+    "reviewer",
+    "reviewed_at",
+    "checks",
+    "verdict",
+    "issues",
+    "rationale"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "problem_id": {"type": "string", "pattern": "^problem:[a-z0-9][a-z0-9.-]*$"},
+    "attempt_id": {"type": "string", "pattern": "^attempt:[a-z0-9][a-z0-9.-]*$"},
+    "graph_id": {"type": "string", "pattern": "^graph:[a-z0-9][a-z0-9.-]*$"},
+    "obligation_id": {"type": "string", "pattern": "^obligation:[a-z0-9][a-z0-9.-]*$"},
+    "candidate_id": {"type": "string", "pattern": "^candidate:[a-z0-9][a-z0-9.-]*$"},
+    "problem_contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "statement_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reviewer": {"type": "string", "pattern": "^[a-z0-9][a-z0-9.-]*$"},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain", "quantifiers", "definitions", "assumptions", "claim_strength", "source_alignment"],
+      "properties": {
+        "domain": {"enum": ["accept", "reject", "undetermined"]},
+        "quantifiers": {"enum": ["accept", "reject", "undetermined"]},
+        "definitions": {"enum": ["accept", "reject", "undetermined"]},
+        "assumptions": {"enum": ["accept", "reject", "undetermined"]},
+        "claim_strength": {"enum": ["accept", "reject", "undetermined"]},
+        "source_alignment": {"enum": ["accept", "reject", "undetermined"]}
+      }
+    },
+    "verdict": {"enum": ["accept", "reject", "undetermined"]},
+    "issues": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "rationale": {"type": "string", "minLength": 1}
+  }
+}

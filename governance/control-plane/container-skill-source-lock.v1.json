@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "lock_id": "container-skill-lock:web-problem-repository-v1",
+  "scope": "compute_container_skills_for_web_problem_repositories",
+  "digest_algorithm": "sha256-canonical-json-sorted-path-bytes-file-sha256-v1",
+  "excluded_skill_ids": [
+    "auto-goal",
+    "auto-tmux",
+    "nvidia-private-compute"
+  ],
+  "skills": [
+    {
+      "skill_id": "solve",
+      "web_status": "active",
+      "source_identity": "vibe-harness-cn/skills/solve sync receipt snapshot",
+      "source_status": "content_locked_pending_source_commit",
+      "source_snapshot": {
+        "version": "0.3.0",
+        "files": 71,
+        "bytes": 1327370,
+        "tree_sha256": "ab74221cf09714087e69596ec475a6173515e31f0cd42d83ef38a91398713786"
+      },
+      "source_receipt": {
+        "kind": "owner_install_sync_receipt",
+        "content_manifest": "5049a0f821d553a3dbdc57138215c32cc35cfbee1601ed6be82938cfd47bc980",
+        "synchronized_copies": 3,
+        "strict_validation": "PASS",
+        "limitations": [
+          "the source and owner receipt are uncommitted",
+          "the receipt proves synchronized content and static validation, not Agent effectiveness or mathematical evidence"
+        ]
+      },
+      "distributed_snapshot": {
+        "version": "0.3.0",
+        "files": 71,
+        "bytes": 1327684,
+        "tree_sha256": "f9c9c43fcdd0ee3b8b25c6b77955cb46b650d24227f129e42448cd79d84f23be"
+      },
+      "adaptations": [
+        "replace machine-local validator paths with repository-local validation",
+        "bind Web use to Attempt/Route/Obligation/Candidate output only",
+        "redact a session-shaped identifier from the distributed changelog"
+      ],
+      "evidence_ceiling": "candidate_only",
+      "operator_library": {
+        "source_entries": 417,
+        "derived_entries": 60,
+        "entries": 477
+      }
+    },
+    {
+      "skill_id": "math-toolchain",
+      "web_status": "constrained",
+      "source_identity": "CPU math compute-container global Skill snapshot",
+      "source_status": "container_observed_content_locked",
+      "source_snapshot": {
+        "version": "0.2.0",
+        "files": 2,
+        "bytes": 2196,
+        "tree_sha256": "1fbc9358c2bc4fc9b5e1ba836046a71841550a3c15bf057fc4ce9e67157a3c04"
+      },
+      "distributed_snapshot": {
+        "version": "0.2.0",
+        "files": 4,
+        "bytes": 3407,
+        "tree_sha256": "79f5b458ccad3ec120a8719ddf1d05bea5f5339131f902cf4f3bb011b10c3c21"
+      },
+      "adaptations": [
+        "remove runtime command execution",
+        "remove auto-governance and auto-tasks dependencies",
+        "bind tool planning to repository registries and candidate-only output"
+      ],
+      "evidence_ceiling": "candidate_only"
+    }
+  ]
+}

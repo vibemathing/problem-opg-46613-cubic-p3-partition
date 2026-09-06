@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/math-knowledge-source.v1.json",
+  "title": "Vibe Mathing Mathematical Knowledge Source Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "as_of", "sources"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "as_of": {"type": "string", "format": "date"},
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/source"}
+    }
+  },
+  "$defs": {
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "identifier", "url", "allowed_uses", "attribution", "bulk_cache"],
+      "properties": {
+        "status": {"enum": ["reviewed", "pending", "restricted"]},
+        "identifier": {"type": ["string", "null"], "minLength": 1},
+        "url": {"type": ["string", "null"], "format": "uri"},
+        "allowed_uses": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"enum": ["discovery", "local_reference", "query", "build", "redistribution"]}
+        },
+        "attribution": {"type": "string", "minLength": 1},
+        "bulk_cache": {"type": "boolean"}
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timeout_seconds", "max_retries", "max_response_bytes", "max_records"],
+      "properties": {
+        "timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 300},
+        "max_retries": {"type": "integer", "minimum": 0, "maximum": 5},
+        "max_response_bytes": {"type": "integer", "minimum": 1},
+        "max_records": {"type": "integer", "minimum": 1}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id", "display_name", "source_class", "canonical_url", "access_modes",
+        "maturity", "operational_status", "evidence_ceiling", "license", "budget",
+        "required_controls", "used_by"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^[a-z][a-z0-9.-]*$"},
+        "display_name": {"type": "string", "minLength": 1},
+        "source_class": {
+          "enum": [
+            "formal_package_registry", "formal_library_index", "proof_archive",
+            "mathematical_object_database", "formula_reference", "algorithm_distribution"
+          ]
+        },
+        "canonical_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "access_modes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["local_exact", "git", "http_query", "bulk_snapshot", "human_reference"]}
+        },
+        "maturity": {
+          "enum": ["surveyed", "source_locked", "installed", "smoke_checked", "evidence_capable", "verifier_admitted"]
+        },
+        "operational_status": {"enum": ["design_only", "available", "quarantined", "suspended"]},
+        "evidence_ceiling": {"enum": ["discovery_only", "candidate_only", "computation_evidence", "verifier_input"]},
+        "license": {"$ref": "#/$defs/license"},
+        "budget": {"$ref": "#/$defs/budget"},
+        "formal_system": {"type": ["string", "null"], "minLength": 1},
+        "package_manager": {"type": ["string", "null"], "minLength": 1},
+        "lock_files": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "required_controls": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}
+        },
+        "used_by": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["math-discovery", "math-derivation", "math-computation", "math-proof", "math-formalization"]}
+        },
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

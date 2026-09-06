@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/web-import-receipt.schema.json",
+  "title": "Trusted Web Attempt Import Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "decision", "channel", "repository", "packet",
+    "harness_snapshot_sha256", "problem_id", "attempt_id", "route_id", "graph_id",
+    "obligation_id", "candidate_records", "append_target", "importer", "imported_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "pattern": "^web-import:[a-f0-9]{64}$"},
+    "decision": {"const": "candidate_only"},
+    "channel": {"const": "chatgpt-web-github-issue-pr-writer"},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "packet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^research/artifacts/web-inbox/.+\\.json$"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "harness_snapshot_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "problem_id": {"type": "string", "pattern": "^problem:[a-z0-9][a-z0-9.-]*$"},
+    "attempt_id": {"type": "string", "pattern": "^attempt:[a-z0-9][a-z0-9.-]*$"},
+    "route_id": {"type": "string", "pattern": "^route:[a-z0-9][a-z0-9.-]*$"},
+    "graph_id": {"type": "string", "pattern": "^graph:[a-z0-9][a-z0-9.-]*$"},
+    "obligation_id": {"type": "string", "pattern": "^obligation:[a-z0-9][a-z0-9.-]*$"},
+    "candidate_records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "record_sha256", "artifact_sha256", "artifact_path"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^candidate:[a-z0-9][a-z0-9.-]*$"},
+          "record_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "artifact_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "artifact_path": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "append_target": {"const": "research/records/candidate-artifacts.jsonl"},
+    "importer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["principal", "version", "script_sha256"],
+      "properties": {
+        "principal": {"const": "trusted-web-attempt-importer"},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "script_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "imported_at": {"type": "string", "format": "date-time"}
+  }
+}

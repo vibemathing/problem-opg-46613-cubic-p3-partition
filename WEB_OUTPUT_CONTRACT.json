@@ -1,0 +1,92 @@
+{
+  "allowed_github_operations": [
+    "issue_create",
+    "candidate_branch_create",
+    "candidate_file_create",
+    "candidate_file_update",
+    "candidate_file_delete",
+    "commit_create",
+    "pull_request_create",
+    "pull_request_review",
+    "actions_read",
+    "actions_rerun_existing_candidate_run",
+    "pull_request_merge",
+    "checkpoint"
+  ],
+  "allowed_write_paths": [
+    "research/artifacts/web-inbox/**",
+    "research/artifacts/candidates/**",
+    "research/artifacts/source-notes/**"
+  ],
+  "attempt_packet_schema": "research/schema/web-attempt-packet.schema.json",
+  "autonomy_policy": {
+    "ai_owned_stages": [
+      "bootstrap_read",
+      "issue_create",
+      "branch_create",
+      "candidate_file_write",
+      "commit_create",
+      "pull_request_create",
+      "pull_request_review",
+      "checks_monitor",
+      "actions_rerun",
+      "pull_request_merge",
+      "checkpoint"
+    ],
+    "human_escalation_only": [
+      "platform_forced_confirmation",
+      "authorization_or_secret_change",
+      "ambiguous_problem_contract",
+      "final_high_assurance_result_admission",
+      "irreversible_repository_operation"
+    ],
+    "mode": "ai_end_to_end_candidate_operations",
+    "routine_human_steps_required": false
+  },
+  "bootstrap_ack_schema": "research/schema/web-bootstrap-ack.schema.json",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "forbidden_claims": [
+    "established",
+    "refuted",
+    "independent",
+    "kernel_checked",
+    "result_admitted"
+  ],
+  "limits": {
+    "max_file_bytes": 1048576,
+    "max_files_per_pull_request": 64,
+    "max_packet_bytes": 262144,
+    "max_total_changed_bytes": 8388608
+  },
+  "prohibited_github_operations": [
+    "repository_create",
+    "direct_default_branch_write",
+    "force_push",
+    "protected_ref_rewrite",
+    "workflow_write",
+    "actions_cancel",
+    "actions_dispatch"
+  ],
+  "prohibited_write_paths": [
+    "AGENTS.md",
+    "WEB_*.md",
+    "HARNESS_SNAPSHOT.json",
+    ".github/workflows/**",
+    "governance/**",
+    "problem-library/records/**",
+    "research/schema/**",
+    "research/records/**",
+    "research/verifiers.json",
+    "result-library/**",
+    "scripts/**"
+  ],
+  "repository_scope_policy": {
+    "automatic_access_for_new_problem_repositories": true,
+    "mode": "dedicated_problem_repository_namespace",
+    "repository_creation": "external_ai_provisioner_required",
+    "unrelated_repositories_allowed": false
+  },
+  "save_hidden_chain_of_thought": false,
+  "schema_version": "1.0.0",
+  "verdict": "candidate_only"
+}

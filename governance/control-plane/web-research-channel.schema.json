@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/web-research-channel.v1.json",
+  "title": "Vibe Mathing Web GPT GitHub Research Channel",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "channel_id",
+    "capability_status",
+    "operational_admission",
+    "trust_role",
+    "connector_observation",
+    "capabilities",
+    "github_permissions",
+    "repository_scope_policy",
+    "confirmation_policy",
+    "autonomy_policy",
+    "branch_policy",
+    "issue_transport",
+    "pull_request_transport",
+    "allowed_repository_write_paths",
+    "prohibited_repository_write_paths",
+    "result_admission"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "channel_id": {"const": "chatgpt-web-github-issue-pr-writer"},
+    "capability_status": {
+      "enum": ["proposed", "user_observed_pending_smoke_check", "smoke_checked", "suspended"]
+    },
+    "operational_admission": {"enum": ["synthetic_only_pending_permission_and_ruleset_smoke", "admitted_problem_repository_namespace", "suspended"]},
+    "trust_role": {"const": "candidate_generator_and_transport_writer"},
+    "connector_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_at", "evidence_kind", "verification_status", "product_identity", "reported_capabilities", "limitations"],
+      "properties": {
+        "observed_at": {"type": "string", "format": "date-time"},
+        "evidence_kind": {"const": "user_provided_chat_export"},
+        "verification_status": {"const": "self_report_only_pending_github_object_receipts"},
+        "product_identity": {"const": "unknown_write_capable_github_plugin_or_app"},
+        "reported_capabilities": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "repository_create", "repository_read", "file_create", "file_update", "file_delete",
+            "commit_create", "branch_create", "branch_ref_update", "issue_create",
+            "pull_request_create", "pull_request_review", "pull_request_merge",
+            "actions_read", "actions_rerun", "direct_default_branch_commit"
+          ],
+          "properties": {
+            "repository_create": {"const": false},
+            "repository_read": {"const": true},
+            "file_create": {"const": true},
+            "file_update": {"const": true},
+            "file_delete": {"const": true},
+            "commit_create": {"const": true},
+            "branch_create": {"const": true},
+            "branch_ref_update": {"const": true},
+            "issue_create": {"const": true},
+            "pull_request_create": {"const": true},
+            "pull_request_review": {"const": true},
+            "pull_request_merge": {"const": true},
+            "actions_read": {"const": true},
+            "actions_rerun": {"const": true},
+            "direct_default_branch_commit": {"const": "conditional_on_repository_rules"}
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_read", "repository_create", "issue_write", "candidate_branch_create",
+        "candidate_artifact_create", "candidate_artifact_revision", "baseline_file_update",
+        "file_delete", "commit_create", "pull_request_create", "pull_request_review",
+        "pull_request_merge", "actions_read", "actions_rerun", "direct_default_branch_write",
+        "branch_ref_rewrite", "command_execution", "evidence_signing", "result_admission"
+      ],
+      "properties": {
+        "repository_read": {"const": true},
+        "repository_create": {"const": false},
+        "issue_write": {"const": true},
+        "candidate_branch_create": {"const": true},
+        "candidate_artifact_create": {"const": true},
+        "candidate_artifact_revision": {"const": true},
+        "baseline_file_update": {"const": false},
+        "file_delete": {"const": true},
+        "commit_create": {"const": true},
+        "pull_request_create": {"const": true},
+        "pull_request_review": {"const": true},
+        "pull_request_merge": {"const": true},
+        "actions_read": {"const": true},
+        "actions_rerun": {"const": true},
+        "direct_default_branch_write": {"const": false},
+        "branch_ref_rewrite": {"const": false},
+        "command_execution": {"const": false},
+        "evidence_signing": {"const": false},
+        "result_admission": {"const": false}
+      }
+    },
+    "github_permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metadata", "contents", "issues", "pull_requests", "actions", "workflows", "administration", "secrets"],
+      "properties": {
+        "metadata": {"const": "read"},
+        "contents": {"const": "write"},
+        "issues": {"const": "write"},
+        "pull_requests": {"const": "write"},
+        "actions": {"const": "write"},
+        "workflows": {"const": "none"},
+        "administration": {"const": "none"},
+        "secrets": {"const": "none"}
+      }
+    },
+    "repository_scope_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "automatic_access_for_new_problem_repositories", "unrelated_repositories_allowed", "repository_creation"],
+      "properties": {
+        "mode": {"const": "dedicated_problem_repository_namespace"},
+        "automatic_access_for_new_problem_repositories": {"const": true},
+        "unrelated_repositories_allowed": {"const": false},
+        "repository_creation": {"const": "external_ai_provisioner_required"}
+      }
+    },
+    "confirmation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_manual_confirmation_required", "platform_confirmation_mode", "non_interactive_writes_allowed"],
+      "properties": {
+        "project_manual_confirmation_required": {"const": false},
+        "platform_confirmation_mode": {"const": "platform_required_only"},
+        "non_interactive_writes_allowed": {"const": true}
+      }
+    },
+    "autonomy_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "routine_human_steps_required", "ai_owned_stages", "human_escalation_only"],
+      "properties": {
+        "mode": {"const": "ai_end_to_end_candidate_operations"},
+        "routine_human_steps_required": {"const": false},
+        "ai_owned_stages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["bootstrap_read", "issue_create", "branch_create", "candidate_file_write", "commit_create", "pull_request_create", "pull_request_review", "checks_monitor", "actions_rerun", "pull_request_merge", "checkpoint"]}
+        },
+        "human_escalation_only": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["platform_forced_confirmation", "authorization_or_secret_change", "ambiguous_problem_contract", "final_high_assurance_result_admission", "irreversible_repository_operation"]}
+        }
+      }
+    },
+    "branch_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prefix", "default_branch_protected", "force_push", "delete_branch", "required_checks", "required_protection", "observed_protection"],
+      "properties": {
+        "prefix": {"const": "web/attempt-"},
+        "default_branch_protected": {"const": true},
+        "force_push": {"const": false},
+        "delete_branch": {"const": false},
+        "required_checks": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "required_protection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["pull_request_required", "status_checks_required", "web_principal_bypass_allowed", "web_principal_merge_allowed"],
+          "properties": {
+            "pull_request_required": {"const": true},
+            "status_checks_required": {"const": true},
+            "web_principal_bypass_allowed": {"const": false},
+            "web_principal_merge_allowed": {"const": true}
+          }
+        },
+        "observed_protection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "receipt"],
+          "properties": {
+            "status": {"enum": ["pending_smoke_check", "verified", "failed", "stale"]},
+            "receipt": {"type": ["string", "null"], "minLength": 1}
+          }
+        }
+      }
+    },
+    "issue_transport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "template", "label", "mathematical_status"],
+      "properties": {
+        "enabled": {"const": true},
+        "template": {"const": ".github/ISSUE_TEMPLATE/web-research-question.yml"},
+        "label": {"const": "web-research-question"},
+        "mathematical_status": {"const": "coordination_only"}
+      }
+    },
+    "pull_request_transport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "template", "mathematical_status", "merge_gate", "web_review_is_independent", "web_merge_allowed"],
+      "properties": {
+        "enabled": {"const": true},
+        "template": {"const": ".github/PULL_REQUEST_TEMPLATE/web-research-candidate.md"},
+        "mathematical_status": {"const": "candidate_only"},
+        "merge_gate": {"const": "required_candidate_checks"},
+        "web_review_is_independent": {"const": false},
+        "web_merge_allowed": {"const": true}
+      }
+    },
+    "allowed_repository_write_paths": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "prohibited_repository_write_paths": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "result_admission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "issue_is_evidence", "commit_is_evidence", "pr_is_evidence", "review_is_evidence", "merge_is_evidence", "actions_rerun_is_evidence", "chat_is_evidence"],
+      "properties": {
+        "source": {"const": "obligation_closure_gate_only"},
+        "issue_is_evidence": {"const": false},
+        "commit_is_evidence": {"const": false},
+        "pr_is_evidence": {"const": false},
+        "review_is_evidence": {"const": false},
+        "merge_is_evidence": {"const": false},
+        "actions_rerun_is_evidence": {"const": false},
+        "chat_is_evidence": {"const": false}
+      }
+    }
+  }
+}

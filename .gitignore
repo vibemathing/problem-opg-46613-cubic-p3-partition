@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+.lake/
+build/
+research/records/*.lock
+research/artifacts/receipts/**/*.pending

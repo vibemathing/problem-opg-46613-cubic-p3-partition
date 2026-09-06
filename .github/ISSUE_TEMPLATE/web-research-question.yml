@@ -1,0 +1,94 @@
+name: Web research question
+description: Bind one web GPT conversation to one route and one obligation
+title: "[web-research] "
+labels:
+  - web-research-question
+body:
+  - type: markdown
+    attributes:
+      value: "Coordination only: this Issue is not Evidence or a mathematical Result."
+  - type: input
+    id: problem_id
+    attributes:
+      label: Problem ID
+      placeholder: problem:...
+    validations:
+      required: true
+  - type: input
+    id: problem_contract_sha256
+    attributes:
+      label: ProblemContract SHA-256
+      placeholder: 64 lowercase hexadecimal characters
+    validations:
+      required: true
+  - type: input
+    id: harness_snapshot_sha256
+    attributes:
+      label: Harness snapshot SHA-256
+      placeholder: 64 lowercase hexadecimal characters
+    validations:
+      required: true
+  - type: input
+    id: base_revision
+    attributes:
+      label: Protected base revision
+      description: Exact immutable base commit selected by the coordinator.
+    validations:
+      required: true
+  - type: input
+    id: attempt_id
+    attributes:
+      label: Attempt ID
+      placeholder: attempt:...
+    validations:
+      required: true
+  - type: input
+    id: route_id
+    attributes:
+      label: Route ID
+      placeholder: route:...
+    validations:
+      required: true
+  - type: input
+    id: graph_id
+    attributes:
+      label: ObligationGraph ID
+      placeholder: graph:...
+    validations:
+      required: true
+  - type: input
+    id: obligation_id
+    attributes:
+      label: Single obligation ID
+      placeholder: obligation:...
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Bounded research question
+      description: Ask one atomic question; do not request a whole-problem completion claim.
+    validations:
+      required: true
+  - type: textarea
+    id: prior_failures
+    attributes:
+      label: Prior failed-route IDs checked
+      description: List route IDs, not hidden reasoning transcripts.
+    validations:
+      required: true
+  - type: textarea
+    id: source_refs
+    attributes:
+      label: Required repository source paths
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Candidate-only acknowledgement
+      options:
+        - label: Issue closure will not be treated as mathematical closure.
+          required: true
+        - label: Output will be transported through a web/attempt-* PR and external gates.
+          required: true

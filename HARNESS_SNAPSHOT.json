@@ -1,0 +1,1896 @@
+{
+  "active_skills": [
+    {
+      "entry": ".codex/skills/math-computation/SKILL.md",
+      "entry_sha256": "80c447221725ec198bee4b104d43ca28425110a7dac17afa9cad56ec69b57f48",
+      "skill_id": "math-computation",
+      "version": "0.6.0",
+      "web_status": "constrained"
+    },
+    {
+      "entry": ".codex/skills/math-derivation/SKILL.md",
+      "entry_sha256": "3f3b567729f1e5dd24f87e832fdac702577f4add14b8cf6be12d538e1fe787c1",
+      "skill_id": "math-derivation",
+      "version": "0.4.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/math-discovery/SKILL.md",
+      "entry_sha256": "ceb54d773cd970ca42d0243fb1a39b109cab3ffdbe2dd87b98b43539f988d471",
+      "skill_id": "math-discovery",
+      "version": "0.4.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/math-formalization/SKILL.md",
+      "entry_sha256": "8ade921dacd277f425f424064a6002806c057f160555081dbdb4ec05c1f5ea05",
+      "skill_id": "math-formalization",
+      "version": "0.5.0",
+      "web_status": "constrained"
+    },
+    {
+      "entry": ".codex/skills/math-proof/SKILL.md",
+      "entry_sha256": "61006c732ad69e73f56be126acb6fa9e25c866e18733ce1f0f3863c1f8eea80f",
+      "skill_id": "math-proof",
+      "version": "0.5.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/math-toolchain/SKILL.md",
+      "entry_sha256": "f6514e01358aa2e40f8b7e3bb9221fd9abca6b7ff37ec6920f2c2cf537533f7b",
+      "skill_id": "math-toolchain",
+      "version": "0.2.0",
+      "web_status": "constrained"
+    },
+    {
+      "entry": ".codex/skills/solve/SKILL.md",
+      "entry_sha256": "ff557dc3fc2fa10df4b21e8bef251a37928f5572ccf0092c79f0d9ab90a00ec0",
+      "skill_id": "solve",
+      "version": "0.3.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/vibe-mathing-router/SKILL.md",
+      "entry_sha256": "65f6b25fe152a4cc2fa9ecb03626dad6e3b70473fc256ac9acbabd0ef7cb9e8e",
+      "skill_id": "vibe-mathing-router",
+      "version": "0.4.0",
+      "web_status": "active"
+    }
+  ],
+  "builder": {
+    "id": "build-problem-repository",
+    "sha256": "251f90611be508ad40fca3aad135f5a1d7a889c96a90f04cacc513bda9e03d95",
+    "version": "1.1.0"
+  },
+  "built_at": "2026-09-06T11:24:12+08:00",
+  "digest_excludes": [
+    "HARNESS_SNAPSHOT.json",
+    "WEB_BOOTSTRAP.md"
+  ],
+  "excludes": [
+    ".git",
+    ".private",
+    ".lake",
+    "__pycache__",
+    "*.pyc",
+    "*.pyo",
+    "sessions",
+    "raw",
+    "derived",
+    "staging",
+    "vendor/upstream",
+    "build"
+  ],
+  "files": [
+    {
+      "bytes": 1387,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/AGENTS.md",
+      "sha256": "f0dbdaa90c69bf0cc9286a3275b532edeb3b941741b0707ace19ed07ab2da00a"
+    },
+    {
+      "bytes": 2090,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/README.md",
+      "sha256": "544eb10ce184d0545d728007c636da64085f141d1362366a9fa4ce044a771562"
+    },
+    {
+      "bytes": 1380,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/CHANGELOG.md",
+      "sha256": "cd69f3a7f77560319a2c1f67848f6ffa60372734827800cad2ca2ebbfeb4e366"
+    },
+    {
+      "bytes": 6433,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/SKILL.md",
+      "sha256": "80c447221725ec198bee4b104d43ca28425110a7dac17afa9cad56ec69b57f48"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/VERSION",
+      "sha256": "97a5d6e540a6120d09c39ddb667e0e8e2bac7fcc2ffef813b82e08fd60365bce"
+    },
+    {
+      "bytes": 227,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/references/index.md",
+      "sha256": "d92af8d0d8b9bde6cfcadd58e546e31a855c7c8760f612be6f713d8bcf85609f"
+    },
+    {
+      "bytes": 1154,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/references/pressure-tests.md",
+      "sha256": "bca380e00887f904347723fec6953972ce1a2100eacfc29e8d0f806f1ea66316"
+    },
+    {
+      "bytes": 766,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/references/source-map.md",
+      "sha256": "a485fcec1a917df09a99df1276df2efff513b530ff952527a97bc8677b0f721c"
+    },
+    {
+      "bytes": 5609,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-computation/references/tool-catalog.md",
+      "sha256": "01c0579f42e89af19579aad259ab93e50d30b1a827f17e95dd9702012fb7ce0e"
+    },
+    {
+      "bytes": 572,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-derivation/CHANGELOG.md",
+      "sha256": "cf10232d42589a87aa54b4782466c3c854a420d0652a19994f285f01ec3acd3b"
+    },
+    {
+      "bytes": 3245,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-derivation/SKILL.md",
+      "sha256": "3f3b567729f1e5dd24f87e832fdac702577f4add14b8cf6be12d538e1fe787c1"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-derivation/VERSION",
+      "sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79"
+    },
+    {
+      "bytes": 138,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-derivation/references/index.md",
+      "sha256": "cfac5585b216a69ea11db338c290d5751bd3f551f71e7cc518231a408c7566ec"
+    },
+    {
+      "bytes": 356,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-derivation/references/pressure-tests.md",
+      "sha256": "a8bc0b310371b079bf221c8ba8d738666e5a52df83608f35d745b6789e701df9"
+    },
+    {
+      "bytes": 259,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-derivation/references/source-map.md",
+      "sha256": "4079ba1d3f2925c4db76ad54421a5c98bae1c0f3b0f24929d273601b58d81a4e"
+    },
+    {
+      "bytes": 661,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-discovery/CHANGELOG.md",
+      "sha256": "2ce91fba1ebe85ce009a8de871ebd335bb08dfc021d76e8c3f55bc779d733572"
+    },
+    {
+      "bytes": 4628,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-discovery/SKILL.md",
+      "sha256": "ceb54d773cd970ca42d0243fb1a39b109cab3ffdbe2dd87b98b43539f988d471"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-discovery/VERSION",
+      "sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79"
+    },
+    {
+      "bytes": 141,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-discovery/references/index.md",
+      "sha256": "86ba5d6c1966edc52ccf9ee8b52b80d6db9b15d08277e3c43b57f729e9911939"
+    },
+    {
+      "bytes": 975,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-discovery/references/pressure-tests.md",
+      "sha256": "72f1cf195b99f1a7295cfeb63dd4e9c90bfce50156c68ba4af9a291f602bdd4c"
+    },
+    {
+      "bytes": 715,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-discovery/references/source-map.md",
+      "sha256": "238fdc36803096e6d5986b5bfb3473e3d319194ca602a5ff0f7b83fd1bab89bf"
+    },
+    {
+      "bytes": 1033,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-formalization/CHANGELOG.md",
+      "sha256": "c9e2b7b3a897f66b1f30da07cb56e0904838cc930466601b13d66ad46603f6d6"
+    },
+    {
+      "bytes": 5138,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-formalization/SKILL.md",
+      "sha256": "8ade921dacd277f425f424064a6002806c057f160555081dbdb4ec05c1f5ea05"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-formalization/VERSION",
+      "sha256": "a0ad50640139a524f86591157145bf1d4674ea9c065bfea21558f0f7b04430c8"
+    },
+    {
+      "bytes": 142,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-formalization/references/index.md",
+      "sha256": "5eab84367ed99f7a8911754519bef286fc2f644dcfab3b0f912c7ebd77a1dec1"
+    },
+    {
+      "bytes": 2462,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-formalization/references/pressure-tests.md",
+      "sha256": "35af765cb93466a3dbbcaec70070f287fbbada2394d7e9ae761a89ffd74e5d9b"
+    },
+    {
+      "bytes": 1456,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-formalization/references/source-map.md",
+      "sha256": "36963cb6c3a9317c8cd16fa0d1351e3be36770b8311972b3c4a324b26ca53d08"
+    },
+    {
+      "bytes": 955,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-proof/CHANGELOG.md",
+      "sha256": "3e283f00401e7a339e82a35bd1c37a820fc5d5e3205fcb9b6c2de9875a6e6828"
+    },
+    {
+      "bytes": 4508,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-proof/SKILL.md",
+      "sha256": "61006c732ad69e73f56be126acb6fa9e25c866e18733ce1f0f3863c1f8eea80f"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-proof/VERSION",
+      "sha256": "a0ad50640139a524f86591157145bf1d4674ea9c065bfea21558f0f7b04430c8"
+    },
+    {
+      "bytes": 147,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-proof/references/index.md",
+      "sha256": "71c1a0265f18b6f6a52e7dce6ecac18a580a68adc5a03cbaeee0441827000108"
+    },
+    {
+      "bytes": 2129,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-proof/references/pressure-tests.md",
+      "sha256": "284886ebc508684d0b3ad5e3b5769f42d75fef6a55e8604b1bac3ca81de6dafb"
+    },
+    {
+      "bytes": 916,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-proof/references/source-map.md",
+      "sha256": "74007ddeac312ccb536b5db351e66906b15b1ec9777263f03ef3268e55cf5f3e"
+    },
+    {
+      "bytes": 506,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-toolchain/AGENTS.md",
+      "sha256": "a15823141c431c85d59d78461613a9d41fee066bb6926ee383f6c83b30708db3"
+    },
+    {
+      "bytes": 436,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-toolchain/CHANGELOG.md",
+      "sha256": "2c43e05641e538e80d42890d5be6eb9cd4378461086e07c6ac1fedd66a49150a"
+    },
+    {
+      "bytes": 2459,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-toolchain/SKILL.md",
+      "sha256": "f6514e01358aa2e40f8b7e3bb9221fd9abca6b7ff37ec6920f2c2cf537533f7b"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/math-toolchain/VERSION",
+      "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+    },
+    {
+      "bytes": 3175,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/AGENTS.md",
+      "sha256": "1f211c2af2aa9899dd3249546b746d93a9260e43f7f99b33e97539dce3a6b6c4"
+    },
+    {
+      "bytes": 4845,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/CHANGELOG.md",
+      "sha256": "93a1b42fac6dede4cd36380baf3841f0f4ce513b34e4b9674d50e1fade94e786"
+    },
+    {
+      "bytes": 3053,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/README.md",
+      "sha256": "e5d6ed01846baf3253faeab3cd809d850f922cc13a9a47c7286529dfb1f6de69"
+    },
+    {
+      "bytes": 10731,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/SKILL.md",
+      "sha256": "ff557dc3fc2fa10df4b21e8bef251a37928f5572ccf0092c79f0d9ab90a00ec0"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/VERSION",
+      "sha256": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0"
+    },
+    {
+      "bytes": 10949,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/catalog.json",
+      "sha256": "d96674504bb68ff9ff7b880faee53355470b03bc972bb90dac573e7b16624446"
+    },
+    {
+      "bytes": 3108,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/index.md",
+      "sha256": "4027cc4ed131475556989672ce782c0babddb63e868a9c83fb8e540a01250f0c"
+    },
+    {
+      "bytes": 3047,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/output-contract.md",
+      "sha256": "7985c8696c1bf2645bbc81b88062f23e5cfd76c697373dada1f28e64f60f97f0"
+    },
+    {
+      "bytes": 12621,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/algorithms.json",
+      "sha256": "f1d2378c0b696527138afdcf3f213dee9957a5340aaec3671b6ddd2f0cb3f3be"
+    },
+    {
+      "bytes": 12912,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/analytical-chemistry-metrology.json",
+      "sha256": "c88702b7b37fa1d6ad4ac293eece66bd1fe54cba6db8f913a2a7b8917591b35f"
+    },
+    {
+      "bytes": 16191,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/astronomy-astrophysics.json",
+      "sha256": "57397b8e7ff2c99d793e613a4cde20c75caf0ee7f742270f5f5f9343887edc72"
+    },
+    {
+      "bytes": 12999,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/causal-inference.json",
+      "sha256": "39a28f3e4347967035b84fb6b62db0fb59d0e44863728ae56e4104120d8af70b"
+    },
+    {
+      "bytes": 21818,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/chemistry.json",
+      "sha256": "b79c44acab1a3d53a369c75a3af686a9f34b11cc961842f5f2622f347ec7a820"
+    },
+    {
+      "bytes": 12874,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/classical-mechanics-variational-methods.json",
+      "sha256": "69a1c458fa225047f5babffcb1a6c2f2ae186a4ac54af72f16dea1446ea00706"
+    },
+    {
+      "bytes": 12894,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/cognitive-science.json",
+      "sha256": "f038f74e0813caf6ce85f07ab4943ec76196532bfbc7b41649264b03873061ed"
+    },
+    {
+      "bytes": 16284,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/complexity-science.json",
+      "sha256": "386d3ebebde2ed23864b226fdc2a422a377d08831abc5405cd1ad51263b4da81"
+    },
+    {
+      "bytes": 34866,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/computer-science.json",
+      "sha256": "a82461bb418bf006ac37285612120a2e0595adf95b8d8d1a62cc918b0fcf695f"
+    },
+    {
+      "bytes": 12530,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/control-theory-cybernetics.json",
+      "sha256": "90190e3c7befcf3a5de53983380f335affe8a301775709b45d216ee20f88dcdd"
+    },
+    {
+      "bytes": 13221,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/decision-science.json",
+      "sha256": "89ddd8d4eeb4641787817e756844012c73c4a607d34e793e8137fffc466ebb5b"
+    },
+    {
+      "bytes": 45692,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/deep-learning.json",
+      "sha256": "a0f53bb79557723dbd58bf048c0c2e147d005c65028910d7c40b9d4ddfe41ddb"
+    },
+    {
+      "bytes": 13052,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/design-methods.json",
+      "sha256": "518cd1716fa9b42e2ab477193b9a04c9e7ab127c33cb1be2677e920bf1191510"
+    },
+    {
+      "bytes": 12927,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/differential-equations-dynamical-systems.json",
+      "sha256": "f96f70f216be4be983997af68645bfbac62a475ec3b2586a4a97de5f0cb82cc6"
+    },
+    {
+      "bytes": 11815,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/discrete-combinatorics.json",
+      "sha256": "43e41716ab823378e953b4c35c7a64ef16deb11dc44c9642b0b3be247e0cf506"
+    },
+    {
+      "bytes": 16222,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/earth-science-geoscience.json",
+      "sha256": "b5609913b170e439e7256d36a68bcc8fcf3840e6b02a685b598bff802cd533a2"
+    },
+    {
+      "bytes": 12952,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/ecology-biology.json",
+      "sha256": "ac746d620d96b35d15d2be5688e60a280a7a8c80f153370e2c0b55c987d9997b"
+    },
+    {
+      "bytes": 13297,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/economics-game-theory.json",
+      "sha256": "9590eea87ca3532872daa90d507ad05d0b7109258c8d340f0d3296bccd7c5b58"
+    },
+    {
+      "bytes": 18109,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/education-learning-science.json",
+      "sha256": "5deaed91ce945396f912b777575e6ae8122790748917913720e080f64c8571cf"
+    },
+    {
+      "bytes": 13298,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/electrochemistry-mass-transport.json",
+      "sha256": "944f63a5dd4964c58d1c6bd8f271633e9663972aa1a2408697c44faddc7a4e16"
+    },
+    {
+      "bytes": 12661,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/electromagnetism-field-methods.json",
+      "sha256": "f531818c46c4d32e64f80da8d63a80659b1c3e95f4d25eb70d5a71de9a1a2aba"
+    },
+    {
+      "bytes": 13738,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/engineering.json",
+      "sha256": "c1ae5ffb0edcccead25d0aacb395c54fea135f2f73cf6dba770566245f2b4f66"
+    },
+    {
+      "bytes": 18031,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/ethics-public-policy.json",
+      "sha256": "28a7e0ed7c9c6778600d36cb60593a2e1bf00a00f281f38f4819a27163bdab24"
+    },
+    {
+      "bytes": 12775,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/fluid-dynamics-continuum-mechanics.json",
+      "sha256": "352bae5d41f8138d15f240e21bf9457f4801fd68af6f1209abbae7a549c81cff"
+    },
+    {
+      "bytes": 26899,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/formal-logic-automated-reasoning.json",
+      "sha256": "8452c12bd272fd24f0e55f9490524c8c9d4d581324f1d3c9e676dd61f3b0a027"
+    },
+    {
+      "bytes": 18168,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/historical-reasoning.json",
+      "sha256": "6b932448474a66fab3dcecafda03adce9e719c016b44b28fc92568c43cda795e"
+    },
+    {
+      "bytes": 13879,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/human-factors-reliability.json",
+      "sha256": "376e633fc18465a082529f3d63cc67766a9795afc920fb532d878723b94c832d"
+    },
+    {
+      "bytes": 19916,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/information-knowledge-science.json",
+      "sha256": "6ac20de080d2cce72d00262a8368daae8f6015c8990fff7d77c72e793d34ac90"
+    },
+    {
+      "bytes": 11574,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/information-theory.json",
+      "sha256": "d13eec8098ebc59ca980ba4c78b9f69ad8a9f2b677dddf0fc07a4689a216db2a"
+    },
+    {
+      "bytes": 16730,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/legal-reasoning.json",
+      "sha256": "5d58c7a9b5699b5f5cc3d1e1e143502df3cd84431df5d6e56d8d06a0c87b21c0"
+    },
+    {
+      "bytes": 12693,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/linear-algebra-spectral-methods.json",
+      "sha256": "e7d30ac0390201c6e94135505261513626609210a016547d2e65a0e471d99037"
+    },
+    {
+      "bytes": 17433,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/linguistics.json",
+      "sha256": "a66380259e7959d48ed13bb39c22b7dff55dd485be632c19402b2d8b594f476c"
+    },
+    {
+      "bytes": 40753,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/machine-learning.json",
+      "sha256": "7166b175953aaeb94eed65d8813e9f17e1986afb0dc49268423f09e22a927417"
+    },
+    {
+      "bytes": 16186,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/materials-science.json",
+      "sha256": "4f5f86f3a72f30641a829fb0aad6281d7c744d5e7956101cc141d1fe40ec8a63"
+    },
+    {
+      "bytes": 130144,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/mathematics.json",
+      "sha256": "4e3cfbb7c52154f0466679aed9c598fb2352aeed6382a7c8f78443e892fda7a9"
+    },
+    {
+      "bytes": 13654,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/medical-decision.json",
+      "sha256": "a12575907c5e1993b0b49f8de30eb48e39d04c5e35c6acaaaf977c550ecd72a9"
+    },
+    {
+      "bytes": 12790,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/numerical-analysis-scientific-computing.json",
+      "sha256": "62aef4d7ac2ba3daa2d6c0e2555e2f6dea7f0a68a75cddbd2acfb2a1326e3bcd"
+    },
+    {
+      "bytes": 13196,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/operations-research.json",
+      "sha256": "5f5c788bdc770fbf2a0d798eea504afd19af6fc2b721a50b918e6924bf23999c"
+    },
+    {
+      "bytes": 12664,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/organic-chemistry-reaction-design.json",
+      "sha256": "ff17befb3040e5fa11c67afcaea491916925b2bf3cf12a55f8e071ccdbfe6c71"
+    },
+    {
+      "bytes": 15301,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/philosophy-science-epistemology.json",
+      "sha256": "197b3947baf69c7f944632809a5a647e1635c9913b03fa2705f9a236b138f93a"
+    },
+    {
+      "bytes": 13092,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/physical-chemistry-chemical-kinetics.json",
+      "sha256": "977ef771c28cfffa4276f73b40c926d919842028689d3f0161fd09d88c69c84b"
+    },
+    {
+      "bytes": 20309,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/physics.json",
+      "sha256": "7b51961e83692f3ac514459d38ab343341be1456ec9a8041929a802156ba4b32"
+    },
+    {
+      "bytes": 30918,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/problem-solving-methodology.json",
+      "sha256": "055190ed0a963256e37554b99ebf3a9a191cf14451dba26b6585309c55adae21"
+    },
+    {
+      "bytes": 39804,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/programming.json",
+      "sha256": "66958c76ca33cc03b5740f463065c9c0b80b5a951b9a1e1df3c46b071862e7d5"
+    },
+    {
+      "bytes": 12728,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/quantum-mechanics-operator-methods.json",
+      "sha256": "1b2bc36ffc6ddf9215f55c26cc44d37af79c07c6932738ed165e837b924be471"
+    },
+    {
+      "bytes": 17143,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/research.json",
+      "sha256": "db5a47c42f8d119330ac098320fbcf69ba76d55edbe5fce8dde13127c1516e05"
+    },
+    {
+      "bytes": 15059,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/scientific-methodology.json",
+      "sha256": "21733946fabd804c2108cb5723093d3bec09c6fc97b342f4e88d3c3c6dc2a501"
+    },
+    {
+      "bytes": 18842,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/social-science-methods.json",
+      "sha256": "b7e9440b12c727b5b5db3cbe845c08fcee8b27bcb34ef94e12f3bd5ed58feffb"
+    },
+    {
+      "bytes": 39271,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/software-engineering.json",
+      "sha256": "801ea4ccd24ddcfff6f1d0115c3c41184390690046f929df21657cd20ef216b1"
+    },
+    {
+      "bytes": 13123,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/solution-thermodynamics-phase-equilibria.json",
+      "sha256": "70611a7db9eb5e92e9be3ad3c1b7f92561722f4e90bed1f2c98dea71dc51817d"
+    },
+    {
+      "bytes": 13437,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/spectroscopy-structure-elucidation.json",
+      "sha256": "dfa63b1df76d404665d71661a159a2d557ef8da4ed958ee818f184a7a5bd574b"
+    },
+    {
+      "bytes": 12749,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/statistics.json",
+      "sha256": "06809818f33016f81dc37be8eed643d763b1fd6ed7aaf047e7da7f4e98a78e65"
+    },
+    {
+      "bytes": 12696,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/stochastic-processes-probability.json",
+      "sha256": "ec754cc4c025ce600526c52be0459f477b64ff0e47e59364609115fbade9bc76"
+    },
+    {
+      "bytes": 14530,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/systems-science.json",
+      "sha256": "6ab58156bde1dc52d066ca2f59cad95e7b2e88c50cafbb82cb49b805bf87b696"
+    },
+    {
+      "bytes": 12659,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/thermodynamics-statistical-mechanics.json",
+      "sha256": "c09510d05d517c09c046a57e5edeb453caceb1badfc5d80effc79cec6cad7346"
+    },
+    {
+      "bytes": 12358,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/packs/topology-geometry.json",
+      "sha256": "e4f1565639b90b4f30e57ec262c782d6f6ace80ca1b8913cf6e7bb636a14a663"
+    },
+    {
+      "bytes": 5433,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/pressure-scenario.md",
+      "sha256": "98ddc15b7682fbd6a211b9d351fedfe999a48ee6ceb3874f45ba2a2690e6e5e5"
+    },
+    {
+      "bytes": 7956,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/problem-solving-operator-pack.schema.json",
+      "sha256": "8e61dff4b570f11ddd208fea3ce438f6e845be503a155baba9477ab39e20b605"
+    },
+    {
+      "bytes": 1964,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/quality-checklist.md",
+      "sha256": "1b96a63456419e78feae14d43099733656fed1ac69cd5fee551671710ce28465"
+    },
+    {
+      "bytes": 4977,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/selection-protocol.md",
+      "sha256": "5115c1a235b2c610522dd36ebc7723eb23557634ea6a8fba2c633ed5978f75c5"
+    },
+    {
+      "bytes": 154173,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/source-inventory.json",
+      "sha256": "42702f92a43153a7c9d5cf3756d3b5df3c79d6821043d441d7142c779e459afb"
+    },
+    {
+      "bytes": 944,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/taxonomy/AGENTS.md",
+      "sha256": "65bab05e8ad1f209a45a068bd4e6ad2f1eaf8e53824a055f24779e438208cc0b"
+    },
+    {
+      "bytes": 28846,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/solve/references/taxonomy/problem-solving-methodology.json",
+      "sha256": "8b4aa358fff41ef4bf4af581fbd9d209cc25bad905aa6d14c96aa3c621b24ae3"
+    },
+    {
+      "bytes": 612,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/vibe-mathing-router/CHANGELOG.md",
+      "sha256": "58ede0ebb3251438c9744659fa67821d5584b50743d06c59664428b30ba6d190"
+    },
+    {
+      "bytes": 3542,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/vibe-mathing-router/SKILL.md",
+      "sha256": "65f6b25fe152a4cc2fa9ecb03626dad6e3b70473fc256ac9acbabd0ef7cb9e8e"
+    },
+    {
+      "bytes": 6,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/vibe-mathing-router/VERSION",
+      "sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79"
+    },
+    {
+      "bytes": 112,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/vibe-mathing-router/references/index.md",
+      "sha256": "0f2dd96d6b53326f3ce5f6b644554b6bdbe7f7bcf23bd12260337ddef9b2f36f"
+    },
+    {
+      "bytes": 752,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/vibe-mathing-router/references/pressure-tests.md",
+      "sha256": "80dca9f7ba102f6be45b0e7d034a1bf49d5735f62a123f99126e07edcbf90e78"
+    },
+    {
+      "bytes": 158,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".codex/skills/vibe-mathing-router/references/source-map.md",
+      "sha256": "01e1691e07222b5905c20d58c6877418d126368260ed183b6f59d9e17b663d92"
+    },
+    {
+      "bytes": 794,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".github/AGENTS.md",
+      "sha256": "9a51ea52de1da99a38be42491dc10b486aa851d09a0ca5ac3ff66bc32a08c2a3"
+    },
+    {
+      "bytes": 2525,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".github/ISSUE_TEMPLATE/web-research-question.yml",
+      "sha256": "cbe81a9fa97354e4e4deb280d6a03faa52d5690bb13c6fcc4b19b725a2a2a427"
+    },
+    {
+      "bytes": 1093,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".github/PULL_REQUEST_TEMPLATE/web-research-candidate.md",
+      "sha256": "52a5c17534263eb4065c436960824dfc20858c2c7b8530fdf4674634f84c0b57"
+    },
+    {
+      "bytes": 1202,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".github/workflows/web-candidate-gate.yml",
+      "sha256": "b2a2c7f7e589c0b4e8d163e60069b77c3db210601188e0748be6b2503b108774"
+    },
+    {
+      "bytes": 109,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": ".gitignore",
+      "sha256": "1b1498dd73a7c7f3f436c1d752304ad16df2b022095dcf62715d53ad41736fea"
+    },
+    {
+      "bytes": 17479,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "AGENTS.md",
+      "sha256": "4c9ca683fb9af7fb1def7a65f9951a3ac79d796792521a4da23d7d780d2585ed"
+    },
+    {
+      "bytes": 366,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "Makefile",
+      "sha256": "4edf4160e956424ef719e77fe71b55d817e503b1809561992d6a0f6c1c6515cd"
+    },
+    {
+      "bytes": 790,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "README.md",
+      "sha256": "d16000bc3387e92529ec7eef2f36986f164213c83280b5767001d9a3030ef7eb"
+    },
+    {
+      "bytes": 1172,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "TEMPLATE_REPOSITORY.md",
+      "sha256": "5392f31cef0ee2aad64b44b56386d560ff3aeec202fa84bc27a63781d0be5d2f"
+    },
+    {
+      "bytes": 2063,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "WEB_ACTIVE_SKILLS.json",
+      "sha256": "bda967ee4e65a4adbf85806532bab24c7274ee4763244c85f354e7739d997831"
+    },
+    {
+      "bytes": 5306,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "WEB_CHANNEL_PROFILE.json",
+      "sha256": "65481bfbc55a5fc609207d35b5bf293d1fa3052be35ee96a12860e3a5536278b"
+    },
+    {
+      "bytes": 9035,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "WEB_CONTEXT_BUNDLE.md",
+      "sha256": "6392294580958c5e0e1084cf2c60c4714220038e4e2bfe20e74b2c1affdf19b6"
+    },
+    {
+      "bytes": 2546,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "WEB_OUTPUT_CONTRACT.json",
+      "sha256": "80a778c800f0e05f68c8985ebbbfc388dae610af5893f350ba1cd9ce02416e12"
+    },
+    {
+      "bytes": 729,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/AGENTS.md",
+      "sha256": "7defec270a3af3c7c7fe18f1dfdf7b2e7db047352b794fd035f057781de85a74"
+    },
+    {
+      "bytes": 72,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/AxiomAudit.lean",
+      "sha256": "04b3892cc524fea7550e295a6db40a685c5f1d7ac680276daaf2d835b520814a"
+    },
+    {
+      "bytes": 563,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/README.md",
+      "sha256": "5507ec11d08a9a55d855eeb4a46a9abc49b40a8c8d4ce5e77a59f8b810d61651"
+    },
+    {
+      "bytes": 244,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/VibeMathingFixture.lean",
+      "sha256": "9a09ade10a81d8e443481e3408184f80205f53f3e2af1a2decdca21f4ddcb7aa"
+    },
+    {
+      "bytes": 3171,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/lake-manifest.json",
+      "sha256": "f7f705e46b49fdd7318039102cd9228ab6cd966bf9ffc73590e6e941e5d230c6"
+    },
+    {
+      "bytes": 270,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/lakefile.toml",
+      "sha256": "f2cad10028d2646f89a88e466124cf63f3fde5d7719ffec637b04799e8806fe5"
+    },
+    {
+      "bytes": 25,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/lean-proof/lean-toolchain",
+      "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+    },
+    {
+      "bytes": 727,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/smt-lra/AGENTS.md",
+      "sha256": "bcf437ed45ee6c9c4ebaf33a04e6063d010598686a7c048b13e86776ec5d6657"
+    },
+    {
+      "bytes": 216,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/smt-lra/case.json",
+      "sha256": "e9fc6dfe286b4772a4cb30fa4b396eafb02fc61383bdd922c821d000f6f4b24b"
+    },
+    {
+      "bytes": 472,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/sympy-counterexample/AGENTS.md",
+      "sha256": "6a3fe7f7a120e92cc14b550d31dabe0a27de0fb70030c9b0d3ca482566220ba1"
+    },
+    {
+      "bytes": 200,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/sympy-counterexample/README.md",
+      "sha256": "8b87283d93196f0c16c308149dcc16973c7c5d4f0ef2d8fd2846015f69ad9e0b"
+    },
+    {
+      "bytes": 1221,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "fixtures/sympy-counterexample/problem.json",
+      "sha256": "6177c2be2c2d199fc290f2ac3f4366d49b8cdd7fa9dd1a6c32e86ce21c19e9ae"
+    },
+    {
+      "bytes": 647,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/context/AGENT-ENTRY.md",
+      "sha256": "3ec4ec7f96b6be759fdc4d0bc485b0e23f79eedf3e113a4e8ee0ea3626287be3"
+    },
+    {
+      "bytes": 1194,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/context/PROJECT_OPERATING_MODEL.md",
+      "sha256": "a795bff2ccff25385a4994353d2046fc21ccead37e2c5120dfe3b9e0b4707e40"
+    },
+    {
+      "bytes": 1118,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/context/TOOLCHAIN_MODEL.md",
+      "sha256": "579eed8520b5384c807e756b80bbc1ae44a6ffbb7103a00847f81c1acc8b6a9e"
+    },
+    {
+      "bytes": 2749,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/container-skill-source-lock.v1.json",
+      "sha256": "f18c9790280ec130aed33428962042e965bbdf5cac8b3e265577aaa64c27a850"
+    },
+    {
+      "bytes": 3323,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/container-skill-source-lock.v1.schema.json",
+      "sha256": "bb2e494205b8ac824a67d5c849d1d58352d033fcf2a0c6ec6be7d0e2d42cd243"
+    },
+    {
+      "bytes": 5064,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/harness-snapshot-manifest.v1.schema.json",
+      "sha256": "469e04ec1cfde45cef996168773e616fdf119b5532d284dc2e32ce2f41a2a630"
+    },
+    {
+      "bytes": 21294,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/harness-source-manifest.v1.json",
+      "sha256": "7dfdb41a68bfda314d663ba03b4b2a713ea194168ade5287e58c6434be5cc4fb"
+    },
+    {
+      "bytes": 2275,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/harness-source-manifest.v1.schema.json",
+      "sha256": "225f1594b3d993896f0e89a26dfcd11e97368240a7af573ae76bc348af8ef526"
+    },
+    {
+      "bytes": 1958,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/math-knowledge-operators.schema.json",
+      "sha256": "92bc9aaf93d1345ec48be0fc16ca494f6ea91f0e843c0d2dc08a2fd4cdd626be"
+    },
+    {
+      "bytes": 6845,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/math-knowledge-operators.v1.json",
+      "sha256": "f35d0c4a02ee977a387f6c20adfc0248cc2c7b1ec1436687c7f7bf8f84732dc9"
+    },
+    {
+      "bytes": 3988,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/math-knowledge-source.schema.json",
+      "sha256": "1478f0cc46ddda99ac0194796d5a72161241ba8e33fe9ece06f86a325471b454"
+    },
+    {
+      "bytes": 11130,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/math-knowledge-source.v1.json",
+      "sha256": "76c034bd2df176c088747f187cf11c619756ab11e76135ba120e77fc2503a43e"
+    },
+    {
+      "bytes": 1664,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/math-tool-maturity.schema.json",
+      "sha256": "c30d2d953b3e2d104fd763d6afe34b7f8c107b850e2e4f0a46ba9cfbb0e47050"
+    },
+    {
+      "bytes": 16846,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/math-tool-maturity.v1.json",
+      "sha256": "73e733e437e6dd376be59df81c0ec9d28a318d2c9233b65973a8d91f3207f1dd"
+    },
+    {
+      "bytes": 10913,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/web-research-channel.schema.json",
+      "sha256": "387e676ff7e2c05b242b4f803a8c97f5823c8fcc3f97b1dddfb18ea29847d3c7"
+    },
+    {
+      "bytes": 5306,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/control-plane/web-research-channel.v1.json",
+      "sha256": "c45008d35f08bcc144dc10c3eaece6724a5d2b0b927b53ee149a4b633e858e7c"
+    },
+    {
+      "bytes": 1258,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/harness/PROJECT_AGENTS.md",
+      "sha256": "8c538e826e8b92810be430c9a69164b6c7f67920c6996b0be8dab30cfef65422"
+    },
+    {
+      "bytes": 1270,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/math-knowledge/REQUIREMENTS.md",
+      "sha256": "3ff53d6aa7d9e53ec707c26ebbce59ec64d575db9a9d2e8ef5d19ef059b2d67c"
+    },
+    {
+      "bytes": 1048,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/processes/WEB_PROBLEM_REPOSITORY_TOPOLOGY.md",
+      "sha256": "2eae016b11c9a22a473bd903bb95e8e0eefb3fa8dab7fb62894d3f0f866be014"
+    },
+    {
+      "bytes": 1629,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/AGENTS.md",
+      "sha256": "f93d9f95bf3f13d8ec2851877b1a3f5e2d87bb5f9e616d451e35e70f174719d6"
+    },
+    {
+      "bytes": 1261,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/Ponytail工程阶梯标准.md",
+      "sha256": "da7acdba9aa639039859648f76c57c5fe1d2cc7300a8724e4e2fae337cb3f483"
+    },
+    {
+      "bytes": 5017,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/VIBE-MATHING-SPEC-v0.1.md",
+      "sha256": "e3343c8a152bf47238e3befa75964bf55b57b67e86e4d7fd3e9ca36738c6f844"
+    },
+    {
+      "bytes": 5887,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/VIBE-MATHING-SPEC-v0.2.md",
+      "sha256": "45bbc228535704d957e90c59fff294d807181c01fc1bfac7037714a80729ed35"
+    },
+    {
+      "bytes": 458,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/劣质代码定义.md",
+      "sha256": "67b7e960f6e7b0ca635d7bd6872e4b13e12f8aa10740527e041583dc6f024150"
+    },
+    {
+      "bytes": 782,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/工程质量标准.md",
+      "sha256": "7c471d4ab2b2a9e75217c234d1d3915c148296721611013d374e49a899e1c49d"
+    },
+    {
+      "bytes": 1103,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/未来最优解原则.md",
+      "sha256": "b14e64c4f9666e78405244b9cfe23de674ccf7baddd3a440a9e9ea7b998a7867"
+    },
+    {
+      "bytes": 2606,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/架构设计原则.md",
+      "sha256": "cb9433d3d83d8ba76e71bf4cb29aeee9d8a06db6b3dafe3b3b07a1bb2d2b0564"
+    },
+    {
+      "bytes": 292,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/standards/非功能性需求标准.md",
+      "sha256": "62974b07fdbf31ba7ee92efe13027f4b62e8799c6e4781b2a2d6fe242382d3e0"
+    },
+    {
+      "bytes": 1462,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "governance/web-channel/REQUIREMENTS.md",
+      "sha256": "225fe05c93d8f05a6da3cb1c23cc2b8b396c6b5a73a8a5c36322c95546669f27"
+    },
+    {
+      "bytes": 8167,
+      "layer": "problem_instance",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "problem-library/AGENTS.md",
+      "sha256": "8226e2d8197f027ef8c0a9aca83e0e9f6208d035d727e7624e94265ae3d94d6e"
+    },
+    {
+      "bytes": 1557,
+      "layer": "problem_instance",
+      "mode": "0644",
+      "owner": "problem",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "sha256": "e30abb1cf2f0f5b39877b895a7480943550c727f7fe4b842769dc20966179541"
+    },
+    {
+      "bytes": 3891,
+      "layer": "problem_instance",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "problem-library/schema/candidate-observation.schema.json",
+      "sha256": "943e639a4f9faa4e3653ba705e9f36472128dd3c21a8bd38a79c0ffeb79bf533"
+    },
+    {
+      "bytes": 2596,
+      "layer": "problem_instance",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "problem-library/schema/candidate-source.schema.json",
+      "sha256": "28ab2b122e2a5a22ed70967e2e1c67e060a2c7fc1f48a0b0ee48ad77911730d0"
+    },
+    {
+      "bytes": 5344,
+      "layer": "problem_instance",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "problem-library/schema/canonical-problem.schema.json",
+      "sha256": "7029fd1f04b4e1421ee59e3faae2a6b596152ca0cc067290840b3cb4a9b8ad9d"
+    },
+    {
+      "bytes": 3126,
+      "layer": "problem_instance",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "problem-library/schema/problem.schema.json",
+      "sha256": "98d238ffa342e9f911b77322ec6d2d863fed9fb6e23dfeb117da66729bc34958"
+    },
+    {
+      "bytes": 178,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "requirements-math-tools.txt",
+      "sha256": "a54a1c19f7ab6fa588a388c096c7497c1043a78cf93c5f19de133343dc6aeaba"
+    },
+    {
+      "bytes": 307,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "requirements-web-harness.txt",
+      "sha256": "a6d26863894f908edb5d27f1e927a721bc57134f3ec732300b56057f52907cc5"
+    },
+    {
+      "bytes": 110,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "requirements.txt",
+      "sha256": "3db5d86ac3d97fdfeb83b6393ad101cd8256b5ce2ea32a11db9fb4e57711a4ca"
+    },
+    {
+      "bytes": 1478,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/AGENTS.md",
+      "sha256": "983d1dd18ea8baf62bdada8d56852c476df677ed5b707d7efde8270e7c9752a4"
+    },
+    {
+      "bytes": 510,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/README.md",
+      "sha256": "0f0f2ce64f73cac41509cdf440bffa161b4fde27af68579d0e9c375fc2f12285"
+    },
+    {
+      "bytes": 1798,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/attempt.schema.json",
+      "sha256": "d96dfa0eb240be31fcf0384c3f184dad2e57fcea8f01d6a808901c82e4bdda0d"
+    },
+    {
+      "bytes": 1735,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/candidate-artifact.schema.json",
+      "sha256": "a2f4f315d64cb7b7d48f5a08c09e2267c84640cfaf3aec220648d5c73f804de5"
+    },
+    {
+      "bytes": 1321,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/evidence-link.schema.json",
+      "sha256": "170089d94e08747044f9f75dfde8ee03ebf4da55484d122cda613739d37ccb2f"
+    },
+    {
+      "bytes": 3197,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/evidence-receipt.schema.json",
+      "sha256": "d26e3bec0061fc8eadbbcf075fcbd5527616c7a1f6ae1e9fa664acbfcc101670"
+    },
+    {
+      "bytes": 1515,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/failed-route.schema.json",
+      "sha256": "4c1588ad71647aea8474a991c181a52024af3153e571f3cccd62b215949caa27"
+    },
+    {
+      "bytes": 2195,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/lean-obligation-request.schema.json",
+      "sha256": "dc2d12c2ca27d031bd2e443eeddbf045539244341e1b0f4999f87f7cb777a3b1"
+    },
+    {
+      "bytes": 3371,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/obligation-graph.schema.json",
+      "sha256": "2a71033168f6380f2117afd890f74adc984660f8472a7152e0f7e8ba3e7407a7"
+    },
+    {
+      "bytes": 4031,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/research-bundle.schema.json",
+      "sha256": "500045165880d3062777615b88e2731f9e85a27482577f05577bd705b03ed56a"
+    },
+    {
+      "bytes": 2055,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/run-state.schema.json",
+      "sha256": "f2618ae8458e69a04afec37dfe712238359e0c1a18e2c468314ed8a61a686191"
+    },
+    {
+      "bytes": 2142,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/semantic-review.schema.json",
+      "sha256": "2c6daaa085c8091956cda3b74d351692bf813298b96f0ebc5ffd556d31bbe04b"
+    },
+    {
+      "bytes": 1539,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/verifier-registry.schema.json",
+      "sha256": "5586a2412857630ff61f06407aad507e979c80cb6045eb6a9164f7691eb57a16"
+    },
+    {
+      "bytes": 6894,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/web-attempt-packet.schema.json",
+      "sha256": "d3421fd45fa06c24238c2228f39e16d9e5f2ad918a2e94d32bde68a278ec7a3b"
+    },
+    {
+      "bytes": 2299,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/web-bootstrap-ack.schema.json",
+      "sha256": "35fa4747d9f93bb4d36eb9552eb8a2b932224adda45c1401e99dcd3c125495c8"
+    },
+    {
+      "bytes": 2784,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/schema/web-import-receipt.schema.json",
+      "sha256": "b544d5b540e563d344b0dd23f5357cf10e8dcd719246a5de19f255bf7147f3d2"
+    },
+    {
+      "bytes": 2196,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "research/verifiers.json",
+      "sha256": "ab8a1a403e6c5835f0dce160e18c8c1447b93eb04b9dff8b235945d7454b1120"
+    },
+    {
+      "bytes": 1668,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "result-library/AGENTS.md",
+      "sha256": "72ecb411bb9762934bd19189fe77868b0a096de832dcdf7a6fae25b459c3dc86"
+    },
+    {
+      "bytes": 2031,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "result-library/README.md",
+      "sha256": "716e4e5a002c8f6cc46eb07eba7698fa2c342d7458637b5ff8938396cb7f8d47"
+    },
+    {
+      "bytes": 3552,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "result-library/schema/result.schema.json",
+      "sha256": "d3e1f8c4b2f99819475c41c57fdfa1636be3ee37b78057719f64392dfa760fa8"
+    },
+    {
+      "bytes": 24399,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/build_problem_repository.py",
+      "sha256": "251f90611be508ad40fca3aad135f5a1d7a889c96a90f04cacc513bda9e03d95"
+    },
+    {
+      "bytes": 5361,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/build_web_context_bundle.py",
+      "sha256": "a4655977a063a5aaccb730c2c31affa0cfc9f95eb5eb831489441e026975bda7"
+    },
+    {
+      "bytes": 8700,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/import_web_attempt.py",
+      "sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1"
+    },
+    {
+      "bytes": 7905,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/sync_problem_repository_harness.py",
+      "sha256": "ed3640cdda8616e5117356980dc13ec04443b031880ac82f8cac00328c942f13"
+    },
+    {
+      "bytes": 26700,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/test_obligation_harness.py",
+      "sha256": "ab4e5013e9ac7ba9dddd69070c6dccb72400720ba4e20a020f7a8aeeec61309e"
+    },
+    {
+      "bytes": 5867,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/validate_math_knowledge_registry.py",
+      "sha256": "0e656dc391961c61c9b08f7c0599fb380433a52737c0f7347ca4d9cadb7625a7"
+    },
+    {
+      "bytes": 1866,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/validate_obligation_graphs.py",
+      "sha256": "fb7e4be35e89a56c99f47ee766bcda977da680d4720f35c272970ce047113097"
+    },
+    {
+      "bytes": 18380,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/validate_research_spaces.py",
+      "sha256": "72ff560777b76892d2a02216c902aa25988bbcdd4f3b3f596d9d57639028a39a"
+    },
+    {
+      "bytes": 2587,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/validate_web_attempt.py",
+      "sha256": "585981de39f2799ba9fa64fccc8b927e3b9ac40c0327c446a709b57f918997e4"
+    },
+    {
+      "bytes": 7770,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/validate_web_pr_diff.py",
+      "sha256": "aa453e6c5c162706bef0b531e45ac8ef775c02de8a5977ccab7ca4cbc0cea2d8"
+    },
+    {
+      "bytes": 21419,
+      "layer": "web_channel",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/validate_web_problem_harness.py",
+      "sha256": "a02e1d4b6393cc284f9700c1896b3588b2c87be9e918db95852f4203ce1c0a5b"
+    },
+    {
+      "bytes": 2410,
+      "layer": "math_layer",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/verify_lean_obligation.py",
+      "sha256": "8f0724976c8d7e55ad3b6997d33bd52ebed0377cb28a05d4ae2500bb6f0240aa"
+    },
+    {
+      "bytes": 1736,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/AGENTS.md",
+      "sha256": "a369e823ac99c7d3eea13428fcd002e9d639e8c094407fd43fed13a1ab6ea83f"
+    },
+    {
+      "bytes": 375,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/__init__.py",
+      "sha256": "a1cba206922a8a54cc7fdbbec16cac78643811aa5600247b5a45fc64ce866beb"
+    },
+    {
+      "bytes": 6834,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/bundle.py",
+      "sha256": "2d66cf9c8864469b40b0fcb6fd07eb7bf64551c8cde4e30093b7bc91338c9d92"
+    },
+    {
+      "bytes": 22927,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/evidence.py",
+      "sha256": "6fb7172d3e18568476194846de45ae85c2e4a24450b4a591716cec6c0de50878"
+    },
+    {
+      "bytes": 6450,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/lean.py",
+      "sha256": "1db5b8f130e9589eccf2467bfa41843cd12b0a62508b5ebaa1953f1efcf235c7"
+    },
+    {
+      "bytes": 19171,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/lean_obligation.py",
+      "sha256": "2e056646222f71e336648e297efa534e4e72061df82b32e0d4c6cd5e4369c4f3"
+    },
+    {
+      "bytes": 6666,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/literature.py",
+      "sha256": "b5694a57fd9345e17fa905e09033678f68c1bdc1f95af57a1572205da4f5d98c"
+    },
+    {
+      "bytes": 25046,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/obligations.py",
+      "sha256": "6806db20e082858a273a7e6b8819ca376cd6728a2f7375953de7e9a1c23a0e6e"
+    },
+    {
+      "bytes": 9555,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/pipeline.py",
+      "sha256": "97eab30dbfc4de20c144774c3da1119fbd6f6565cfab1ef3087b2d102063f5eb"
+    },
+    {
+      "bytes": 15933,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/runtime.py",
+      "sha256": "d369f32928b97a3af0862117aeb5b00cb05eefe6b349b8e8b1851f417bbd73ae"
+    },
+    {
+      "bytes": 4719,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/semantic_review.py",
+      "sha256": "9541fd6c9805026715188139922375b86d6978f128cecc3081b021a1a7bde45d"
+    },
+    {
+      "bytes": 5832,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/smt.py",
+      "sha256": "651fecc9533dfe2988a6ff8a14e99b1c100960028b4b3b370f619dc5f026f023"
+    },
+    {
+      "bytes": 18941,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/store.py",
+      "sha256": "113d2a5aa8ebf7811d63fc16fe049bf89bd3e2c69927a2da815733046db56ae5"
+    },
+    {
+      "bytes": 14758,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/web_channel.py",
+      "sha256": "75645b444d76637000823ce502eeb603709775dc452dcff952275477fe867590"
+    }
+  ],
+  "harness_version": "1.1.0",
+  "problem": {
+    "admission": "preview_unadmitted",
+    "contract_sha256": "e64cd03254e03dd661eade23243c3c21793fc2d8bffa2d33c172cf8ed2e7f940",
+    "lifecycle": "draft",
+    "problem_id": "problem:template-placeholder"
+  },
+  "profile": "web-research-full",
+  "repository": "vibemathing/vibe-mathing-problem-public-template",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358726712,
+    "default_branch": "main",
+    "full_name": "vibemathing/vibe-mathing-problem-public-template",
+    "node_id": "R_kgDOUPyGOA",
+    "visibility": "public"
+  },
+  "schema_version": "1.1.0",
+  "snapshot_id": "harness-snapshot:template-placeholder",
+  "source": {
+    "commit": "7dfdb41a68bfda314d663ba03b4b2a713ea19416",
+    "repository": "reviewed-public-export",
+    "source_manifest_sha256": "7dfdb41a68bfda314d663ba03b4b2a713ea194168ade5287e58c6434be5cc4fb",
+    "worktree_dirty": false
+  },
+  "tree_sha256": "477cb5ec65c457390c1210b4b9e74b96cc20490b1a09aae29450653e9f480032"
+}

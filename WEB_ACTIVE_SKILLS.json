@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "skills": [
+    {
+      "entry": ".codex/skills/math-computation/SKILL.md",
+      "entry_sha256": "80c447221725ec198bee4b104d43ca28425110a7dac17afa9cad56ec69b57f48",
+      "skill_id": "math-computation",
+      "version": "0.6.0",
+      "web_status": "constrained"
+    },
+    {
+      "entry": ".codex/skills/math-derivation/SKILL.md",
+      "entry_sha256": "3f3b567729f1e5dd24f87e832fdac702577f4add14b8cf6be12d538e1fe787c1",
+      "skill_id": "math-derivation",
+      "version": "0.4.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/math-discovery/SKILL.md",
+      "entry_sha256": "ceb54d773cd970ca42d0243fb1a39b109cab3ffdbe2dd87b98b43539f988d471",
+      "skill_id": "math-discovery",
+      "version": "0.4.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/math-formalization/SKILL.md",
+      "entry_sha256": "8ade921dacd277f425f424064a6002806c057f160555081dbdb4ec05c1f5ea05",
+      "skill_id": "math-formalization",
+      "version": "0.5.0",
+      "web_status": "constrained"
+    },
+    {
+      "entry": ".codex/skills/math-proof/SKILL.md",
+      "entry_sha256": "61006c732ad69e73f56be126acb6fa9e25c866e18733ce1f0f3863c1f8eea80f",
+      "skill_id": "math-proof",
+      "version": "0.5.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/math-toolchain/SKILL.md",
+      "entry_sha256": "f6514e01358aa2e40f8b7e3bb9221fd9abca6b7ff37ec6920f2c2cf537533f7b",
+      "skill_id": "math-toolchain",
+      "version": "0.2.0",
+      "web_status": "constrained"
+    },
+    {
+      "entry": ".codex/skills/solve/SKILL.md",
+      "entry_sha256": "ff557dc3fc2fa10df4b21e8bef251a37928f5572ccf0092c79f0d9ab90a00ec0",
+      "skill_id": "solve",
+      "version": "0.3.0",
+      "web_status": "active"
+    },
+    {
+      "entry": ".codex/skills/vibe-mathing-router/SKILL.md",
+      "entry_sha256": "65f6b25fe152a4cc2fa9ecb03626dad6e3b70473fc256ac9acbabd0ef7cb9e8e",
+      "skill_id": "vibe-mathing-router",
+      "version": "0.4.0",
+      "web_status": "active"
+    }
+  ]
+}

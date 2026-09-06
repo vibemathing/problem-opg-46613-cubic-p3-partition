@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/harness-snapshot-manifest.v1.json",
+  "title": "Web Problem Repository Harness Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "snapshot_id", "harness_version", "profile", "repository",
+    "repository_identity", "source", "builder", "problem", "active_skills", "files", "digest_excludes",
+    "excludes", "tree_sha256", "built_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "snapshot_id": {"type": "string", "pattern": "^harness-snapshot:[a-z0-9][a-z0-9.-]*$"},
+    "harness_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "profile": {"const": "web-research-full"},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "repository_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["binding_state", "full_name", "database_id", "node_id", "default_branch", "visibility"],
+      "properties": {
+        "binding_state": {"enum": ["planned", "verified"]},
+        "full_name": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+        "database_id": {"type": ["integer", "null"], "minimum": 1},
+        "node_id": {"type": ["string", "null"], "minLength": 1},
+        "default_branch": {"type": "string", "pattern": "^[A-Za-z0-9._/-]+$"},
+        "visibility": {"enum": ["private", "public"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"binding_state": {"const": "verified"}}, "required": ["binding_state"]},
+          "then": {
+            "properties": {
+              "database_id": {"type": "integer", "minimum": 1},
+              "node_id": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"binding_state": {"const": "planned"}}, "required": ["binding_state"]},
+          "then": {"properties": {"database_id": {"type": "null"}, "node_id": {"type": "null"}}}
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "commit", "worktree_dirty", "source_manifest_sha256"],
+      "properties": {
+        "repository": {"type": "string", "minLength": 1},
+        "commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "worktree_dirty": {"type": "boolean"},
+        "source_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "builder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "sha256"],
+      "properties": {
+        "id": {"const": "build-problem-repository"},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "problem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["problem_id", "contract_sha256", "lifecycle", "admission"],
+      "properties": {
+        "problem_id": {"type": "string", "pattern": "^problem:[a-z0-9][a-z0-9.-]*$"},
+        "contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "lifecycle": {"enum": ["draft", "active", "withdrawn"]},
+        "admission": {"enum": ["canonical_admitted", "preview_unadmitted"]}
+      }
+    },
+    "active_skills": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["skill_id", "version", "entry", "entry_sha256", "web_status"],
+        "properties": {
+          "skill_id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "version": {"type": "string", "minLength": 1},
+          "entry": {"type": "string", "minLength": 1},
+          "entry_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "web_status": {"enum": ["active", "constrained", "inactive"]}
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "bytes", "mode", "sha256", "layer", "owner"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "bytes": {"type": "integer", "minimum": 0},
+          "mode": {"enum": ["0644", "0755"]},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "layer": {"enum": ["research_core", "math_layer", "web_channel", "problem_instance"]},
+          "owner": {"enum": ["harness", "problem"]}
+        }
+      }
+    },
+    "digest_excludes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["HARNESS_SNAPSHOT.json", "WEB_BOOTSTRAP.md"]}
+    },
+    "excludes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "tree_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "built_at": {"type": "string", "format": "date-time"}
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "operators": [
+    {
+      "operator_id": "op:identify-mathematical-object",
+      "owner_skill": "math-discovery",
+      "purpose": "Classify the current statement or data as a theorem family, formal declaration, sequence, number-theory object, formula family or algorithmic task before deriving from scratch.",
+      "input_kinds": ["problem_contract", "obligation_statement"],
+      "output_kind": "object_identity_candidates",
+      "external_effect": "none",
+      "evidence_ceiling": "discovery_only",
+      "requires": ["frozen_statement_digest"],
+      "fail_closed_on": ["ambiguous_domain", "missing_statement", "identity_conflict"]
+    },
+    {
+      "operator_id": "op:search-formal-theorem",
+      "owner_skill": "math-discovery",
+      "purpose": "Search an exact-version local formal-library index first, then bounded remote discovery sources, and preserve query coverage and source identity.",
+      "input_kinds": ["obligation_statement", "object_identity_candidates", "source_profile"],
+      "output_kind": "formal_theorem_hits",
+      "external_effect": "read_local",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["source_profile", "query_budget", "statement_digest"],
+      "fail_closed_on": ["source_version_unknown", "schema_drift", "partial_response", "license_blocked"]
+    },
+    {
+      "operator_id": "op:search-mathematical-database",
+      "owner_skill": "math-discovery",
+      "purpose": "Query bounded OEIS, LMFDB or reference profiles for candidate object identity without treating a hit as a theorem proof.",
+      "input_kinds": ["object_fingerprint", "source_profile"],
+      "output_kind": "database_object_hits",
+      "external_effect": "read_network",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["source_profile", "query_budget", "license_policy"],
+      "fail_closed_on": ["rate_limited", "timeout", "partial_response", "attribution_missing", "license_blocked"]
+    },
+    {
+      "operator_id": "op:resolve-formal-package",
+      "owner_skill": "math-formalization",
+      "purpose": "Resolve a formal package candidate to an immutable source revision, toolchain, manifest and transitive dependency closure before any build.",
+      "input_kinds": ["formal_theorem_hit", "package_candidate", "source_profile"],
+      "output_kind": "environment_closure_candidate",
+      "external_effect": "read_local",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["immutable_revision", "license_review", "toolchain_pin", "manifest_lock"],
+      "fail_closed_on": ["floating_revision", "dependency_confusion", "license_blocked", "toolchain_quarantined", "manifest_drift"]
+    },
+    {
+      "operator_id": "op:compare-statements",
+      "owner_skill": "math-proof",
+      "purpose": "Classify an external theorem as exact, equivalent-candidate, stronger, weaker, specialization, generalization, analogue or conflict while preserving both implication directions.",
+      "input_kinds": ["obligation_statement", "external_statement", "environment_closure_candidate"],
+      "output_kind": "statement_relation_candidate",
+      "external_effect": "none",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["statement_digests", "domain_map", "quantifier_map", "assumption_map"],
+      "fail_closed_on": ["one_way_equivalence", "vacuous_assumption", "definition_drift", "claim_strength_drift"]
+    },
+    {
+      "operator_id": "op:compose-reuse-plan",
+      "owner_skill": "math-proof",
+      "purpose": "Choose reusable components and emit only the remaining source-identity, bridge, assumption, adapter, import and glue obligations.",
+      "input_kinds": ["statement_relation_candidate", "obligation_graph", "failed_routes"],
+      "output_kind": "reuse_plan_candidate",
+      "external_effect": "none",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["attempt_binding", "route_binding", "graph_binding", "source_digests"],
+      "fail_closed_on": ["unknown_dependency", "cycle", "duplicate_route", "stale_statement", "cross_problem_reference"]
+    },
+    {
+      "operator_id": "op:prove-reuse-gap",
+      "owner_skill": "math-proof",
+      "purpose": "Advance exactly one bounded glue or bridge obligation without rewriting the imported theorem or claiming whole-problem completion.",
+      "input_kinds": ["reuse_plan_candidate", "active_obligation"],
+      "output_kind": "candidate_artifact",
+      "external_effect": "none",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["bounded_step", "active_obligation", "failed_route_check"],
+      "fail_closed_on": ["timeout", "resource_error", "route_refuted", "unresolved_assumption"]
+    },
+    {
+      "operator_id": "op:build-formal-candidate",
+      "owner_skill": "math-formalization",
+      "purpose": "Build a candidate proof in a fixed, sandboxed formal environment while keeping build success separate from kernel and semantic acceptance.",
+      "input_kinds": ["candidate_artifact", "environment_closure_candidate"],
+      "output_kind": "formal_build_receipt",
+      "external_effect": "bounded_candidate_build",
+      "evidence_ceiling": "candidate_only",
+      "requires": ["sandbox", "resource_budget", "pristine_source", "toolchain_allowlist"],
+      "fail_closed_on": ["sorry", "admit", "unsafe", "unauthorized_axiom", "cache_poisoning", "timeout", "resource_error"]
+    },
+    {
+      "operator_id": "op:verify-formal-candidate",
+      "owner_skill": "math-formalization",
+      "purpose": "Produce separately bound kernel, axiom/escape and statement-identity receipts for one candidate under an admitted toolchain.",
+      "input_kinds": ["formal_build_receipt", "candidate_artifact", "obligation_statement"],
+      "output_kind": "machine_verifier_receipts",
+      "external_effect": "bounded_candidate_build",
+      "evidence_ceiling": "verifier_receipt",
+      "requires": ["verifier_registry", "toolchain_allowlist", "fresh_replay", "axiom_policy", "statement_identity"],
+      "fail_closed_on": ["toolchain_quarantined", "receipt_stale", "axiom_escape", "statement_mismatch", "native_status_unknown", "timeout"]
+    },
+    {
+      "operator_id": "op:review-reuse-semantics",
+      "owner_skill": "math-proof",
+      "purpose": "Review domain, quantifiers, definitions, assumptions, claim strength and source alignment independently of machine build status.",
+      "input_kinds": ["candidate_artifact", "statement_relation_candidate", "problem_contract"],
+      "output_kind": "semantic_review_receipt",
+      "external_effect": "none",
+      "evidence_ceiling": "verifier_receipt",
+      "requires": ["review_policy", "independent_principal", "source_alignment"],
+      "fail_closed_on": ["domain_mismatch", "quantifier_mismatch", "definition_mismatch", "assumption_mismatch", "claim_strength_mismatch"]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/lean-obligation-request.v1.json",
+  "title": "Bounded Lean Obligation Verification Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "graph_id",
+    "obligation_id",
+    "candidate_id",
+    "fixture_root",
+    "module",
+    "source_files",
+    "declaration",
+    "expected_declaration",
+    "allowed_axioms",
+    "budgets",
+    "verifiers"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "graph_id": {"type": "string", "pattern": "^graph:[a-z0-9][a-z0-9.-]*$"},
+    "obligation_id": {"type": "string", "pattern": "^obligation:[a-z0-9][a-z0-9.-]*$"},
+    "candidate_id": {"type": "string", "pattern": "^candidate:[a-z0-9][a-z0-9.-]*$"},
+    "fixture_root": {"type": "string", "minLength": 1},
+    "module": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.]*$"},
+    "source_files": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "declaration": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_'.]*$"},
+    "expected_declaration": {"type": "string", "minLength": 1},
+    "allowed_axioms": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "budgets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timeout_seconds", "max_output_bytes", "max_memory_bytes"],
+      "properties": {
+        "timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 3600},
+        "max_output_bytes": {"type": "integer", "minimum": 1024, "maximum": 16777216},
+        "max_memory_bytes": {"type": "integer", "minimum": 67108864}
+      }
+    },
+    "verifiers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kernel_check", "axiom_escape_audit", "statement_identity"],
+      "properties": {
+        "kernel_check": {"type": "string", "minLength": 1},
+        "axiom_escape_audit": {"type": "string", "minLength": 1},
+        "statement_identity": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

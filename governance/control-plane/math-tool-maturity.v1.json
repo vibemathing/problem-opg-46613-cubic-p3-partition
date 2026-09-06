@@ -1,0 +1,470 @@
+{
+  "schema_version": "math-tool-maturity.v1",
+  "as_of": "2026-09-01",
+  "states": [
+    "surveyed",
+    "source_locked",
+    "installed",
+    "smoke_checked",
+    "evidence_capable",
+    "verifier_admitted"
+  ],
+  "tools": [
+    {
+      "tool_id": "T01",
+      "family": "算筹、算盘、对数表、机械计算器",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T01"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T02",
+      "family": "FORTRAN、BLAS/LINPACK 传统",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T02"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T03",
+      "family": "Logic Theorist、resolution、Davis–Putnam",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T03"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T04",
+      "family": "REDUCE、Macsyma/Maxima",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T04"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T05",
+      "family": "Automath、LCF、NQTHM",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T05"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T06",
+      "family": "Mizar、HOL、Isabelle、Coq/Rocq",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T06"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T07",
+      "family": "Maple、Mathematica",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T07"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T08",
+      "family": "PARI/GP、FLINT/Arb",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T08"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T09",
+      "family": "GAP",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T09"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T10",
+      "family": "Singular、Macaulay2",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T10"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T11",
+      "family": "SageMath",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T11"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T12",
+      "family": "SymPy",
+      "maturity": "evidence_capable",
+      "runtime_route": "evidence",
+      "admitted_components": [
+        "SymPy exact-arithmetic vertical slice"
+      ],
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T12",
+        "scripts/smoke_math.py",
+        "scripts/test_vibe_mathing_pipeline.py"
+      ],
+      "reason": "The bounded SymPy vertical slice emits replayable symbolic evidence; it is not a general proof verifier."
+    },
+    {
+      "tool_id": "T13",
+      "family": "mpmath、python-flint",
+      "maturity": "smoke_checked",
+      "runtime_route": "candidate-generation",
+      "components": [
+        "python-flint + Arb bounded slice"
+      ],
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T13",
+        "scripts/run_math_tool_canaries.py",
+        "governance/operations/check-reports/2026-09-01-math-tool-canaries.json"
+      ],
+      "reason": "The compute-runtime canary covers python-flint exact factorization and Arb ball containment with positive, negative, error, and timeout cases; mpmath remains outside this route and no proof/verifier capability is inferred."
+    },
+    {
+      "tool_id": "T14",
+      "family": "NumPy、SciPy、Julia",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T14"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T15",
+      "family": "Z3、cvc5、SMT-LIB",
+      "maturity": "smoke_checked",
+      "runtime_route": "candidate-generation",
+      "components": [
+        "cvc5 Python QF_LIA slice",
+        "Z3 Python QF_LIA slice",
+        "Z3 SMT-LIB syntax slice"
+      ],
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T15",
+        "scripts/run_math_tool_canaries.py",
+        "governance/operations/check-reports/2026-09-01-math-tool-canaries.json"
+      ],
+      "reason": "The compute-runtime canary covers SAT, UNSAT, malformed-input, and bounded-timeout behavior for cvc5/Z3 and a small SMT-LIB slice; solver output is candidate-generation only, with no proof consumer or verifier admission."
+    },
+    {
+      "tool_id": "T16",
+      "family": "MiniSat、CaDiCaL",
+      "maturity": "smoke_checked",
+      "runtime_route": "candidate-generation",
+      "components": [
+        "MiniSat bounded DIMACS slice"
+      ],
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T16",
+        "scripts/run_math_tool_canaries.py",
+        "governance/operations/check-reports/2026-09-01-math-tool-canaries.json"
+      ],
+      "reason": "MiniSat passed bounded SAT, UNSAT, malformed-DIMACS, and timeout cases in the compute runtime; CaDiCaL is not installed and neither component provides a project verifier route."
+    },
+    {
+      "tool_id": "T17",
+      "family": "E、Vampire、Prover9、TPTP",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T17"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T18",
+      "family": "Lean 4/Mathlib",
+      "maturity": "verifier_admitted",
+      "runtime_route": "verifier",
+      "admitted_components": [
+        "Lean 4 kernel check with axiom and statement-faithfulness gates"
+      ],
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T18",
+        "scripts/test_lean_pipeline.py",
+        "fixtures/lean-proof/lakefile.toml",
+        "scripts/test_evidence_attacks.py"
+      ],
+      "reason": "The project admits only the tested Lean kernel adapter and its axiom, freshness, and statement-faithfulness gates."
+    },
+    {
+      "tool_id": "T19",
+      "family": "HOL Light、Isabelle、Rocq、Metamath、ACL2",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T19"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T20",
+      "family": "polymake、4ti2、TOPCOM",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T20"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T21",
+      "family": "nauty/Traces、NetworkX、igraph",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T21"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T22",
+      "family": "OEIS、LMFDB、DLMF、TPTP",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T22"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T23",
+      "family": "Gappa、区间算术与浮点证书",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T23"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T24",
+      "family": "Alethe/Eunoia、CPC、Carcara、SMTCoq",
+      "maturity": "source_locked",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T24",
+        "vendor/sources.lock.json"
+      ],
+      "reason": "Named components have immutable source references, but no runtime or verifier route is admitted by that fact.",
+      "components": [
+        "Carcara",
+        "SMTCoq"
+      ]
+    },
+    {
+      "tool_id": "T25",
+      "family": "Isabelle/HOL + LLM prover（Isabellm）",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T25"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T26",
+      "family": "OpenTheory / proof exchange packages",
+      "maturity": "source_locked",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T26",
+        "vendor/sources.lock.json"
+      ],
+      "reason": "Named components have immutable source references, but no runtime or verifier route is admitted by that fact.",
+      "components": [
+        "OpenTheory"
+      ]
+    },
+    {
+      "tool_id": "T27",
+      "family": "LeanDojo-v2 / TorchLean / ITPEval 生态",
+      "maturity": "source_locked",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T27",
+        "vendor/sources.lock.json"
+      ],
+      "reason": "Named components have immutable source references, but no runtime or verifier route is admitted by that fact.",
+      "components": [
+        "LeanDojo-v2",
+        "ITPEval"
+      ]
+    },
+    {
+      "tool_id": "T28",
+      "family": "Axiom / FriCAS",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T28"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T29",
+      "family": "Macaulay2 / Singular",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T29"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T30",
+      "family": "GAP / SageMath",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T30"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T31",
+      "family": "ACL2 / TPTP-SZS",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T31"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T32",
+      "family": "FLINT / Arb",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T32"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T33",
+      "family": "OSCAR.jl",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T33"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T34",
+      "family": "Dedukti",
+      "maturity": "source_locked",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T34",
+        "vendor/sources.lock.json"
+      ],
+      "reason": "Named components have immutable source references, but no runtime or verifier route is admitted by that fact.",
+      "components": [
+        "Dedukti"
+      ]
+    },
+    {
+      "tool_id": "T35",
+      "family": "Agda",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T35"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T36",
+      "family": "LFSC",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T36"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T37",
+      "family": "PVS",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T37"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T38",
+      "family": "Nuprl / MetaPRL",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T38"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T39",
+      "family": "Maude",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T39"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T40",
+      "family": "OpenMath",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T40"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    },
+    {
+      "tool_id": "T41",
+      "family": "SMT-LIB / SMT-LIB-db",
+      "maturity": "surveyed",
+      "runtime_route": "none",
+      "evidence_refs": [
+        "governance/tasks/0002-survey-vibe-mathing-practices/RESEARCH_INVENTORY.md#T41"
+      ],
+      "reason": "Survey entry only; no project runtime or verifier admission is inferred."
+    }
+  ]
+}

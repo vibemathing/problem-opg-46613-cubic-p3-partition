@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/evidence-receipt.schema.json",
+  "title": "Vibe Mathing Evidence Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "evidence_id", "capability", "verdict", "verifier", "checked_at", "subject", "output", "command"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "evidence_id": {"type": "string", "pattern": "^evidence:[a-z0-9][a-z0-9.-]*$"},
+    "capability": {
+      "enum": [
+        "numeric_check",
+        "symbolic_check",
+        "human_review",
+        "kernel_check",
+        "counterexample_check",
+        "axiom_escape_audit",
+        "statement_identity",
+        "statement_faithfulness",
+        "prior_art_review"
+      ]
+    },
+    "verdict": {"enum": ["accept", "reject", "undetermined"]},
+    "verifier": {"type": "string", "minLength": 1},
+    "checked_at": {"type": "string", "format": "date-time"},
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["problem_id", "attempt_id"],
+      "properties": {
+        "problem_id": {"type": "string"},
+        "attempt_id": {"type": "string"},
+        "result_id": {"type": ["string", "null"]},
+        "graph_id": {"type": "string", "pattern": "^graph:[a-z0-9][a-z0-9.-]*$"},
+        "obligation_id": {"type": "string", "pattern": "^obligation:[a-z0-9][a-z0-9.-]*$"},
+        "candidate_id": {"type": "string", "pattern": "^candidate:[a-z0-9][a-z0-9.-]*$"}
+      },
+      "oneOf": [
+        {
+          "required": ["result_id"],
+          "properties": {"result_id": {"type": "string"}}
+        },
+        {"required": ["graph_id", "obligation_id", "candidate_id"]}
+      ]
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locator", "sha256"],
+      "properties": {
+        "locator": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["executor", "argv", "exit_code"],
+      "properties": {
+        "executor": {"enum": ["subprocess", "in_process"]},
+        "argv": {"type": "array", "items": {"type": "string"}},
+        "exit_code": {"type": "integer"}
+      }
+    },
+    "native_status": {
+      "enum": ["accepted", "rejected", "incomplete", "unsupported", "timeout", "resource_error", "checker_error"]
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["locator", "sha256"],
+        "properties": {
+          "locator": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "toolchain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "fingerprint": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  }
+}

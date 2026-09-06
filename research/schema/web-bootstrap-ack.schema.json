@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/web-bootstrap-ack.v1.json",
+  "title": "Web GPT GitHub Bootstrap Acknowledgement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "channel",
+    "repository",
+    "repository_identity",
+    "problem_id",
+    "attempt_id",
+    "route_id",
+    "problem_contract_sha256_declared",
+    "harness_snapshot_sha256_declared",
+    "retrieved_files",
+    "unread_required_files",
+    "status",
+    "errors"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "channel": {"const": "chatgpt-web-github-issue-pr-writer"},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "repository_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["binding_state", "database_id", "node_id", "default_branch"],
+      "properties": {
+        "binding_state": {"enum": ["planned", "verified"]},
+        "database_id": {"type": ["integer", "null"], "minimum": 1},
+        "node_id": {"type": ["string", "null"], "minLength": 1},
+        "default_branch": {"type": "string", "pattern": "^[A-Za-z0-9._/-]+$"}
+      }
+    },
+    "problem_id": {"type": "string", "pattern": "^problem:[a-z0-9][a-z0-9.-]*$"},
+    "attempt_id": {"type": "string", "pattern": "^attempt:[a-z0-9][a-z0-9.-]*$"},
+    "route_id": {"type": "string", "pattern": "^route:[a-z0-9][a-z0-9.-]*$"},
+    "problem_contract_sha256_declared": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "harness_snapshot_sha256_declared": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "retrieved_files": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "unread_required_files": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "status": {"enum": ["ready", "block"]},
+    "errors": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "ready"}}},
+      "then": {
+        "properties": {
+          "unread_required_files": {"maxItems": 0},
+          "errors": {"maxItems": 0}
+        }
+      }
+    }
+  ]
+}

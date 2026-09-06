@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.1.0",
+  "channel_id": "chatgpt-web-github-issue-pr-writer",
+  "capability_status": "user_observed_pending_smoke_check",
+  "operational_admission": "synthetic_only_pending_permission_and_ruleset_smoke",
+  "trust_role": "candidate_generator_and_transport_writer",
+  "connector_observation": {
+    "observed_at": "2026-09-06T05:57:39+08:00",
+    "evidence_kind": "user_provided_chat_export",
+    "verification_status": "self_report_only_pending_github_object_receipts",
+    "product_identity": "unknown_write_capable_github_plugin_or_app",
+    "reported_capabilities": {
+      "repository_create": false,
+      "repository_read": true,
+      "file_create": true,
+      "file_update": true,
+      "file_delete": true,
+      "commit_create": true,
+      "branch_create": true,
+      "branch_ref_update": true,
+      "issue_create": true,
+      "pull_request_create": true,
+      "pull_request_review": true,
+      "pull_request_merge": true,
+      "actions_read": true,
+      "actions_rerun": true,
+      "direct_default_branch_commit": "conditional_on_repository_rules"
+    },
+    "limitations": [
+      "the exported chat is a connector self-report, not a GitHub object or permission receipt",
+      "the exact plugin or app type and installation permission set remain unidentified",
+      "repository creation was reported unavailable",
+      "reported repository/default/truth/workflow reach remains broader than the admitted candidate-only path policy"
+    ]
+  },
+  "capabilities": {
+    "repository_read": true,
+    "repository_create": false,
+    "issue_write": true,
+    "candidate_branch_create": true,
+    "candidate_artifact_create": true,
+    "candidate_artifact_revision": true,
+    "baseline_file_update": false,
+    "file_delete": true,
+    "commit_create": true,
+    "pull_request_create": true,
+    "pull_request_review": true,
+    "pull_request_merge": true,
+    "actions_read": true,
+    "actions_rerun": true,
+    "direct_default_branch_write": false,
+    "branch_ref_rewrite": false,
+    "command_execution": false,
+    "evidence_signing": false,
+    "result_admission": false
+  },
+  "github_permissions": {
+    "metadata": "read",
+    "contents": "write",
+    "issues": "write",
+    "pull_requests": "write",
+    "actions": "write",
+    "workflows": "none",
+    "administration": "none",
+    "secrets": "none"
+  },
+  "repository_scope_policy": {
+    "mode": "dedicated_problem_repository_namespace",
+    "automatic_access_for_new_problem_repositories": true,
+    "unrelated_repositories_allowed": false,
+    "repository_creation": "external_ai_provisioner_required"
+  },
+  "confirmation_policy": {
+    "project_manual_confirmation_required": false,
+    "platform_confirmation_mode": "platform_required_only",
+    "non_interactive_writes_allowed": true
+  },
+  "autonomy_policy": {
+    "mode": "ai_end_to_end_candidate_operations",
+    "routine_human_steps_required": false,
+    "ai_owned_stages": [
+      "bootstrap_read",
+      "issue_create",
+      "branch_create",
+      "candidate_file_write",
+      "commit_create",
+      "pull_request_create",
+      "pull_request_review",
+      "checks_monitor",
+      "actions_rerun",
+      "pull_request_merge",
+      "checkpoint"
+    ],
+    "human_escalation_only": [
+      "platform_forced_confirmation",
+      "authorization_or_secret_change",
+      "ambiguous_problem_contract",
+      "final_high_assurance_result_admission",
+      "irreversible_repository_operation"
+    ]
+  },
+  "branch_policy": {
+    "prefix": "web/attempt-",
+    "default_branch_protected": true,
+    "force_push": false,
+    "delete_branch": false,
+    "required_checks": [
+      "web-harness-snapshot",
+      "web-attempt-packet",
+      "web-pr-diff-boundary"
+    ],
+    "required_protection": {
+      "pull_request_required": true,
+      "status_checks_required": true,
+      "web_principal_bypass_allowed": false,
+      "web_principal_merge_allowed": true
+    },
+    "observed_protection": {
+      "status": "pending_smoke_check",
+      "receipt": null
+    }
+  },
+  "issue_transport": {
+    "enabled": true,
+    "template": ".github/ISSUE_TEMPLATE/web-research-question.yml",
+    "label": "web-research-question",
+    "mathematical_status": "coordination_only"
+  },
+  "pull_request_transport": {
+    "enabled": true,
+    "template": ".github/PULL_REQUEST_TEMPLATE/web-research-candidate.md",
+    "mathematical_status": "candidate_only",
+    "merge_gate": "required_candidate_checks",
+    "web_review_is_independent": false,
+    "web_merge_allowed": true
+  },
+  "allowed_repository_write_paths": [
+    "research/artifacts/web-inbox/**",
+    "research/artifacts/candidates/**",
+    "research/artifacts/source-notes/**"
+  ],
+  "prohibited_repository_write_paths": [
+    "AGENTS.md",
+    "WEB_*.md",
+    "HARNESS_SNAPSHOT.json",
+    ".github/workflows/**",
+    "governance/**",
+    "problem-library/records/**",
+    "research/schema/**",
+    "research/records/**",
+    "research/verifiers.json",
+    "result-library/**",
+    "scripts/**"
+  ],
+  "result_admission": {
+    "source": "obligation_closure_gate_only",
+    "issue_is_evidence": false,
+    "commit_is_evidence": false,
+    "pr_is_evidence": false,
+    "review_is_evidence": false,
+    "merge_is_evidence": false,
+    "actions_rerun_is_evidence": false,
+    "chat_is_evidence": false
+  }
+}

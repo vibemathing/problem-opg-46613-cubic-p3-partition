@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-mathing.local/schema/evidence-link.v1.json",
+  "title": "Vibe Mathing Append-only Evidence Link",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_link_id",
+    "graph_id",
+    "obligation_id",
+    "candidate_id",
+    "receipt",
+    "invalidates",
+    "linked_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "evidence_link_id": {"type": "string", "pattern": "^evidence-link:[a-z0-9][a-z0-9.-]*$"},
+    "graph_id": {"type": "string", "pattern": "^graph:[a-z0-9][a-z0-9.-]*$"},
+    "obligation_id": {"type": "string", "pattern": "^obligation:[a-z0-9][a-z0-9.-]*$"},
+    "candidate_id": {"type": "string", "pattern": "^candidate:[a-z0-9][a-z0-9.-]*$"},
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locator", "sha256"],
+      "properties": {
+        "locator": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "invalidates": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^evidence-link:[a-z0-9][a-z0-9.-]*$"}
+    },
+    "linked_at": {"type": "string", "format": "date-time"}
+  }
+}
