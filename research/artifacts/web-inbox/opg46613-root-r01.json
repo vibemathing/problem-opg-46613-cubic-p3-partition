@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-root-r01",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 9,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/9"
   },
   "objective": "ROOT-R01 proof-only transaction: characterize general P3 cut interfaces, prove exact gluing/counting and signature-inclusion reductions, with explicit small replacement tilings. Executable-code upload is blocked by a platform safety gate and is not part of this packet.",
   "candidate_artifacts": [
