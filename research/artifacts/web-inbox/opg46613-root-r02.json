@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-root-r02",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 11,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/11"
   },
   "objective": "Direct root repair: exact center-capacity and port-capacity Hall criteria, permanent counting, minimal Hall-defect constraints, and an explicit cyclically-4-connected specified-center counterexample with its own positive P3 factor.",
   "candidate_artifacts": [
