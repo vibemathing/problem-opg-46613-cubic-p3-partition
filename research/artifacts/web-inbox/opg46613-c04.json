@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-a01-c04",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 7,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/7"
   },
   "objective": "C04: complete the lower-order finite cover, preserve exact positive witnesses and negative controls, and assemble a candidate that eighteen is the minimum eligible order obstructing the divisible-cycle strengthening. Preserve earlier C04 repair drafts without claiming they have all been executed.",
   "candidate_artifacts": [
