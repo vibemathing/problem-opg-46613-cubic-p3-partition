@@ -1,0 +1,223 @@
+{
+  "completions_three_connected": [
+    "T",
+    "D",
+    "J",
+    "R"
+  ],
+  "exit_code": 0,
+  "full_output_sha256": "aec76ea5233506dd9eb1f916eae4725965446e1f5ce00ce9ed05715e29b1879b",
+  "gluing_cases": 96,
+  "gluing_counts": {
+    "DD": [
+      937,
+      937,
+      937,
+      937,
+      937,
+      937
+    ],
+    "DJ": [
+      512,
+      512,
+      512,
+      512,
+      512,
+      512
+    ],
+    "DR": [
+      433,
+      433,
+      433,
+      433,
+      433,
+      433
+    ],
+    "DT": [
+      111,
+      111,
+      111,
+      111,
+      111,
+      111
+    ],
+    "JD": [
+      512,
+      512,
+      512,
+      512,
+      512,
+      512
+    ],
+    "JJ": [
+      327,
+      315,
+      327,
+      315,
+      315,
+      315
+    ],
+    "JR": [
+      278,
+      278,
+      278,
+      278,
+      278,
+      278
+    ],
+    "JT": [
+      74,
+      74,
+      74,
+      74,
+      74,
+      74
+    ],
+    "RD": [
+      433,
+      433,
+      433,
+      433,
+      433,
+      433
+    ],
+    "RJ": [
+      278,
+      278,
+      278,
+      278,
+      278,
+      278
+    ],
+    "RR": [
+      253,
+      253,
+      253,
+      253,
+      253,
+      253
+    ],
+    "RT": [
+      63,
+      63,
+      63,
+      63,
+      63,
+      63
+    ],
+    "TD": [
+      111,
+      111,
+      111,
+      111,
+      111,
+      111
+    ],
+    "TJ": [
+      74,
+      74,
+      74,
+      74,
+      74,
+      74
+    ],
+    "TR": [
+      63,
+      63,
+      63,
+      63,
+      63,
+      63
+    ],
+    "TT": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  "limitations": [
+    "Not a census of graph orders.",
+    "Generator-side finite replay only, not a registered verifier receipt.",
+    "Mathematical proofs, not finite tests, support the general forest equivalence."
+  ],
+  "limits": {
+    "cpu_seconds": 35,
+    "file_blocks_1024": 2048,
+    "memory_mib": 256,
+    "processes": 1,
+    "wall_seconds": 40
+  },
+  "local_audit_source_sha256": "e0e5d5252387aea40f557c75eb986774ae236d9c91727747feb65dd91e2fee75",
+  "permutation_order": [
+    "012",
+    "021",
+    "102",
+    "120",
+    "201",
+    "210"
+  ],
+  "python": "3.13.5",
+  "scope": "C07 four specified cells and all six port bijections for each ordered cell pair",
+  "signature_counts": {
+    "D": [
+      29,
+      4,
+      4,
+      4,
+      3,
+      4,
+      4,
+      4,
+      0
+    ],
+    "J": [
+      13,
+      5,
+      7,
+      5,
+      0,
+      3,
+      7,
+      3,
+      5
+    ],
+    "R": [
+      11,
+      4,
+      4,
+      4,
+      3,
+      4,
+      4,
+      4,
+      6
+    ],
+    "T": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ]
+  },
+  "signature_order": [
+    "000",
+    "0AB",
+    "0BA",
+    "A0B",
+    "AAA",
+    "AB0",
+    "B0A",
+    "BA0",
+    "BBB"
+  ],
+  "source_location": "local-only audit_c07.py; no executable upload asserted",
+  "verdict": "candidate_only"
+}
