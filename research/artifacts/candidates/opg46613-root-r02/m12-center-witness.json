@@ -1,0 +1,175 @@
+{
+  "verdict": "candidate_only",
+  "scope": "Specified-center obstruction only; this graph has a P3-factor.",
+  "graph": {
+    "order": 12,
+    "vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ]
+    ]
+  },
+  "proposed_centers": [
+    0,
+    1,
+    4,
+    8
+  ],
+  "external_neighborhoods": {
+    "0": [
+      6,
+      11
+    ],
+    "1": [
+      2,
+      7
+    ],
+    "4": [
+      3,
+      5,
+      10
+    ],
+    "8": [
+      2,
+      7,
+      9
+    ]
+  },
+  "hall_obstruction": {
+    "centers": [
+      1,
+      8
+    ],
+    "external_neighbors": [
+      2,
+      7,
+      9
+    ],
+    "required_endpoints": 4,
+    "available_endpoints": 3
+  },
+  "positive_p3_factor": [
+    [
+      1,
+      0,
+      6
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      11,
+      10
+    ],
+    [
+      7,
+      8,
+      9
+    ]
+  ],
+  "four_edge_cyclic_cut_side": [
+    0,
+    1,
+    6,
+    7
+  ],
+  "cyclic_connectivity_argument": "See Section 5 of center-hall.md; every edge cut of size at most three is a singleton cut.",
+  "fresh_generator_observation": {
+    "python": "3.13.5",
+    "networkx": "3.6.1",
+    "eligible_center_sets_failing_hall_on_this_labeled_graph": 24,
+    "graph_census_performed": false
+  },
+  "not_claimed": [
+    "root counterexample",
+    "complete order-12 graph census",
+    "order-18 census",
+    "registered verification receipt"
+  ]
+}
