@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "c6f36062608619438b1984f374676237c515d3a7",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-root",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-root-r04",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": 13,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/13"
+  },
+  "objective": "Classify minimal fixed-center Hall cores by cycle rank; prove the unique no-four-cycle defect-two structure and a single-center-exchange barrier with an explicit positive root instance.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-root-r04-hall-cores",
+      "kind": "proof",
+      "locator": "research/artifacts/candidates/opg46613-root-r04/hall-cores.md",
+      "sha256": "a597704246c2d828eb5341303d84f1d99d2a721f7580ce9a77f09f51b64c515d"
+    },
+    {
+      "candidate_id": "candidate:opg46613-root-r04-tetrahedral-control",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-root-r04/tetrahedral-control.json",
+      "sha256": "c68ee5a552db2a1666a09651bf170b5dbb054e4765044287ee6f760ca6dd3e8a"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-root-r04-rank",
+      "text": "A minimal deficient support of an eligible center set has defect d in {1,2} and connected incidence graph with cycle rank d+1-r, where r counts support vertices adjacent to centers.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r04-tetrahedron",
+      "text": "In a cubic graph without four-cycles, every minimal defect-two incidence graph is the one-subdivision of K4; girth at least seven therefore excludes defect two.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r04-bicycle",
+      "text": "For an edgeless center set, every minimal defect-one core after private-leaf deletion is a theta or loose handcuff; with four centers and no four-cycle the two theta length types are (2,4,4) and (3,3,3).",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r04-exchange-barrier",
+      "text": "An edgeless proposed center set with a minimal defect-two support cannot be repaired to a P3-factor center set by any single center exchange.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r04-positive-control",
+      "text": "The displayed eighteen-vertex simple cubic 3-connected girth-five graph has such a bad center set and an explicit factor exactly two center exchanges away.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "Finite simple cubic graphs; |V|=3k and |C|=k.",
+    "The initial proposed center set has induced maximum degree at most one.",
+    "The theta and one-exchange claims additionally assume the initial center set contains no edge.",
+    "No-four-cycle and girth hypotheses are stated only where used.",
+    "Selected P3 subgraphs need not be induced; finite-graph-basic and finite-combinatorics are the allowed axioms."
+  ],
+  "risks": [
+    "These are fixed-center obstruction results, not a universal choice of centers or root closure.",
+    "The eighteen-vertex example has a positive P3-factor and is not a root counterexample.",
+    "The cyclic-connectivity-five observation depends on replaying a finite cut histogram; the main host properties have separate hand proofs.",
+    "One graph was checked, not a census of all eighteen-vertex graphs.",
+    "The local checker is not included in this proof-only packet and is not a registered verifier.",
+    "The protected legacy DAG dependency still needs trusted repair; no records were changed.",
+    "The previously blocked ROOT-R01 executable upload is not retried or repackaged."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-root",
+    "obligation:opg46613-divisible-two-factor"
+  ],
+  "failed_route_proposal": {
+    "route_fingerprint": "87f88059a361405b31c2c53a3fe40a66cf6a189d746343b44cc3f845f7cf0e05",
+    "failure_class": "counterexample",
+    "blocker": "A minimal defect-two support prevents every single center exchange from repairing an initially edgeless center set. The explicit eighteen-vertex host has a different positive factor at exchange distance exactly two. Only the one-step repair shortcut fails.",
+    "evidence_locators": [
+      "research/artifacts/candidates/opg46613-root-r04/hall-cores.md",
+      "research/artifacts/candidates/opg46613-root-r04/tetrahedral-control.json"
+    ],
+    "next_obligation": "obligation:opg46613-root"
+  },
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "c6f36062608619438b1984f374676237c515d3a7",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-root-r02/center-hall.md",
+      "revision": "c6f36062608619438b1984f374676237c515d3a7",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/source-notes/opg46613-root-r04-hall-cores.md",
+      "revision": "25da71a5450fcd3be3f4e92b5d1712358d3274c7",
+      "relation": "prior_art"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T14:17:41.463202Z"
+}
