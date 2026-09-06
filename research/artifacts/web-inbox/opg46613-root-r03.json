@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-root-r03",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 12,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/12"
   },
   "objective": "Prove full-signature composition and a residue-preserving adjacent-brick compression; separate valid replacement from boundary-preserving lifting of a prescribed factor through three triangle expansions.",
   "candidate_artifacts": [
