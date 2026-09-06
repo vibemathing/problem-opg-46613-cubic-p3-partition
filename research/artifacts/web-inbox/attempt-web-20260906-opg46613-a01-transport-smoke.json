@@ -59,8 +59,8 @@
     "branch": "web/attempt-web-20260906-opg46613-a01-transport-smoke",
     "issue_number": 1,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/1",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 2,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/2"
   },
   "verdict": "candidate_only"
 }
