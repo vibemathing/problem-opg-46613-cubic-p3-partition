@@ -1,0 +1,190 @@
+{
+  "verdict": "candidate_only",
+  "scope": "Boundary-preserving lift counterexample, not a root counterexample",
+  "quotient_vertices": [
+    "a",
+    "b",
+    "c",
+    "x",
+    "y",
+    "z"
+  ],
+  "quotient_edges": [
+    [
+      "a",
+      "x"
+    ],
+    [
+      "a",
+      "y"
+    ],
+    [
+      "a",
+      "z"
+    ],
+    [
+      "b",
+      "x"
+    ],
+    [
+      "b",
+      "y"
+    ],
+    [
+      "b",
+      "z"
+    ],
+    [
+      "c",
+      "x"
+    ],
+    [
+      "c",
+      "y"
+    ],
+    [
+      "c",
+      "z"
+    ]
+  ],
+  "specified_quotient_p3_factor": [
+    [
+      "x",
+      "a",
+      "y"
+    ],
+    [
+      "b",
+      "z",
+      "c"
+    ]
+  ],
+  "expanded_vertices": [
+    "x",
+    "y",
+    "z",
+    "a_x",
+    "a_y",
+    "a_z",
+    "b_x",
+    "b_y",
+    "b_z",
+    "c_x",
+    "c_y",
+    "c_z"
+  ],
+  "expanded_edges": [
+    [
+      "a_x",
+      "a_y"
+    ],
+    [
+      "a_x",
+      "a_z"
+    ],
+    [
+      "a_x",
+      "x"
+    ],
+    [
+      "a_y",
+      "a_z"
+    ],
+    [
+      "a_y",
+      "y"
+    ],
+    [
+      "a_z",
+      "z"
+    ],
+    [
+      "b_x",
+      "b_y"
+    ],
+    [
+      "b_x",
+      "b_z"
+    ],
+    [
+      "b_x",
+      "x"
+    ],
+    [
+      "b_y",
+      "b_z"
+    ],
+    [
+      "b_y",
+      "y"
+    ],
+    [
+      "b_z",
+      "z"
+    ],
+    [
+      "c_x",
+      "c_y"
+    ],
+    [
+      "c_x",
+      "c_z"
+    ],
+    [
+      "c_x",
+      "x"
+    ],
+    [
+      "c_y",
+      "c_z"
+    ],
+    [
+      "c_y",
+      "y"
+    ],
+    [
+      "c_z",
+      "z"
+    ]
+  ],
+  "expanded_p3_factor": [
+    [
+      "a_x",
+      "x",
+      "b_x"
+    ],
+    [
+      "y",
+      "a_y",
+      "a_z"
+    ],
+    [
+      "z",
+      "b_z",
+      "b_y"
+    ],
+    [
+      "c_x",
+      "c_y",
+      "c_z"
+    ]
+  ],
+  "forced_triangle_words": {
+    "a": "BBU",
+    "b": "UUA",
+    "c": "UUA"
+  },
+  "port_order": [
+    "x",
+    "y",
+    "z"
+  ],
+  "local_generator_check": {
+    "python": "3.13.5",
+    "deletions_checked_including_empty": 79,
+    "vertex_deletion_limit": 2,
+    "positive_factor_edge_checks": 8,
+    "is_census": false,
+    "is_verifier_receipt": false
+  }
+}
