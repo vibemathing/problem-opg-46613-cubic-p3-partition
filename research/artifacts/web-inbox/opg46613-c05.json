@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-a01-c05",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 8,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/8"
   },
   "objective": "C05: replace the nine-retained quotient search by the exact published nine-point theorem and a fully explicit common-cycle P3 gluing construction, with bounded adversarial tests.",
   "candidate_artifacts": [
