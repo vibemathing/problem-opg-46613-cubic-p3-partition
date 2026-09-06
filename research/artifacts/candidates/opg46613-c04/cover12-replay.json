@@ -1,0 +1,53 @@
+{
+  "certificate_complete": true,
+  "certificate_sha256": "57e0f9d1365ad6a053c9c35b3cc1c005470f4c469d2f8882dcb89c5773403960",
+  "counts_by_type": [
+    {
+      "cycle_lengths": [
+        4,
+        8
+      ],
+      "retained": 2448,
+      "unions": 3327
+    },
+    {
+      "cycle_lengths": [
+        5,
+        7
+      ],
+      "retained": 2940,
+      "unions": 3325
+    },
+    {
+      "cycle_lengths": [
+        3,
+        4,
+        5
+      ],
+      "retained": 2520,
+      "unions": 3330
+    },
+    {
+      "cycle_lengths": [
+        4,
+        4,
+        4
+      ],
+      "retained": 1728,
+      "unions": 3329
+    }
+  ],
+  "coverage_scheme": "four fixed bad factors and all disjoint perfect matchings",
+  "limitations": [
+    "candidate-side replay, not an admitted verifier receipt",
+    "the lower-order implication also uses the accompanying finite-cover proof",
+    "counts include repeated graph isomorphism classes"
+  ],
+  "selected_witness_spectra": {
+    "12": 8068,
+    "3,3,6": 34,
+    "3,9": 754,
+    "6,6": 780
+  },
+  "verdict": "candidate_only"
+}

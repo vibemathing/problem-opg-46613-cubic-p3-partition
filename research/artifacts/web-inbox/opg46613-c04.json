@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "4ea85f7f958211eed8ba3cdca91532e2d5e68618",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-divisible-two-factor",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-a01-c04",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": 7,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/7"
+  },
+  "objective": "C04: complete the lower-order finite cover, preserve exact positive witnesses and negative controls, and assemble a candidate that eighteen is the minimum eligible order obstructing the divisible-cycle strengthening. Preserve earlier C04 repair drafts without claiming they have all been executed.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-c04-finite-cover",
+      "kind": "proof",
+      "locator": "research/artifacts/candidates/opg46613-c04/finite-cover-audit.md",
+      "sha256": "90f7e8fbed1dfa5176f5970f535399ee1dc18e7d4f629b72a925e5c5bd3afe69"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-cover-generator",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/factor_cover12.cpp",
+      "sha256": "ae320695c7ded5c74862693e8acbf16045f65b01301fe73dbabfa1c49e378198"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-cover-checker",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/check_factor_cover12.py",
+      "sha256": "f9a92c845f94550f284c1355a7ceb411de28f934db668b92d8412f45635dd6e4"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-compressed-witnesses",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/cover12-ranks.json",
+      "sha256": "6d82636c6a33f2aa50ce1e1e86bd905915e55f24a87a7ef98d8ff537f2dbb4d9"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-witness-decoder",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/expand_factor_cover12.py",
+      "sha256": "c1fe490a81f22f9167ec77a9d048bb8bd8ea7c403cf1925af9939abcc4722692"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-cover-replay",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/cover12-replay.json",
+      "sha256": "6a90ada10f17325990d7729cf9e82af411b261c2843d2b98b796414d901649cf"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-adversarial-controls",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/audit_controls.py",
+      "sha256": "729883f853f41fee24d1f24acf8c40cf40eda7599333ec349681473ad796301b"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-control-output",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/audit-controls-output.json",
+      "sha256": "0c203ca700503d569d95e32126742be7d720672db897e30ffe4f7ff392648494"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c04-execution-observation",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c04/execution-observation.json",
+      "sha256": "c91e8b63b5e5e5b2f4df6cf91e6659f68e840011d0819b80236cb1c9d72d9b99"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-c04-coverage",
+      "text": "The four bad order-12 cycle types and all disjoint perfect matchings cover every possible order-12 obstruction up to relabeling; the accompanying finite proof supplies perfect-matching existence and excludes order six.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c04-positive-replay",
+      "text": "The local generator and checker cover 13311 fixed-factor/matching unions, with a valid divisible-factor witness for each of the 9636 three-connected unions. Counts retain repeated isomorphism classes.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c04-exact-transport",
+      "text": "The 9636 matching-rank bytes reconstruct the 269886-byte full certificate with SHA-256 57e0f9d1365ad6a053c9c35b3cc1c005470f4c469d2f8882dcb89c5773403960; exact byte equality was checked locally.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c04-controls",
+      "text": "Five specific malformed certificates were rejected. The C02 order-18 control has 26 perfect matchings, all complementary factors contain a five-cycle, and six explicit P3 paths cover the graph.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c04-minimum-order",
+      "text": "Combining the complete lower-order cover and the explicit order-18 control yields a candidate minimum order of eighteen for the stronger route only, not for the root P3-factor question.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "All graphs are finite and simple; three-connected means vertex connectivity at least three.",
+    "P3 is a selected two-edge path, not necessarily induced.",
+    "Allowed axioms are finite-graph-basic and finite-combinatorics.",
+    "The exact lower-order coverage proof in the preserved C04 companion file is a dependency; no BG theorem is needed for this replay."
+  ],
+  "risks": [
+    "All execution reported here is local generator-side computation, not a registered verifier receipt or remote GitHub command execution.",
+    "The original root is not contradicted; the negative control explicitly has a P3-factor.",
+    "Earlier C04 proof/quotient/BG drafts are preserved as candidates and are not collectively promoted by this finite replay.",
+    "Two inherited-environment decoder executions were resource-terminated; final clean-environment expansion succeeded.",
+    "Finite programs and the coverage-to-statement bridge require the target prescribed verification and statement-faithfulness review.",
+    "The rank decoder reuses graph primitives from the Python checker; no separate-trust claim is made."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-divisible-two-factor",
+    "obligation:opg46613-root"
+  ],
+  "failed_route_proposal": null,
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "4ea85f7f958211eed8ba3cdca91532e2d5e68618",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/records/obligation-graphs.jsonl",
+      "revision": "4ea85f7f958211eed8ba3cdca91532e2d5e68618",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-c02/witness.json",
+      "revision": "4ea85f7f958211eed8ba3cdca91532e2d5e68618",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-c04/lower-order-factor-cover.md",
+      "revision": "f66f7033ea01cda3cf57b3e90f34b9d2912bb2e1",
+      "relation": "prior_art"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T11:29:23Z"
+}
