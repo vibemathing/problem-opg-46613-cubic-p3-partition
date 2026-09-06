@@ -26,8 +26,8 @@
     "branch": "web/attempt-opg46613-a01-c01",
     "issue_number": 3,
     "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 4,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/4"
   },
   "objective": "C01: construct a P3-factor from a divisible-cycle 2-factor and give an exact 30-vertex counterexample to the stronger universal assertion, with a P3-factor witness keeping the root separate.",
   "candidate_artifacts": [
