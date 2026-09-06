@@ -9,7 +9,7 @@ def budget():
     if time.monotonic()>DEADLINE: raise TimeoutError('20-second C02 screening limit')
 
 def petersen():
-    return sorted({tuple(sorted(e)) for i in range(5) for e in [(i,(i+1)%5),(i,i+5),(i+2 if False else i+5,5+(i+2)%5)]})
+    return sorted({tuple(sorted(e)) for i in range(5) for e in [(i,(i+1)%5),(i,i+5),(i+5,5+(i+2)%5)]})
 
 def build():
     # Petersen minus vertex 0 uses labels 0..8 (original j -> j-1).
