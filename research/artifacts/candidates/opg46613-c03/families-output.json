@@ -1,0 +1,171 @@
+{
+  "verdict": "candidate_only",
+  "python": "3.13.5",
+  "frame_checks": [
+    {
+      "frame": "K3,3",
+      "frame_order": 6,
+      "brick_count": 3,
+      "expanded_order": 30,
+      "frame_matching_count": 6,
+      "expanded_matching_count": 48,
+      "spectra": [
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            15
+          ],
+          "count": 48
+        }
+      ],
+      "deletion_sets": 466
+    },
+    {
+      "frame": "prism-C4",
+      "frame_order": 8,
+      "brick_count": 4,
+      "expanded_order": 40,
+      "frame_matching_count": 9,
+      "expanded_matching_count": 144,
+      "spectra": [
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            5,
+            10,
+            10
+          ],
+          "count": 48
+        },
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            5,
+            20
+          ],
+          "count": 96
+        }
+      ],
+      "deletion_sets": 821
+    },
+    {
+      "frame": "prism-C6",
+      "frame_order": 12,
+      "brick_count": 6,
+      "expanded_order": 60,
+      "frame_matching_count": 20,
+      "expanded_matching_count": 1280,
+      "spectra": [
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            10,
+            10,
+            10
+          ],
+          "count": 128
+        },
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            10,
+            20
+          ],
+          "count": 384
+        },
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            15,
+            15
+          ],
+          "count": 256
+        },
+        {
+          "lengths": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            30
+          ],
+          "count": 512
+        }
+      ],
+      "deletion_sets": 1831
+    }
+  ],
+  "triangle_expansion_checks": [
+    {
+      "expanded_vertices": 1,
+      "labeled_subsets_checked": 10,
+      "order": 12,
+      "constructed_spectrum": [
+        3,
+        9
+      ]
+    },
+    {
+      "expanded_vertices": 4,
+      "labeled_subsets_checked": 210,
+      "order": 18,
+      "constructed_spectrum": [
+        3,
+        15
+      ]
+    },
+    {
+      "expanded_vertices": 7,
+      "labeled_subsets_checked": 120,
+      "order": 24,
+      "constructed_spectrum": [
+        3,
+        21
+      ]
+    },
+    {
+      "expanded_vertices": 10,
+      "labeled_subsets_checked": 1,
+      "order": 30,
+      "constructed_spectrum": [
+        3,
+        27
+      ]
+    }
+  ],
+  "limits": {
+    "wall_seconds": 20,
+    "cpu_seconds": 20,
+    "address_space_bytes": 268435456,
+    "output_bytes": 32768,
+    "threads": 1
+  },
+  "scope": "Only the named frames and all 341 labeled Petersen expansion subsets; not all cubic graphs of these orders.",
+  "limitations": [
+    "generator-side exact checks only",
+    "no formal replay or mathematical admission"
+  ]
+}
