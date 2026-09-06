@@ -1,0 +1,143 @@
+{
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "failed_experiments": [
+    {
+      "cause": "not identified; clean environment and -S are used in final reproduction",
+      "cpu_limit_seconds": 30,
+      "interpretation": "resource termination; no mathematical negative and no certificate accepted",
+      "name": "rank expansion with inherited environment",
+      "runs": [
+        {
+          "elapsed_seconds": 31.111535,
+          "exit_status": -9
+        },
+        {
+          "elapsed_seconds": 31.269755,
+          "exit_status": -9
+        }
+      ],
+      "stderr_bytes": 0,
+      "stdout_bytes": 0,
+      "wall_limit_seconds": 35
+    }
+  ],
+  "python": "3.13.5",
+  "runs": [
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "factor_cover12.cpp",
+        "-o",
+        "factor_cover12"
+      ],
+      "cpu_limit_seconds": 15,
+      "elapsed_seconds": 0.618938,
+      "exit_status": 0,
+      "memory_limit_bytes": 536870912,
+      "name": "build",
+      "output_file_limit_bytes": 2097152,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_limit_seconds": 20
+    },
+    {
+      "command": [
+        "./factor_cover12"
+      ],
+      "cpu_limit_seconds": 30,
+      "elapsed_seconds": 0.035116,
+      "exit_status": 0,
+      "memory_limit_bytes": 268435456,
+      "name": "cover",
+      "output_file_limit_bytes": 2097152,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 269886,
+      "stdout_sha256": "57e0f9d1365ad6a053c9c35b3cc1c005470f4c469d2f8882dcb89c5773403960",
+      "wall_limit_seconds": 35
+    },
+    {
+      "command": [
+        "python3",
+        "check_factor_cover12.py",
+        "cover.stdout",
+        "--seconds",
+        "30"
+      ],
+      "cpu_limit_seconds": 30,
+      "elapsed_seconds": 5.481159,
+      "exit_status": 0,
+      "memory_limit_bytes": 268435456,
+      "name": "replay",
+      "output_file_limit_bytes": 2097152,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1065,
+      "stdout_sha256": "6a90ada10f17325990d7729cf9e82af411b261c2843d2b98b796414d901649cf",
+      "wall_limit_seconds": 35
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "expand_factor_cover12.py",
+        "cover12-ranks.json",
+        "expanded-clean.tsv",
+        "--seconds",
+        "15"
+      ],
+      "cpu_limit_seconds": 20,
+      "elapsed_seconds": 2.472615,
+      "environment": {
+        "LC_ALL": "C",
+        "OMP_NUM_THREADS": "1",
+        "PYTHONHASHSEED": "0"
+      },
+      "exit_status": 0,
+      "memory_limit_bytes": 268435456,
+      "name": "expand-ranks-clean",
+      "output_file_limit_bytes": 2097152,
+      "site_import": "disabled with -S",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 250,
+      "stdout_sha256": "144062db3e12105c61ff4d95e2a06bab5c7749a258840b86228a78181ac0910d",
+      "wall_limit_seconds": 25
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "audit_controls.py",
+        "expanded-clean.tsv"
+      ],
+      "cpu_limit_seconds": 38,
+      "elapsed_seconds": 7.124093,
+      "exit_status": 0,
+      "memory_limit_bytes": 268435456,
+      "name": "mutation-and-18-vertex-controls",
+      "output_file_limit_bytes": 2097152,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2413,
+      "stdout_sha256": "0c203ca700503d569d95e32126742be7d720672db897e30ffe4f7ff392648494",
+      "wall_limit_seconds": 40
+    }
+  ],
+  "scope": "local generator-side execution, not remote GitHub command execution or a registered verifier receipt",
+  "source_sha256": {
+    "audit_controls.py": "729883f853f41fee24d1f24acf8c40cf40eda7599333ec349681473ad796301b",
+    "check_factor_cover12.py": "f9a92c845f94550f284c1355a7ceb411de28f934db668b92d8412f45635dd6e4",
+    "cover12-ranks.json": "6d82636c6a33f2aa50ce1e1e86bd905915e55f24a87a7ef98d8ff537f2dbb4d9",
+    "expand_factor_cover12.py": "c1fe490a81f22f9167ec77a9d048bb8bd8ea7c403cf1925af9939abcc4722692",
+    "factor_cover12.cpp": "ae320695c7ded5c74862693e8acbf16045f65b01301fe73dbabfa1c49e378198"
+  },
+  "verdict": "candidate_only"
+}
