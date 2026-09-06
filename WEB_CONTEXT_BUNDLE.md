@@ -208,72 +208,95 @@ This file is generated from repository truth and bounded for the web channel. It
     "acceptance": {
       "policy": "solution-admission-v1"
     },
-    "aliases": [],
+    "aliases": [
+      "Open Problem Garden OPG-46613"
+    ],
     "allowed_axioms": [
-      "none"
+      "finite-graph-basic",
+      "finite-combinatorics"
     ],
     "assumptions": [
-      "This record must never be treated as an active research problem."
+      "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
     ],
     "constraints": {
       "allowed_adapters": [
-        "template-validation-v1"
+        "cubic-graph-enumerator-v1",
+        "p3-factor-sat-v1",
+        "lean-obligation-v1"
       ],
       "allowed_methods": [
-        "discovery"
+        "discovery",
+        "derivation",
+        "computation",
+        "proof",
+        "formalization"
       ],
-      "max_attempts": 1,
+      "max_attempts": 20,
       "runtime": {
-        "max_output_bytes": 65536,
-        "max_retries": 1,
-        "max_transitions": 10,
-        "timeout_seconds": 60
+        "max_output_bytes": 5242880,
+        "max_retries": 3,
+        "max_transitions": 300,
+        "timeout_seconds": 1800
       }
     },
-    "created_at": "2026-09-06T00:00:00Z",
+    "created_at": "2026-09-06T03:30:00Z",
     "definitions": [
       {
-        "definition": "A non-admitted draft record used only to validate the physical public repository template.",
-        "term": "template placeholder"
+        "definition": "A path on three distinct vertices and two edges.",
+        "term": "path of length 2 (P3)"
+      },
+      {
+        "definition": "A spanning subgraph whose connected components are vertex-disjoint copies of P3.",
+        "term": "P3-factor"
       }
     ],
     "domain": {
-      "description": "Template-only placeholder domain; not a mathematical research question.",
+      "description": "Finite simple 3-connected 3-regular graphs G with |V(G)| divisible by 3.",
       "objects": [
-        "template-placeholder"
+        "cubic graph",
+        "3-connected graph",
+        "P3-factor"
       ]
     },
-    "lifecycle": "draft",
+    "lifecycle": "active",
     "msc": [
-      "00A00"
+      "05C70"
     ],
-    "problem_id": "problem:template-placeholder",
+    "problem_id": "problem:opg-46613-cubic-p3-partition",
     "quantifiers": [
       {
-        "domain": "a reviewed public canonical ProblemContract supplied by the repository builder",
-        "kind": "find",
+        "domain": "positive integers k and finite simple 3-connected cubic graphs G on 3k vertices",
+        "kind": "forall",
         "variables": [
-          "replacement_problem"
+          "k",
+          "G"
+        ]
+      },
+      {
+        "domain": "spanning subgraphs F of G whose components are k copies of P3",
+        "kind": "exists",
+        "variables": [
+          "F"
         ]
       }
     ],
     "schema_version": "1.0.0",
     "sources": [
       {
-        "retrieved_at": "2026-09-06T00:00:00Z",
-        "source": "Vibe Mathing public Web Harness",
-        "source_record_id": "public-template-placeholder-v1",
-        "url": "https://github.com/vibemathing/vibe-mathing-problem-public-template"
+        "retrieved_at": "2026-09-02T00:06:43Z",
+        "source": "UnsolvedMath",
+        "source_record_id": "unsolvedmath-opg-46613-d7e087798d77",
+        "url": "https://www.unsolvedmath.com/problems/OPG-46613"
       }
     ],
     "statement": {
       "language": "en",
-      "text": "This is a non-research placeholder. Replace it with exactly one reviewed public ProblemContract before creating a public problem repository.",
+      "text": "For every positive integer k, does every finite 3-connected cubic graph on 3k vertices admit a partition of its vertices into k paths of length 2?",
       "version": 1
     },
-    "title": "Vibe Mathing public problem repository template placeholder",
-    "updated_at": "2026-09-06T00:00:00Z"
+    "title": "P3-partitions of cubic 3-connected graphs",
+    "updated_at": "2026-09-06T03:30:00Z"
   },
-  "problem_contract_sha256": "e64cd03254e03dd661eade23243c3c21793fc2d8bffa2d33c172cf8ed2e7f940"
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a"
 }
 ```
