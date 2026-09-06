@@ -22,7 +22,6 @@ def main() -> int:
     root = args.project_root.resolve()
     paths = packet_files(root) if args.all_inbox else [args.packet if args.packet.is_absolute() else root / args.packet]
     errors: list[str] = []
-    route_bindings: dict[tuple[str, str, str], Path] = {}
     candidate_ids: dict[str, Path] = {}
 
     for path in paths:
@@ -30,11 +29,10 @@ def main() -> int:
         errors.extend(f"{path.relative_to(root) if path.is_relative_to(root) else path}: {error}" for error in packet_errors)
         if packet is None:
             continue
-        binding = (str(packet.get("problem_id")), str(packet.get("route_id")), str(packet.get("obligation_id")))
-        prior = route_bindings.get(binding)
-        if prior is not None and prior != path:
-            errors.append(f"duplicate active web route binding in {prior} and {path}: {binding}")
-        route_bindings[binding] = path
+        # Multiple immutable packets may refine the same admitted route/obligation
+        # across bounded Web turns. Candidate identity remains globally unique; the
+        # trusted importer and verifier receipts, not one-packet-per-route, govern
+        # admission and supersession.
         for candidate in packet.get("candidate_artifacts", []):
             if not isinstance(candidate, dict):
                 continue

@@ -59,10 +59,10 @@
   ],
   "builder": {
     "id": "build-problem-repository",
-    "sha256": "e29a25ec656248939010855cf650f5154045e0197f7603b8554c535efd392bb3",
-    "version": "1.1.1"
+    "sha256": "aea00b7031d49bc39aa9f3d1ca1b92128e2ad50c5a064063b34ff0a8c2ae96ad",
+    "version": "1.1.2"
   },
-  "built_at": "2026-09-06T13:10:07+08:00",
+  "built_at": "2026-09-06T13:26:50+08:00",
   "digest_excludes": [
     "HARNESS_SNAPSHOT.json",
     "WEB_BOOTSTRAP.md"
@@ -1248,7 +1248,7 @@
       "mode": "0644",
       "owner": "harness",
       "path": "governance/control-plane/harness-source-manifest.v1.json",
-      "sha256": "c615d53afae447ea46d8ec53b442c9514e87948676c8c448ecafb68b8f41175b"
+      "sha256": "97499c98e0774ef58c0be06ff8f3035c89cda1dffb6f9a9d222fb281b049cdb4"
     },
     {
       "bytes": 2275,
@@ -1664,7 +1664,7 @@
       "mode": "0644",
       "owner": "harness",
       "path": "scripts/build_problem_repository.py",
-      "sha256": "e29a25ec656248939010855cf650f5154045e0197f7603b8554c535efd392bb3"
+      "sha256": "aea00b7031d49bc39aa9f3d1ca1b92128e2ad50c5a064063b34ff0a8c2ae96ad"
     },
     {
       "bytes": 5361,
@@ -1723,12 +1723,12 @@
       "sha256": "72ff560777b76892d2a02216c902aa25988bbcdd4f3b3f596d9d57639028a39a"
     },
     {
-      "bytes": 2587,
+      "bytes": 2475,
       "layer": "web_channel",
       "mode": "0644",
       "owner": "harness",
       "path": "scripts/validate_web_attempt.py",
-      "sha256": "585981de39f2799ba9fa64fccc8b927e3b9ac40c0327c446a709b57f918997e4"
+      "sha256": "b4940667d01afdeb07bb1a90534b23975cfd7afd08918037ecd8a85131249649"
     },
     {
       "bytes": 7770,
@@ -1867,7 +1867,7 @@
       "sha256": "75645b444d76637000823ce502eeb603709775dc452dcff952275477fe867590"
     }
   ],
-  "harness_version": "1.1.1",
+  "harness_version": "1.1.2",
   "problem": {
     "admission": "canonical_admitted",
     "contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
@@ -1887,10 +1887,10 @@
   "schema_version": "1.1.0",
   "snapshot_id": "harness-snapshot:opg-46613-cubic-p3-partition",
   "source": {
-    "commit": "c615d53afae447ea46d8ec53b442c9514e879486",
+    "commit": "97499c98e0774ef58c0be06ff8f3035c89cda1df",
     "repository": "reviewed-public-export",
-    "source_manifest_sha256": "c615d53afae447ea46d8ec53b442c9514e87948676c8c448ecafb68b8f41175b",
+    "source_manifest_sha256": "97499c98e0774ef58c0be06ff8f3035c89cda1dffb6f9a9d222fb281b049cdb4",
     "worktree_dirty": false
   },
-  "tree_sha256": "eb58c311b26fd7dd1ea62b25fa53c37c3b30a996217457934d870782099e757f"
+  "tree_sha256": "57d1cabccb569e9ec293c8b8c03d7f03046d40f44152c54e1154359e4a7fae02"
 }
