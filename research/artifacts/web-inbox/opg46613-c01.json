@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "f0acdab58541da177be5a3978ede5883f492ea41",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-divisible-two-factor",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-a01-c01",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": null,
+    "pull_request_url": null
+  },
+  "objective": "C01: construct a P3-factor from a divisible-cycle 2-factor and give an exact 30-vertex counterexample to the stronger universal assertion, with a P3-factor witness keeping the root separate.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-c01-obstruction-proof",
+      "kind": "counterexample",
+      "locator": "research/artifacts/candidates/opg46613-c01/proof.md",
+      "sha256": "3f94eb0c0f06f3684e3fcae347358988d5613f475dc89c09e29138bc71ed9835"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c01-witness",
+      "kind": "counterexample",
+      "locator": "research/artifacts/candidates/opg46613-c01/witness.json",
+      "sha256": "02cd6de87155fab96c23cb93cc8101451721ebc43112090db42296bdb83938b0"
+    },
+    {
+      "candidate_id": "candidate:opg46613-c01-screen",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-c01/screen30.py",
+      "sha256": "3fb6be6fbdf00327db78b4db0dcb7b6f0386850272cd0eb4e54485ccb13f0591"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-c01-implication",
+      "text": "A spanning 2-factor with all cycle lengths divisible by 3 yields a P3-factor by consecutive triples; no induced-path condition is needed.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c01-domain",
+      "text": "The explicitly labeled Y(P,a0) graph H is finite, simple, cubic, 3-connected, and has 30 vertices and 45 edges.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c01-spectrum",
+      "text": "H has exactly 48 perfect matchings; every complementary 2-factor has cycle spectrum (5,5,5,15), by a complete cut-counting and Petersen matching argument.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c01-separation",
+      "text": "The ten explicit triples in the witness form a P3-factor of H. H therefore separates the stronger assertion from the original root question.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-c01-screen",
+      "text": "A bounded generator-side CPython 3.13.5 run checked 466 vertex deletion sets and enumerated 48 matchings, all with the predicted spectrum; this is not a verifier receipt.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "All graphs are finite and simple; 3-connected means vertex connectivity at least three.",
+    "P3 means a selected two-edge path on three distinct vertices, not necessarily an induced subgraph.",
+    "Allowed axioms: finite-graph-basic and finite-combinatorics."
+  ],
+  "risks": [
+    "Natural-language proof and generator-side screening require further mathematical verification; no EvidenceLink or Result is claimed.",
+    "No minimum counterexample order or novelty claim is made.",
+    "The 30-vertex graph is an attributed specialization of Kelmans Y construction.",
+    "The local scratch runtime is not the GitHub command runtime or an admitted verifier; repository CI validates transport only.",
+    "Route fingerprint is SHA-256 of the UTF-8 text: route:two-factor-divisible-cycles-v1 followed by LF, then For every finite simple 3-connected cubic graph of order divisible by 3, some perfect matching has complementary cycles all of length divisible by 3. followed by LF."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-divisible-two-factor",
+    "obligation:opg46613-root"
+  ],
+  "failed_route_proposal": {
+    "route_fingerprint": "cdd67e5d6e0aad05f515a737ca156e2e298f67c8dc8549a31ae323c7486ba960",
+    "failure_class": "counterexample",
+    "blocker": "The stronger universal assertion fails on the candidate graph Y(P,a0): all 48 complementary spectra are (5,5,5,15). The root statement is not contradicted; an explicit P3-factor is supplied. Do not repeat the unchanged strengthening.",
+    "evidence_locators": [
+      "research/artifacts/candidates/opg46613-c01/proof.md",
+      "research/artifacts/candidates/opg46613-c01/witness.json"
+    ],
+    "next_obligation": "obligation:opg46613-root"
+  },
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "f0acdab58541da177be5a3978ede5883f492ea41",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/records/obligation-graphs.jsonl",
+      "revision": "f0acdab58541da177be5a3978ede5883f492ea41",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/source-notes/opg46613-c01-statements.md",
+      "revision": "db275a0780e06a4b7a06ce7f29e9957d4ad684b583ebd607b8d341631cd1a55f",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "arxiv",
+      "path": "https://arxiv.org/pdf/0910.2766v2",
+      "revision": "0910.2766v2",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "arxiv",
+      "path": "https://arxiv.org/html/1601.03248v2",
+      "revision": "1601.03248v2",
+      "relation": "weaker"
+    },
+    {
+      "repository": "arxiv",
+      "path": "https://arxiv.org/abs/0904.1296v1",
+      "revision": "0904.1296v1",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "combinatorialpress",
+      "path": "https://combinatorialpress.com/article/ars/Volume%20097/volume-97-paper-9.pdf",
+      "revision": "Ars Combinatoria 97 (2010), 87-95; retrieved 2026-09-06",
+      "relation": "weaker"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T07:27:16Z"
+}
