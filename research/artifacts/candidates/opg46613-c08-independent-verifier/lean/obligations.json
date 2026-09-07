@@ -1,0 +1,16 @@
+{
+  "verdict": "candidate_only",
+  "obligations": [
+    {"id":"O1","statement":"Exact input graph and q=0 labeling","status":"Python byte/hash/edge equality passed; Lean bridge pending"},
+    {"id":"O2","statement":"Local degree formula equals actual edge-incidence count","status":"Lean proof script drafted, uncompiled"},
+    {"id":"O3","statement":"Six-state local classification and closed-five certificates","status":"Python exhaustive passed; Lean proof scripts uncompiled"},
+    {"id":"O4","statement":"Bipartition degree sums imply exactly two boundary edges","status":"General mathematical derivation audited; arithmetic Lean draft uncompiled; graph degree-sum bridge absent"},
+    {"id":"O5","statement":"Global two-factor restriction to all and only local bit states","status":"Not formalized; must not be assumed"},
+    {"id":"O6","statement":"Closed local five-cycle becomes an entire global F-component","status":"Not formalized; must account for all boundary incidences"},
+    {"id":"O7","statement":"All-q simplicity, cubicity and vertex-3-connectivity","status":"General proof audited; all-q Lean proof absent"},
+    {"id":"O8","statement":"All-q explicit noninduced P3 partition via a bijection","status":"General proof audited; all-q Lean proof absent"},
+    {"id":"O9","statement":"Cubic perfect-matching complements iff spanning 2-factors","status":"Semantic target drafted; Lean proof absent"},
+    {"id":"O10","statement":"Assemble FiniteTarget and FamilyTarget without additional hypotheses","status":"Not proved in Lean; exact acceptance target pending"},
+    {"id":"O11","statement":"RootProblem","status":"Not solved or reduced to this stronger statement"}
+  ]
+}
