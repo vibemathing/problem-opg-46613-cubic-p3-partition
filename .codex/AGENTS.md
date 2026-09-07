@@ -2,6 +2,12 @@
 
 This directory contains the fixed Skills available to the single-problem Web GPT + GitHub workflow. It does not import user-level Skills or activate upstream repositories.
 
+## Mandatory reasoning discipline
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+Every selected Skill inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`: definition/scope freeze precedes derivation; dependencies and explicit witnesses must be reviewable; candidates must face counterexamples, invariants, monovariants/termination, extremal/symmetry/probability assumptions, scale/boundary checks, and evidence ceilings. Finite testing is not induction, and contraposition cannot reverse or invert an implication.
+
 Use `vibe-mathing-router` to choose exactly one primary owner Skill for the current obligation:
 
 ```text

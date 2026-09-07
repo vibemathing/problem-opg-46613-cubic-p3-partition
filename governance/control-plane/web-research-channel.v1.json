@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "channel_id": "chatgpt-web-github-issue-pr-writer",
   "capability_status": "user_observed_pending_smoke_check",
-  "operational_admission": "synthetic_only_pending_permission_and_ruleset_smoke",
+  "operational_admission": "admitted_problem_repository_namespace",
   "trust_role": "candidate_generator_and_transport_writer",
   "connector_observation": {
     "observed_at": "2026-09-06T05:57:39+08:00",
@@ -27,10 +27,12 @@
       "direct_default_branch_commit": "conditional_on_repository_rules"
     },
     "limitations": [
-      "the exported chat is a connector self-report, not a GitHub object or permission receipt",
+      "the exported chat remains a connector self-report for exact product and installation identity",
+      "live candidate branch, issue, pull-request, check and merge receipts verify effective transport behavior but do not identify the exact plugin or app installation",
       "the exact plugin or app type and installation permission set remain unidentified",
       "repository creation was reported unavailable",
-      "reported repository/default/truth/workflow reach remains broader than the admitted candidate-only path policy"
+      "reported repository/default/truth/workflow reach remains broader than the admitted candidate-only path policy",
+      "capability maturity and per-repository launch admission are separate dimensions"
     ]
   },
   "capabilities": {

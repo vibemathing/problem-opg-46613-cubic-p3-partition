@@ -17,6 +17,7 @@ review_cycle: P90D
 ```text
 standards/
 ├── AGENTS.md                       # 标准目录职责、文件地图和维护边界
+├── MATHEMATICAL_REASONING_DISCIPLINE.md # 定义、逻辑、反例、终止与证据的强制纪律
 ├── VIBE-MATHING-SPEC-v0.1.md       # 历史规范，保留可追溯性
 ├── VIBE-MATHING-SPEC-v0.2.md       # 当前研究闭环、输入与输出规范
 ├── Ponytail工程阶梯标准.md          # 新增所有权面的存在性判断
@@ -26,6 +27,12 @@ standards/
 ├── 劣质代码定义.md                  # 不可接受的工程模式
 └── 非功能性需求标准.md              # 性能、可靠性、安全等默认检查面
 ```
+
+## 数学推理纪律
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+`governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md` 与 `governance/control-plane/mathematical-reasoning-discipline.v1.json` 共同定义生成、研究、验证和验收必须继承的数学纪律；scoped `AGENTS.md` 只能收紧，不能弱化。修改后必须通过数学纪律一致性校验和单问题仓 Harness 重建测试。
 
 ## 依赖与边界
 

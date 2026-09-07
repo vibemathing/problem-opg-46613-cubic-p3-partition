@@ -111,7 +111,7 @@
     "digest_excludes": {
       "type": "array",
       "uniqueItems": true,
-      "items": {"enum": ["HARNESS_SNAPSHOT.json", "WEB_BOOTSTRAP.md"]}
+      "items": {"enum": ["HARNESS_SNAPSHOT.json", "HARNESS_SNAPSHOT_HISTORY.json", "WEB_BOOTSTRAP.md"]}
     },
     "excludes": {
       "type": "array",

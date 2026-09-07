@@ -1,5 +1,9 @@
 # SymPy Counterexample Fixture
 
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+This fixture inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`: a counterexample closes only the exactly frozen universal statement after explicit witness, domain, assumption and statement-faithfulness checks; bounded tests do not prove a universal claim.
+
 本目录保存可通过统一 CLI 注册和运行的确定性 Problem Contract；它证明系统闭环，不进入真实开放问题库。
 
 ```text

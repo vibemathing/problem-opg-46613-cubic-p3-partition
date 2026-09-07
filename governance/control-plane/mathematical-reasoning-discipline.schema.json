@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibemathing.example/schemas/mathematical-reasoning-discipline.schema.json",
+  "title": "Mathematical Reasoning Discipline Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "policy_id",
+    "status",
+    "marker",
+    "normative_standard_path",
+    "required_sequence",
+    "logic_safeguards",
+    "evidence_boundaries",
+    "required_agent_surfaces",
+    "closure_rule"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "policy_id": {"const": "mathematical-reasoning-discipline:v1"},
+    "status": {"const": "active"},
+    "marker": {"const": "MATHEMATICAL_REASONING_DISCIPLINE_V1"},
+    "normative_standard_path": {"const": "governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md"},
+    "required_sequence": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "definition_and_scope_freeze"},
+        {"const": "traceable_dependency_chain"},
+        {"const": "explicit_construction_or_witness"},
+        {"const": "counterexample_pressure_test"},
+        {"const": "invariant_analysis"},
+        {"const": "monovariant_and_termination"},
+        {"const": "extremal_symmetry_probability_checks"},
+        {"const": "scale_and_boundary_checks"},
+        {"const": "verifiable_evidence_and_honest_conclusion"}
+      ],
+      "items": false,
+      "minItems": 9,
+      "maxItems": 9
+    },
+    "logic_safeguards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["induction", "contrapositive"],
+      "properties": {
+        "induction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required_form", "forbidden_substitutes"],
+          "properties": {
+            "required_form": {
+              "type": "array",
+              "prefixItems": [
+                {"const": "prove_base_case"},
+                {"const": "assume_P_n_for_arbitrary_allowed_n"},
+                {"const": "derive_P_n_plus_1"},
+                {"const": "state_covered_domain_and_step"}
+              ],
+              "items": false,
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "forbidden_substitutes": {
+              "type": "array",
+              "minItems": 3,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "contrapositive": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_implication", "valid_form", "forbidden_inferences"],
+          "properties": {
+            "source_implication": {"const": "P -> Q"},
+            "valid_form": {"const": "not Q -> not P"},
+            "forbidden_inferences": {
+              "type": "array",
+              "minItems": 4,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "evidence_boundaries": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "required_agent_surfaces": {
+      "type": "array",
+      "minItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+      }
+    },
+    "closure_rule": {"type": "string", "minLength": 32}
+  }
+}

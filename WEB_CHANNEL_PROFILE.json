@@ -80,10 +80,12 @@
   "connector_observation": {
     "evidence_kind": "user_provided_chat_export",
     "limitations": [
-      "the exported chat is a connector self-report, not a GitHub object or permission receipt",
+      "the exported chat remains a connector self-report for exact product and installation identity",
+      "live candidate branch, issue, pull-request, check and merge receipts verify effective transport behavior but do not identify the exact plugin or app installation",
       "the exact plugin or app type and installation permission set remain unidentified",
       "repository creation was reported unavailable",
-      "reported repository/default/truth/workflow reach remains broader than the admitted candidate-only path policy"
+      "reported repository/default/truth/workflow reach remains broader than the admitted candidate-only path policy",
+      "capability maturity and per-repository launch admission are separate dimensions"
     ],
     "observed_at": "2026-09-06T05:57:39+08:00",
     "product_identity": "unknown_write_capable_github_plugin_or_app",
@@ -122,7 +124,7 @@
     "mathematical_status": "coordination_only",
     "template": ".github/ISSUE_TEMPLATE/web-research-question.yml"
   },
-  "operational_admission": "synthetic_only_pending_permission_and_ruleset_smoke",
+  "operational_admission": "admitted_problem_repository_namespace",
   "prohibited_repository_write_paths": [
     "AGENTS.md",
     "WEB_*.md",

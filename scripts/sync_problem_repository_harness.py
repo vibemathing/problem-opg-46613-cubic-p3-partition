@@ -39,6 +39,56 @@ def by_path(snapshot: dict[str, Any], owner: str = "harness") -> dict[str, dict[
     }
 
 
+def history_entry(snapshot_path: Path, importer_path: Path) -> dict[str, str]:
+    snapshot = load_json(snapshot_path)
+    return {
+        "harness_snapshot_sha256": sha256_file(snapshot_path),
+        "harness_version": snapshot["harness_version"],
+        "tree_sha256": snapshot["tree_sha256"],
+        "source_manifest_sha256": snapshot["source"]["source_manifest_sha256"],
+        "importer_policy_sha256": sha256_file(importer_path),
+    }
+
+
+def merge_snapshot_history(target: Path, built: Path, new_snapshot: dict[str, Any]) -> None:
+    new_history_path = built / "HARNESS_SNAPSHOT_HISTORY.json"
+    new_history = load_json(new_history_path)
+    prior_history_path = target / "HARNESS_SNAPSHOT_HISTORY.json"
+    prior_entries: list[dict[str, Any]] = []
+    if prior_history_path.is_file() and not prior_history_path.is_symlink():
+        prior_history = load_json(prior_history_path)
+        if prior_history.get("repository") != new_history.get("repository"):
+            raise RuntimeError("existing Harness history repository mismatch")
+        prior_entries.extend(prior_history.get("entries", []))
+    prior_entries.append(history_entry(
+        target / "HARNESS_SNAPSHOT.json",
+        target / "scripts/import_web_attempt.py",
+    ))
+    prior_entries.extend(new_history.get("entries", []))
+    merged: list[dict[str, Any]] = []
+    by_digest: dict[str, dict[str, Any]] = {}
+    for entry in prior_entries:
+        digest = entry.get("harness_snapshot_sha256")
+        if not isinstance(digest, str):
+            raise RuntimeError("Harness history entry lacks snapshot digest")
+        previous = by_digest.get(digest)
+        if previous is not None and previous != entry:
+            raise RuntimeError(f"conflicting Harness history entry: {digest}")
+        if previous is None:
+            by_digest[digest] = entry
+            merged.append(entry)
+    new_history["repository_identity"] = {
+        key: new_snapshot["repository_identity"].get(key)
+        for key in ("database_id", "node_id", "default_branch", "visibility")
+    }
+    new_history["entries"] = merged
+    new_history_path.write_text(
+        json.dumps(new_history, ensure_ascii=False, sort_keys=True, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    os.chmod(new_history_path, 0o644)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check or apply a problem-repository Harness snapshot refresh.")
     parser.add_argument("--source-root", type=Path, default=ROOT)
@@ -59,6 +109,10 @@ def main() -> int:
     try:
         old = load_json(target / "HARNESS_SNAPSHOT.json")
         repository = old["repository"]
+        identity = old.get("repository_identity", {})
+        visibility = identity.get("visibility")
+        if visibility not in {"private", "public"}:
+            raise RuntimeError("target snapshot lacks a valid repository visibility")
         problem_file = target / "problem-library/records/canonical-problems.jsonl"
         with tempfile.TemporaryDirectory(prefix="vibe-web-harness-sync-") as temporary:
             built = Path(temporary) / "repo"
@@ -68,7 +122,8 @@ def main() -> int:
                 "--project-root", str(source_root),
                 "--problem-file", str(problem_file),
                 "--repository", repository,
-                "--default-branch", str(old.get("repository_identity", {}).get("default_branch", "main")),
+                "--visibility", visibility,
+                "--default-branch", str(identity.get("default_branch", "main")),
                 "--output", str(built),
                 "--attempts-file", str(target / "research/records/attempts.jsonl"),
                 "--failed-routes-file", str(target / "research/records/failed-routes.jsonl"),
@@ -81,7 +136,6 @@ def main() -> int:
                 command.append("--allow-draft-problem")
             if args.allow_unadmitted_problem:
                 command.append("--allow-unadmitted-problem")
-            identity = old.get("repository_identity", {})
             if identity.get("binding_state") == "verified":
                 command.extend([
                     "--repository-database-id", str(identity["database_id"]),
@@ -95,12 +149,13 @@ def main() -> int:
             if result.returncode != 0:
                 raise RuntimeError(result.stderr.strip() or "replacement Harness build failed")
             new = load_json(built / "HARNESS_SNAPSHOT.json")
+            merge_snapshot_history(target, built, new)
             old_files = by_path(old)
             new_files = by_path(new)
             added = sorted(set(new_files) - set(old_files))
             removed = sorted(set(old_files) - set(new_files))
             changed = sorted(path for path in set(old_files) & set(new_files) if old_files[path]["sha256"] != new_files[path]["sha256"] or old_files[path]["mode"] != new_files[path]["mode"])
-            generated = ["WEB_BOOTSTRAP.md", "WEB_CONTEXT_BUNDLE.md", "WEB_CHANNEL_PROFILE.json", "WEB_ACTIVE_SKILLS.json", "WEB_OUTPUT_CONTRACT.json", "HARNESS_SNAPSHOT.json"]
+            generated = ["WEB_BOOTSTRAP.md", "WEB_CONTEXT_BUNDLE.md", "WEB_CHANNEL_PROFILE.json", "WEB_ACTIVE_SKILLS.json", "WEB_OUTPUT_CONTRACT.json", "HARNESS_SNAPSHOT.json", "HARNESS_SNAPSHOT_HISTORY.json"]
             changed_generated = sorted(path for path in generated if not (target / path).is_file() or sha256_file(target / path) != sha256_file(built / path))
             drift = bool(added or removed or changed or changed_generated)
             if args.apply:

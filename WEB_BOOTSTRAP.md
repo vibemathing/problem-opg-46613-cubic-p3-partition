@@ -10,9 +10,9 @@
 - ProblemContract SHA-256: `f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a`
 - Problem lifecycle: `active`
 - Problem admission: `canonical_admitted`
-- Harness suite: `harness-source:web-research-full` `1.1.2`
-- Suite manifest SHA-256: `97499c98e0774ef58c0be06ff8f3035c89cda1dffb6f9a9d222fb281b049cdb4`
-- Harness snapshot SHA-256: `9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a`
+- Harness suite: `harness-source:web-research-full` `1.2.3`
+- Suite manifest SHA-256: `27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993`
+- Harness snapshot SHA-256: `b8a1b0f220baf243682fb32b8a032347990e828b6864f88bf4cb96cb75a6f5a9`
 - Channel: `chatgpt-web-github-issue-pr-writer`
 
 ## Required read order
@@ -30,11 +30,21 @@
 
 Return a `web-bootstrap-ack.schema.json` object before mathematical work. Hashes shown here are manifest-declared values; do not claim to have recomputed them in chat.
 
+## Fresh-state gate precedence
+
+At the start of every turn, refresh the default branch plus live Issue/branch/PR/check state. Current repository records outrank launch-prompt SHAs, and launch-prompt SHAs outrank old chat replies. A controlled merge may legitimately advance main or the Harness snapshot; use the fresh revision as the packet base after validating the new snapshot. Never repeat an old `BLOCK_PRE_ADMISSION` unless a fresh read proves that the exact Attempt/Route/Graph/Obligation is currently absent or mismatched.
+
+Channel audit maturity is not repository admission. `capability_status` and connector identity fields describe how completely the exact Plugin/App identity has been audited; they do not block a repository whose current identity, canonical ProblemContract, admitted route objects, and transport controls pass. The admitted namespace remains candidate-only and grants no Evidence/Result authority.
+
+Branch protection and automated required checks are transport controls, not demands for manual approval. Reuse the one Issue identified by `(problem_id, attempt_id, route_id, obligation_id)` and label `web-research-question`; search before create, including a second fresh search immediately before creation, so retries and concurrent turns stay idempotent.
+
+One Web response ending is a runtime boundary, not a permission failure and not mathematical completion. Before the boundary, save the best bounded checkpoint when possible. The next turn must resume by rereading current main and live GitHub state rather than replaying a stale bootstrap decision.
+
 ## AI-native writable route
 
 After repository admission, perform the routine candidate transport end to end without project-added human handoffs:
 
-1. Open or use one Issue labeled `web-research-question` for the bounded question.
+1. Reuse the unique Issue labeled `web-research-question` for the exact Problem/Attempt/Route/Obligation tuple; create one only after two fresh searches find none.
 2. Create branch `web/attempt-<attempt-suffix>`.
 3. Add, revise, or delete files only under `research/artifacts/web-inbox/**`, `research/artifacts/candidates/**`, or `research/artifacts/source-notes/**`.
 4. Commit real changes and open a PR using the web candidate template.

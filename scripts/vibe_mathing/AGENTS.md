@@ -1,5 +1,11 @@
 # Runtime Package Agent Guide
 
+## Mathematical reasoning enforcement
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+Runtime adapters and gates inherit `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`. They must preserve frozen statement/quantifier identity, dependency and witness bindings, exact execution scope, termination/resource limits and evidence ceilings; they must reject attempts to promote finite checks, invalid induction/contraposition, transport state, or unfaithful formalizations into mathematical closure.
+
 本目录只实现单机可信研究闭环的连接层：证据解析、原子存储、状态机、确定性 adapter 与 CLI。数学事实仍由三张 JSONL 真相源和派生 Solution View 管理。
 
 ## 目录结构

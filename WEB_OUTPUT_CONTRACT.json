@@ -52,6 +52,14 @@
     "kernel_checked",
     "result_admitted"
   ],
+  "harness_maintenance_policy": {
+    "branch_prefix": "maintenance/harness-",
+    "exact_regenerated_snapshot_delta_required": true,
+    "mathematical_state_changes_allowed": false,
+    "trusted_actors": [
+      "vibemathing"
+    ]
+  },
   "limits": {
     "max_file_bytes": 1048576,
     "max_files_per_pull_request": 64,
@@ -88,5 +96,19 @@
   },
   "save_hidden_chain_of_thought": false,
   "schema_version": "1.0.0",
+  "state_freshness_policy": {
+    "audit_maturity_is_repository_admission": false,
+    "authoritative_state": "fresh_default_branch_and_live_github_objects",
+    "design_time_revisions_may_advance": true,
+    "historical_chat_is_authoritative": false,
+    "issue_creation": "search_twice_then_create_or_reuse_unique",
+    "issue_identity_fields": [
+      "problem_id",
+      "attempt_id",
+      "route_id",
+      "obligation_id"
+    ],
+    "round_end_is_permission_failure": false
+  },
   "verdict": "candidate_only"
 }

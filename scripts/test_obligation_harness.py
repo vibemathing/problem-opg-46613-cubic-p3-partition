@@ -530,6 +530,8 @@ class ObligationHarnessTest(unittest.TestCase):
                 self.assertIn("MemoryError", outcome["stderr"])
 
     def test_lean_exit_zero_with_sorry_does_not_close(self) -> None:
+        if shutil.which("lake") is None or shutil.which("lean") is None:
+            self.skipTest("fixed Lean/Lake toolchain is not installed in this portable test job")
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             context = prepare_project(root)

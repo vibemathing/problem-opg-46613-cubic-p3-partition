@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Fail-closed Git diff gate for Web GPT candidate pull requests."""
+"""Fail-closed Git diff gate for candidate PRs and trusted Harness maintenance."""
 from __future__ import annotations
 
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -17,6 +18,28 @@ from vibe_mathing.web_channel import (
     scan_prohibited_keys,
     validate_packet,
 )
+
+MAINTENANCE_BRANCH_PREFIX = "maintenance/harness-"
+TRUSTED_HARNESS_MAINTAINERS = {"vibemathing"}
+GENERATED_HARNESS_FILES = {
+    "HARNESS_SNAPSHOT.json",
+    "HARNESS_SNAPSHOT_HISTORY.json",
+    "WEB_BOOTSTRAP.md",
+    "WEB_CONTEXT_BUNDLE.md",
+    "WEB_CHANNEL_PROFILE.json",
+    "WEB_ACTIVE_SKILLS.json",
+    "WEB_OUTPUT_CONTRACT.json",
+}
+MUTABLE_TRUTH_FILES = {
+    "problem-library/records/canonical-problems.jsonl",
+    "research/records/attempts.jsonl",
+    "research/records/failed-routes.jsonl",
+    "research/records/obligation-graphs.jsonl",
+    "research/records/candidate-artifacts.jsonl",
+    "research/records/evidence-links.jsonl",
+    "result-library/records/results.jsonl",
+    "result-library/indexes/solutions.json",
+}
 
 
 def git(root: Path, *args: str, binary: bool = False) -> str | bytes:
@@ -60,8 +83,105 @@ def tree_mode_and_size(root: Path, revision: str, path: str) -> tuple[str | None
     return mode, size
 
 
-def validate(root: Path, base: str, head: str, branch: str) -> list[str]:
+def json_at_revision(root: Path, revision: str, path: str) -> dict[str, Any]:
+    raw = git(root, "show", f"{revision}:{path}", binary=True)
+    assert isinstance(raw, bytes)
+    value = json.loads(raw.decode("utf-8", "strict"))
+    if not isinstance(value, dict):
+        raise RuntimeError(f"{path} at {revision} must be a JSON object")
+    return value
+
+
+def semantic_version(value: Any) -> tuple[int, int, int] | None:
+    if not isinstance(value, str) or not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", value):
+        return None
+    major, minor, patch = value.split(".")
+    return int(major), int(minor), int(patch)
+
+
+def harness_owned(snapshot: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    return {
+        item["path"]: item
+        for item in snapshot.get("files", [])
+        if isinstance(item, dict) and item.get("owner") == "harness" and isinstance(item.get("path"), str)
+    }
+
+
+def validate_harness_maintenance(root: Path, base: str, head: str, branch: str, actor: str) -> list[str]:
     errors: list[str] = []
+    if actor not in TRUSTED_HARNESS_MAINTAINERS:
+        errors.append(f"Harness maintenance actor is not trusted: {actor or '<missing>'}")
+    suffix = branch[len(MAINTENANCE_BRANCH_PREFIX):]
+    if not suffix or not re.fullmatch(r"[A-Za-z0-9._-]+", suffix):
+        errors.append(f"invalid Harness maintenance branch: {branch}")
+    try:
+        changes = changed_paths(root, base, head)
+        old_snapshot = json_at_revision(root, base, "HARNESS_SNAPSHOT.json")
+        new_snapshot = json_at_revision(root, head, "HARNESS_SNAPSHOT.json")
+    except (RuntimeError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return errors + [str(exc)]
+    if not changes:
+        return errors + ["Harness maintenance PR has no changed files"]
+
+    old_version = semantic_version(old_snapshot.get("harness_version"))
+    new_version = semantic_version(new_snapshot.get("harness_version"))
+    if old_version is None or new_version is None or new_version <= old_version:
+        errors.append("Harness maintenance must strictly increase semantic harness_version")
+    for field in ("repository", "repository_identity", "problem"):
+        if old_snapshot.get(field) != new_snapshot.get(field):
+            errors.append(f"Harness maintenance cannot change snapshot {field}")
+    if new_snapshot.get("source", {}).get("worktree_dirty") is not False:
+        errors.append("Harness maintenance source must be a clean committed worktree")
+
+    old_files = harness_owned(old_snapshot)
+    new_files = harness_owned(new_snapshot)
+    expected = {
+        path
+        for path in set(old_files) | set(new_files)
+        if old_files.get(path) != new_files.get(path)
+    }
+    actual: set[str] = set()
+    for status, paths in changes:
+        operation = status[:1]
+        if operation not in {"A", "M", "D"} or len(paths) != 1:
+            errors.append(f"Harness maintenance allows only non-rename add/modify/delete: {status} {paths}")
+        for path in paths:
+            if path in actual:
+                errors.append(f"duplicate changed path: {path}")
+            actual.add(path)
+            if path in MUTABLE_TRUTH_FILES or path.startswith("research/artifacts/"):
+                errors.append(f"Harness maintenance cannot change mathematical truth/candidate state: {path}")
+            if operation == "D":
+                continue
+            mode, size = tree_mode_and_size(root, head, path)
+            if mode not in {"100644", "100755"}:
+                errors.append(f"Harness maintenance path must be a regular file: {path}")
+            if size is None:
+                errors.append(f"Harness maintenance path is not a blob: {path}")
+                continue
+            if size > 1_048_576:
+                errors.append(f"Harness maintenance file exceeds 1048576 bytes: {path}")
+            # Harness files contain policy vocabulary (for example prohibited
+            # packet keys and privacy-regex fixtures), so candidate-content
+            # scanners would create false positives here. The exact snapshot
+            # delta, trusted actor, full Harness validator, JSON schemas and
+            # coordinator privacy scan are the maintenance controls.
+    expected.update(path for path in actual if path in GENERATED_HARNESS_FILES)
+    missing = sorted(expected - actual)
+    extra = sorted(actual - expected)
+    if missing:
+        errors.append(f"Harness snapshot delta is missing changed paths: {missing}")
+    if extra:
+        errors.append(f"Harness maintenance changed paths outside regenerated snapshot delta: {extra}")
+    if "HARNESS_SNAPSHOT.json" not in actual:
+        errors.append("Harness maintenance must regenerate HARNESS_SNAPSHOT.json")
+    return errors
+
+
+def validate(root: Path, base: str, head: str, branch: str, actor: str | None = None) -> list[str]:
+    errors: list[str] = []
+    if branch.startswith(MAINTENANCE_BRANCH_PREFIX):
+        return validate_harness_maintenance(root, base, head, branch, actor or "")
     try:
         profile = load_json(root / "WEB_CHANNEL_PROFILE.json")
         output_contract = load_json(root / "WEB_OUTPUT_CONTRACT.json")
@@ -155,6 +275,7 @@ def main() -> int:
     parser.add_argument("--base", required=True)
     parser.add_argument("--head", default="HEAD")
     parser.add_argument("--branch", default=os.environ.get("GITHUB_HEAD_REF", ""))
+    parser.add_argument("--actor", default=os.environ.get("GITHUB_ACTOR", ""))
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
     root = args.project_root.resolve()
@@ -164,7 +285,7 @@ def main() -> int:
             branch = str(git(root, "branch", "--show-current"))
         except RuntimeError:
             branch = ""
-    errors = validate(root, args.base, args.head, branch)
+    errors = validate(root, args.base, args.head, branch, args.actor)
     report = {"decision": "PASS" if not errors else "BLOCK", "base": args.base, "head": args.head, "branch": branch, "errors": errors}
     if args.json:
         print(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2))

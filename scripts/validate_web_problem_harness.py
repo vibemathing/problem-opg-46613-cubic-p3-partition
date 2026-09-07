@@ -12,6 +12,7 @@ from typing import Any
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from validate_mathematical_reasoning_discipline import validate as validate_reasoning_discipline
 from vibe_mathing.web_channel import (
     canonical_json_sha256,
     load_json,
@@ -38,6 +39,7 @@ REQUIRED_CONTROL_FILES = {
     "WEB_ACTIVE_SKILLS.json",
     "WEB_OUTPUT_CONTRACT.json",
     "HARNESS_SNAPSHOT.json",
+    "HARNESS_SNAPSHOT_HISTORY.json",
     ".codex/AGENTS.md",
     ".codex/skills/README.md",
     "problem-library/records/canonical-problems.jsonl",
@@ -47,6 +49,8 @@ REQUIRED_CONTROL_FILES = {
     "research/records/candidate-artifacts.jsonl",
     "research/records/evidence-links.jsonl",
     "result-library/records/results.jsonl",
+    "governance/control-plane/mathematical-reasoning-discipline.schema.json",
+    "governance/control-plane/mathematical-reasoning-discipline.v1.json",
     "governance/control-plane/math-knowledge-source.v1.json",
     "governance/control-plane/math-knowledge-operators.v1.json",
     "governance/control-plane/harness-source-manifest.v1.json",
@@ -54,9 +58,11 @@ REQUIRED_CONTROL_FILES = {
     "governance/control-plane/container-skill-source-lock.v1.json",
     "governance/control-plane/container-skill-source-lock.v1.schema.json",
     "governance/control-plane/harness-snapshot-manifest.v1.schema.json",
+    "governance/control-plane/harness-snapshot-history.v1.schema.json",
     "scripts/build_problem_repository.py",
     "scripts/build_web_context_bundle.py",
     "scripts/sync_problem_repository_harness.py",
+    "scripts/validate_mathematical_reasoning_discipline.py",
     "scripts/validate_math_knowledge_registry.py",
     "scripts/validate_web_problem_harness.py",
     "scripts/validate_web_attempt.py",
@@ -115,6 +121,7 @@ def validate(root: Path) -> list[str]:
         path = root / relative
         if not path.is_file() or path.is_symlink():
             errors.append(f"required regular file missing: {relative}")
+    errors.extend(f"reasoning discipline: {message}" for message in validate_reasoning_discipline(root))
 
     try:
         snapshot = load_json(root / "HARNESS_SNAPSHOT.json")
@@ -168,6 +175,34 @@ def validate(root: Path) -> list[str]:
             errors.append("verified repository identity lacks database/node ID")
 
     try:
+        history = load_json(root / "HARNESS_SNAPSHOT_HISTORY.json")
+        history_schema = root / "governance/control-plane/harness-snapshot-history.v1.schema.json"
+        errors.extend(f"snapshot history schema: {message}" for message in validate_schema(history, history_schema))
+        expected_history_identity = {
+            key: repository_identity.get(key)
+            for key in ("database_id", "node_id", "default_branch", "visibility")
+        }
+        if history.get("repository") != snapshot.get("repository"):
+            errors.append("Harness snapshot history repository mismatch")
+        if history.get("repository_identity") != expected_history_identity:
+            errors.append("Harness snapshot history repository identity mismatch")
+        entries = history.get("entries", [])
+        digests = [item.get("harness_snapshot_sha256") for item in entries if isinstance(item, dict)]
+        if len(digests) != len(set(digests)):
+            errors.append("Harness snapshot history contains duplicate digests")
+        current_entry = {
+            "harness_snapshot_sha256": sha256_file(root / "HARNESS_SNAPSHOT.json"),
+            "harness_version": snapshot.get("harness_version"),
+            "tree_sha256": snapshot.get("tree_sha256"),
+            "source_manifest_sha256": snapshot.get("source", {}).get("source_manifest_sha256"),
+            "importer_policy_sha256": sha256_file(root / "scripts/import_web_attempt.py"),
+        }
+        if current_entry not in entries:
+            errors.append("Harness snapshot history lacks the current snapshot/importer binding")
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        errors.append(f"Harness snapshot history invalid: {exc}")
+
+    try:
         problem = load_problem(root)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         errors.append(str(exc))
@@ -199,6 +234,28 @@ def validate(root: Path) -> list[str]:
             errors.append("WEB_OUTPUT_CONTRACT autonomy policy drift")
         if output_contract.get("repository_scope_policy") != profile.get("repository_scope_policy"):
             errors.append("WEB_OUTPUT_CONTRACT repository scope policy drift")
+        expected_maintenance = {
+            "branch_prefix": "maintenance/harness-",
+            "trusted_actors": ["vibemathing"],
+            "exact_regenerated_snapshot_delta_required": True,
+            "mathematical_state_changes_allowed": False,
+        }
+        if output_contract.get("harness_maintenance_policy") != expected_maintenance:
+            errors.append("WEB_OUTPUT_CONTRACT Harness maintenance policy drift")
+        freshness = output_contract.get("state_freshness_policy", {})
+        expected_freshness = {
+            "authoritative_state": "fresh_default_branch_and_live_github_objects",
+            "historical_chat_is_authoritative": False,
+            "design_time_revisions_may_advance": True,
+            "audit_maturity_is_repository_admission": False,
+            "round_end_is_permission_failure": False,
+            "issue_identity_fields": ["problem_id", "attempt_id", "route_id", "obligation_id"],
+            "issue_creation": "search_twice_then_create_or_reuse_unique",
+        }
+        if freshness != expected_freshness:
+            errors.append("WEB_OUTPUT_CONTRACT state freshness policy drift")
+        if profile.get("operational_admission") != "admitted_problem_repository_namespace":
+            errors.append("Web candidate namespace is not operationally admitted")
         required_operations = {
             "issue_create", "candidate_branch_create", "candidate_file_create", "candidate_file_update",
             "candidate_file_delete", "commit_create", "pull_request_create", "pull_request_review",

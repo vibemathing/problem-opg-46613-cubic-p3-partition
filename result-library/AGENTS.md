@@ -13,6 +13,12 @@ result-library/
 └── indexes/solutions.json
 ```
 
+## Result 验收数学推理纪律
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+Result gate 必须按 `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md` 复核定义/量词冻结、完整依赖链、显式 witness、反例攻击、不变量、单调量与终止、极值/对称/概率方法前提、尺度/边界以及证据能力。有限样本不得冒充归纳；逆否必须保持 `P → Q` 与 `¬Q → ¬P`；kernel check 必须与 statement-faithfulness、axiom/escape audit 分离。任一必要义务未闭合时拒绝 `established/refuted`。
+
 ## 职责与依赖
 
 - 上游：每个结果必须引用一个 canonical `Problem` 和一个 `Attempt`。
