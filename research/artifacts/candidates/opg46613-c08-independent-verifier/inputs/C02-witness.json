@@ -1,0 +1,252 @@
+{
+  "verdict": "candidate_only",
+  "python": "3.13.5",
+  "graph_order": 18,
+  "graph_size": 27,
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      17
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      13
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      14
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      11,
+      16
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      12,
+      17
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ]
+  ],
+  "vertex_deletion_sets_tested": 172,
+  "perfect_matching_count": 26,
+  "cycle_spectrum_counts": [
+    {
+      "lengths": [
+        4,
+        5,
+        9
+      ],
+      "count": 6
+    },
+    {
+      "lengths": [
+        5,
+        6,
+        7
+      ],
+      "count": 4
+    },
+    {
+      "lengths": [
+        5,
+        13
+      ],
+      "count": 16
+    }
+  ],
+  "p3_factor": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      4,
+      7,
+      5
+    ],
+    [
+      3,
+      8,
+      6
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16,
+      17
+    ]
+  ],
+  "sample_matching": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      13
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      16,
+      17
+    ]
+  ],
+  "sample_cycles": [
+    [
+      10,
+      11,
+      16,
+      15
+    ],
+    [
+      1,
+      2,
+      7,
+      4,
+      6
+    ],
+    [
+      0,
+      5,
+      8,
+      3,
+      17,
+      12,
+      13,
+      14,
+      9
+    ]
+  ],
+  "algorithm": "least-uncovered-vertex perfect matching recursion; exact P3 cover recursion; deletion BFS",
+  "limits": {
+    "timeout_seconds": 20,
+    "threads": 1,
+    "memory_bytes": 268435456,
+    "cpu_seconds": 20,
+    "maximum_output_bytes": 16384
+  },
+  "limitations": [
+    "generator-side exact screening only",
+    "no EvidenceLink or admission",
+    "no claim of minimum counterexample order"
+  ]
+}
