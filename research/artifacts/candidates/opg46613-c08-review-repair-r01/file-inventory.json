@@ -22,16 +22,25 @@
     },
     {
       "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/repair-status.json",
-      "bytes": 2765,
-      "sha256": "0a581f0e151543ea636a233711658be3202cd9a70197ef05820fc70789a029ed",
-      "git_blob_sha": "9eda1f2dc0ea4b38e56e79794a90779b5776f88e"
+      "bytes": 3459,
+      "sha256": "5401b584ae1e8e2efca9765eede0391f393d0b3545e5aba84ecd2181a97c5a30",
+      "git_blob_sha": "55221dac7d5b7533b7955ee3855a230a778fcc19"
     },
     {
       "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/README.md",
-      "bytes": 4003,
-      "sha256": "e8d5f0e317ab9576c549b6d141c3de8879134dd194b399a551c560bb6d1737fe",
-      "git_blob_sha": "6998979d22a0e997bbc3887106604ff2cf6f7289"
+      "bytes": 4397,
+      "sha256": "4dbb019d5a0e648722dfc2c7316153c720c09087d6d278ddc0e04f89d41a42ac",
+      "git_blob_sha": "43a3642c4e64f28d82d4ab5078317b1e831dff6e"
     }
   ],
-  "originals_unchanged": true
+  "originals_unchanged": true,
+  "resolved_environment_source": {
+    "revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+    "manifest_path": "fixtures/lean-proof/lake-manifest.json",
+    "manifest_git_blob_sha": "d1580b698c57aa5a2d6b2e8542c8fa3940832116",
+    "lean_toolchain_path": "fixtures/lean-proof/lean-toolchain",
+    "lean_toolchain_git_blob_sha": "025e59548e48cf71f2744154e2890beefe30a258",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "lean": "4.33.0"
+  }
 }

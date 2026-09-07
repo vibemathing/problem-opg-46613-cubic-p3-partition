@@ -46,12 +46,12 @@
   },
   "planned_replay": {
     "commands": [
-      "lean -o Local.olean Local.lean",
-      "lake env lean MathlibTargets.lean"
+      "lake env lean ../../research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/Local.lean",
+      "lake env lean ../../research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/MathlibTargets.lean"
     ],
-    "execution_directory": "the new versioned lean directory, using a separately pinned Mathlib environment for the second command",
-    "lean_version": "4.33.0 as user-reviewed target",
-    "mathlib_commit": "requires full revision corresponding to user prefix db584cd6",
+    "execution_directory": "fixtures/lean-proof",
+    "lean_version": "4.33.0 (repository fixture toolchain)",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
     "per_command_limits": {
       "cpu_seconds": 600,
       "wall_seconds": 610,
@@ -67,5 +67,16 @@
     "Audit declaration axioms and semantic faithfulness after successful compilation.",
     "Global restriction, matching complement bridge, full family and root are still unproved here."
   ],
-  "mathematical_admission": false
+  "mathematical_admission": false,
+  "repository_environment_pin": {
+    "revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "manifest_path": "fixtures/lean-proof/lake-manifest.json",
+    "manifest_git_blob_sha": "d1580b698c57aa5a2d6b2e8542c8fa3940832116",
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "toolchain_path": "fixtures/lean-proof/lean-toolchain",
+    "toolchain_git_blob_sha": "025e59548e48cf71f2744154e2890beefe30a258",
+    "matches_user_version_and_prefix": true,
+    "meaning": "read-only repository pin for planned replay, not a receipt proving the exact environment of the user run"
+  }
 }
