@@ -1,0 +1,23 @@
+{
+  "axiom_report": null,
+  "executed_as_trusted_verifier": false,
+  "frozen_report_sha256": "a7247c8ad62756a160e361b1f4d91a62ad377a58a960c2b8727c6e242da549e2",
+  "generator_trust_domain": "web-candidate-generation",
+  "kind": "verifier_and_formalization_request_not_receipt",
+  "lean_elaboration": null,
+  "new_consumer_requirement": "Separate admitted proof assistant formalization of restriction/gluing and preservation of simple cubic 3-vertex-connected host graphs, then an axiom and statement comparison review; existing generator checker is not the verifying implementation.",
+  "no_truth_record_authority": true,
+  "obligation_id": "obligation:opg46613-root",
+  "open_gap": "No successful registered proof/faithfulness/closure receipt. Even a receipt for this bridge cannot prove triangle-free root existence.",
+  "prior_request": "research/artifacts/candidates/opg46613-triangle-simulator-audit-r01/admission-request.json",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "request_scope": "Previously merged triangle-free reduction lemma; do not rerun its 18/45-vertex object audit here.",
+  "required_capabilities": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "source_revision": "d1df88796cc753123f53796f8de5c9e89066e0cc",
+  "trusted_attestation": null,
+  "verdict": "candidate_only"
+}

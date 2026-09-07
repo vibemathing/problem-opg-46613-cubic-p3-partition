@@ -1,0 +1,52 @@
+{
+  "construction_probe": {
+    "earlier_failed_draft": "An intermediate attempt iterated over a missing model, causing TypeError; it is a programming error, not mathematical evidence.",
+    "original_source_sha256": "3410f92f880e1b26fe694c6efb20fc85f48ef61d2bcaefca1ee2b022da4ea162",
+    "program": "construct_probe.py",
+    "sanitization": "Only the output filename expression was changed from a local absolute path to a relative path; sanitized copy not rerun. Final checker and complete certificates supersede development tests."
+  },
+  "historical_missing_materials_recovered": false,
+  "one_defect_probe": {
+    "conclusion": "No universal strict-descent inference; the archived R07 failure family takes precedence.",
+    "observed_exit_code": 0,
+    "program": "probe.py",
+    "samples_not_certified_as_three_connected": true,
+    "saved_output": "probe-output.json",
+    "seed": 4661326
+  },
+  "parity_probe": {
+    "elapsed_seconds_from_tool": 0.018835900999988553,
+    "meaning": "Reject an always-odd parity shortcut. Only G36 is needed; no new host-property audit of previous 18/45 objects is claimed.",
+    "observed_exit_code": 0,
+    "observed_results": [
+      {
+        "count": 9360,
+        "n": 36,
+        "name": "G36",
+        "states": 766
+      },
+      {
+        "count": 297,
+        "n": 18,
+        "name": "Hamilton18",
+        "states": 321
+      },
+      {
+        "count": 9,
+        "n": 6,
+        "name": "K33",
+        "states": 11
+      },
+      {
+        "count": 634,
+        "n": 24,
+        "name": "layer24",
+        "states": 323
+      }
+    ],
+    "program": "parity_probe.py"
+  },
+  "scope": "Discarded exploratory programs; no graph-order census and no dependency of the general theorem.",
+  "trusted_attestation": null,
+  "verdict": "candidate_only"
+}

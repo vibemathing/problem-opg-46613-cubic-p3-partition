@@ -1,0 +1,97 @@
+{
+  "file_sha256": {
+    "failure-certificates.json": "3a196cbc334c1865f73f60da57e9a858ec0973c340bbda70ba451514e6fdc232",
+    "input.json": "b1d177cfe89f6226d7da03c390698a2a775caa46195022dfe196a2222efd31c8",
+    "run_bounded.py": "3e6fa306257a0cdabfe883d6793df92f8c27bd62da91057ec7adc015994fd0e8"
+  },
+  "kind": "same_generation_domain_execution_observations",
+  "lean": {
+    "axiom_audit": null,
+    "elaboration": null,
+    "executed": false
+  },
+  "runs": [
+    {
+      "command": "python3 -I -S checker.py",
+      "elapsed_wall_seconds": 0.116807,
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes": 536870912,
+        "cpu_seconds": 25,
+        "per_output_bytes": 2097152,
+        "threads": 1,
+        "wall_seconds": 35,
+        "worker_processes": 1
+      },
+      "program": "checker.py",
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "source_sha256": "a45a16f0c94db89085989463b309a019b0ab57869fa5a413e419246e10969bb1",
+      "start": "2026-09-07T08:20:29.471839+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1d4d66f8b3cc4f801328f8124ee6f4b99aa1fb6bc7ce3c222a8af7f202c4d0df",
+      "timed_out": false
+    },
+    {
+      "command": "python3 -I -S normal_form.py",
+      "elapsed_wall_seconds": 0.270238,
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes": 536870912,
+        "cpu_seconds": 20,
+        "per_output_bytes": 2097152,
+        "threads": 1,
+        "wall_seconds": 30,
+        "worker_processes": 1
+      },
+      "program": "normal_form.py",
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "source_sha256": "0438cb27f268934dc2906480166ff543a3aa72e64170701150dcd1f89321f5f1",
+      "start": "2026-09-07T08:20:29.589005+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f07f223f61c37a1f2831673598e9beeb635ecc6ce36b2fce344ddefe3af29639",
+      "timed_out": false
+    },
+    {
+      "command": "python3 -I -S gap_forest.py",
+      "elapsed_wall_seconds": 3.827851,
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes": 536870912,
+        "cpu_seconds": 30,
+        "per_output_bytes": 2097152,
+        "threads": 1,
+        "wall_seconds": 40,
+        "worker_processes": 1
+      },
+      "program": "gap_forest.py",
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "source_sha256": "1db1eea0f8ec4f43c064020b3cd3c7a935cd277f4101fcae80e036845cc0b6f8",
+      "start": "2026-09-07T08:20:29.860059+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d532c7ca1f7dc1fa918be03037aa198920e7ee85e0a963822d886274319bd983",
+      "timed_out": false
+    },
+    {
+      "command": "python3 -I -S verify_certificates.py",
+      "elapsed_wall_seconds": 0.267604,
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes": 536870912,
+        "cpu_seconds": 25,
+        "per_output_bytes": 2097152,
+        "threads": 1,
+        "wall_seconds": 35,
+        "worker_processes": 1
+      },
+      "program": "verify_certificates.py",
+      "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+      "source_sha256": "b524a96d35b4e2e26d8729e5473c049419f31b48646bfb97b2919eec3879b416",
+      "start": "2026-09-07T08:20:33.688632+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f1f11ae43bf56551d6ee23997b64d2f8fe69422199ea521b14ece0bcfe23369d",
+      "timed_out": false
+    }
+  ],
+  "trusted_attestation": null,
+  "verdict": "candidate_only"
+}
