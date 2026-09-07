@@ -1,5 +1,9 @@
 # Lean Proof Fixture
 
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+This fixture inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`: the formal statement must match frozen definitions and quantifiers, induction/contraposition must be logically valid, and kernel success still requires axiom/escape and statement-faithfulness audits.
+
 本目录用固定 Lean/Mathlib 构建一个无逃逸的最小定理，并输出 `#print axioms` 供证据层审计。
 
 ```text

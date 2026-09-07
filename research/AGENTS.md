@@ -2,6 +2,12 @@
 
 `research/` holds the research chain for the repository's one canonical ProblemContract.
 
+## Mandatory reasoning discipline
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+Every route and Candidate must follow `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`. Bind it to frozen definitions, quantifiers, assumptions and target; expose dependencies; record applicable witness/construction, minimal-counterexample, invariant, monovariant/termination, extremal/symmetry/probability and scale/boundary checks. Ordinary induction and contraposition must use their exact valid forms. Unresolved checks stay open and cannot be replaced by computation, model confidence, CI, transport, or self-review.
+
 - `records/attempts.jsonl`: admitted research attempts and generators.
 - `records/failed-routes.jsonl`: append-only blockers and dead routes.
 - `records/obligation-graphs.jsonl`: acyclic claim dependencies.

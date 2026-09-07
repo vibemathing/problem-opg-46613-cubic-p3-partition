@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "mathematical-reasoning-discipline:v1",
+  "status": "active",
+  "marker": "MATHEMATICAL_REASONING_DISCIPLINE_V1",
+  "normative_standard_path": "governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md",
+  "required_sequence": [
+    "definition_and_scope_freeze",
+    "traceable_dependency_chain",
+    "explicit_construction_or_witness",
+    "counterexample_pressure_test",
+    "invariant_analysis",
+    "monovariant_and_termination",
+    "extremal_symmetry_probability_checks",
+    "scale_and_boundary_checks",
+    "verifiable_evidence_and_honest_conclusion"
+  ],
+  "logic_safeguards": {
+    "induction": {
+      "required_form": [
+        "prove_base_case",
+        "assume_P_n_for_arbitrary_allowed_n",
+        "derive_P_n_plus_1",
+        "state_covered_domain_and_step"
+      ],
+      "forbidden_substitutes": [
+        "finite_sample_checks",
+        "observed_recurrence_pattern",
+        "bounded_exhaustive_search"
+      ]
+    },
+    "contrapositive": {
+      "source_implication": "P -> Q",
+      "valid_form": "not Q -> not P",
+      "forbidden_inferences": [
+        "Q -> P",
+        "not P -> not Q",
+        "absence_of_sufficient_condition_implies_false",
+        "absence_of_sufficient_condition_called_absence_of_necessary_condition"
+      ]
+    }
+  },
+  "evidence_boundaries": [
+    "generation_is_not_verification",
+    "finite_testing_is_not_induction",
+    "no_counterexample_found_is_not_proof",
+    "kernel_check_requires_statement_faithfulness",
+    "transport_state_is_not_mathematical_evidence",
+    "unexecuted_tool_plan_is_pending_unverified"
+  ],
+  "required_agent_surfaces": [
+    "AGENTS.md",
+    ".github/AGENTS.md",
+    ".codex/AGENTS.md",
+    "governance/harness/PROJECT_AGENTS.md",
+    "governance/standards/AGENTS.md",
+    "problem-library/AGENTS.md",
+    "research/AGENTS.md",
+    "result-library/AGENTS.md",
+    "fixtures/lean-proof/AGENTS.md",
+    "fixtures/smt-lra/AGENTS.md",
+    "fixtures/sympy-counterexample/AGENTS.md",
+    "scripts/vibe_mathing/AGENTS.md"
+  ],
+  "closure_rule": "An unmet applicable discipline item remains an open obligation, failed route, bounded candidate, or inconclusive outcome; it never silently closes mathematics."
+}

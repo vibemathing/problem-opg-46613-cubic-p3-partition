@@ -4,6 +4,12 @@ This file is the Web GPT + GitHub plugin project context embedded in each proble
 
 The repository contains exactly one ProblemContract and a fixed, self-contained research Harness. It has no runtime dependency on the local multi-worker solution, compute nodes, tmux, GPU dispatch, model sessions, or another repository's moving branch.
 
+## Mandatory reasoning inheritance
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+All mathematical work inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`: freeze definitions/quantifiers/assumptions/target first; expose the dependency chain; then explicitly address construction or witness, counterexample attacks, invariants, monovariants/termination, extremal/symmetry/probability hypotheses, scale/boundary cases, and verifiable evidence. Finite samples are not induction; contraposition is only `not Q -> not P` for an established `P -> Q`; scoped instructions cannot weaken these rules.
+
 Keep the chain `ProblemContract -> Attempt/Route -> Obligation DAG -> Candidate -> verifier receipt -> EvidenceLink -> Result` explicit. Candidate transport, GitHub state, CI, and model output do not create mathematical evidence or conclusions.
 
 During research, write only the candidate paths admitted by `WEB_CHANNEL_PROFILE.json`. Problem, records, Evidence, Result, schema, workflow, scripts, Skills, and Harness snapshots are protected. Harness maintenance requires an explicit maintainer task, regenerated snapshot, and full validation.

@@ -53,6 +53,12 @@ raw/erdosproblems/
 └── tags/                    # tags-index.json + 每个标签页（对账证据）
 ```
 
+## ProblemContract 数学推理纪律
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+ProblemContract 准入必须执行 `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md` 的定义先行规则：冻结对象、定义域、量词顺序、定义、前提、公理、目标、精确否定、尺度与极端边界，并登记来源差异和可能的语义重复。来源标题、状态、有限样本或模型概括不得替代 statement-faithfulness 审查；歧义未闭合时禁止进入研究准入。
+
 ## 边界与依赖
 
 - 上游：Wikipedia MediaWiki API、UnsolvedMath 公开目录分页/Hugging Face 固定 JSON 分发与 Erdős Problems 站点页面。

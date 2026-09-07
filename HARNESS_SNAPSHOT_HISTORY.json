@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+      "harness_version": "1.1.2",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "97499c98e0774ef58c0be06ff8f3035c89cda1dffb6f9a9d222fb281b049cdb4",
+      "tree_sha256": "57d1cabccb569e9ec293c8b8c03d7f03046d40f44152c54e1154359e4a7fae02"
+    },
+    {
+      "harness_snapshot_sha256": "b8a1b0f220baf243682fb32b8a032347990e828b6864f88bf4cb96cb75a6f5a9",
+      "harness_version": "1.2.3",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993",
+      "tree_sha256": "83d71a4d2845132ca0dce97ae31fb2d5522b0a0228b563fc762b7df146f3d4f1"
+    }
+  ],
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "database_id": 1358762601,
+    "default_branch": "main",
+    "node_id": "R_kgDOUP0SaQ",
+    "visibility": "public"
+  },
+  "schema_version": "1.0.0"
+}

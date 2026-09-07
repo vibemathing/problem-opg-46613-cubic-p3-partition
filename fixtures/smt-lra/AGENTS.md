@@ -1,5 +1,9 @@
 # SMT/LRA Fixture Agent Guide
 
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+This fixture inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`: freeze the exact theory/domain and witness obligations, attack boundary cases, and keep finite SAT/SMT evidence within its declared scope rather than treating it as induction or a universal proof.
+
 本目录保存 SymPy 命题 SAT 与 QF-LRA theory solver 的固定反例样例，只证明有限 solver、精确 witness 与证据回执连接正确。
 
 ## 文件

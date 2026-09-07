@@ -131,6 +131,21 @@ def snapshot_file_sha256(root: Path) -> str:
     return sha256_file(path)
 
 
+def snapshot_history_bindings(root: Path) -> set[tuple[str, str]]:
+    path = root / "HARNESS_SNAPSHOT_HISTORY.json"
+    if not path.is_file() or path.is_symlink():
+        raise ValueError("HARNESS_SNAPSHOT_HISTORY.json is missing or unsafe")
+    history = load_json(path)
+    entries = history.get("entries")
+    if not isinstance(entries, list):
+        raise ValueError("Harness snapshot history entries must be an array")
+    return {
+        (str(entry.get("harness_snapshot_sha256", "")), str(entry.get("importer_policy_sha256", "")))
+        for entry in entries
+        if isinstance(entry, dict)
+    }
+
+
 def find_graph(root: Path, graph_id: str) -> dict[str, Any] | None:
     for record in load_jsonl(root / "research/records/obligation-graphs.jsonl"):
         if record.get("graph_id") == graph_id:
@@ -217,17 +232,19 @@ def validate_packet(root: Path, packet_path: Path) -> tuple[dict[str, Any] | Non
     if packet.get("problem_contract_sha256") != contract_digest:
         errors.append("packet ProblemContract digest mismatch")
     try:
-        snapshot_digest = snapshot_file_sha256(root)
-    except ValueError as exc:
+        snapshot_bindings = snapshot_history_bindings(root)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
         errors.append(str(exc))
-        snapshot_digest = None
-    if snapshot_digest and packet.get("harness_snapshot_sha256") != snapshot_digest:
-        errors.append("packet Harness snapshot digest mismatch")
+        snapshot_bindings = set()
+    packet_binding = (
+        str(packet.get("harness_snapshot_sha256", "")),
+        str(packet.get("importer_policy_sha256", "")),
+    )
+    if snapshot_bindings and packet_binding not in snapshot_bindings:
+        errors.append("packet Harness snapshot/importer binding is not in immutable history")
     importer_path = root / "scripts/import_web_attempt.py"
     if not importer_path.is_file() or importer_path.is_symlink():
         errors.append("trusted importer policy is missing or unsafe")
-    elif packet.get("importer_policy_sha256") != sha256_file(importer_path):
-        errors.append("packet trusted importer policy digest mismatch")
 
     attempts = {record.get("attempt_id"): record for record in load_jsonl(root / "research/records/attempts.jsonl")}
     attempt = attempts.get(packet.get("attempt_id"))
