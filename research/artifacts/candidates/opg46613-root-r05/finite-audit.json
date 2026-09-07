@@ -1,0 +1,272 @@
+{
+  "center_censuses": [
+    {
+      "center_distance_histogram": {
+        "0": 1,
+        "2": 16,
+        "3": 16,
+        "4": 8
+      },
+      "center_subsets_checked": 495,
+      "feasible_center_sets": 41,
+      "localization_checked_for_all_feasible_centers": true,
+      "m": 2,
+      "matching_and_exact_cover_agree": true,
+      "n": 12,
+      "p3_factors": 65
+    },
+    {
+      "center_distance_histogram": {
+        "0": 1,
+        "2": 12,
+        "3": 64,
+        "4": 90,
+        "5": 60,
+        "6": 16
+      },
+      "center_subsets_checked": 18564,
+      "feasible_center_sets": 243,
+      "localization_checked_for_all_feasible_centers": true,
+      "m": 3,
+      "matching_and_exact_cover_agree": true,
+      "n": 18,
+      "p3_factors": 297
+    }
+  ],
+  "execution": {
+    "cpu_seconds": 35,
+    "exit_code": 0,
+    "internal_deadline_seconds": 30,
+    "kind": "local_generator_only",
+    "local_code_sha256": "e9283f3a43b48a8342a4db2adc66db4612a7d1edfa1088e11c6f7e9aec79fe4e",
+    "memory_mib": 512,
+    "output_limit_kib": 2048,
+    "processes": 1,
+    "raw_output_sha256": "b46551fc7594ac1aac1ab5dd4db00986efe271b4dcc09ca11bde6136f6f2d7ed",
+    "source_status": "local-only; no executable GitHub artifact asserted",
+    "wall_seconds": 40
+  },
+  "family_checks": [
+    {
+      "edges": 18,
+      "girth": 5,
+      "m": 2,
+      "n": 12,
+      "product_factors_checked": 9,
+      "single_exchanges_nondominating": 32,
+      "vertex_deletion_sets_checked": 79
+    },
+    {
+      "edges": 27,
+      "girth": 6,
+      "m": 3,
+      "n": 18,
+      "product_factors_checked": 27,
+      "single_exchanges_nondominating": 72,
+      "vertex_deletion_sets_checked": 172
+    },
+    {
+      "edges": 36,
+      "girth": 6,
+      "m": 4,
+      "n": 24,
+      "product_factors_checked": 81,
+      "single_exchanges_nondominating": 128,
+      "vertex_deletion_sets_checked": 301
+    },
+    {
+      "edges": 45,
+      "girth": 6,
+      "m": 5,
+      "n": 30,
+      "product_factors_checked": 243,
+      "single_exchanges_nondominating": 200,
+      "vertex_deletion_sets_checked": 466
+    },
+    {
+      "edges": 54,
+      "girth": 6,
+      "m": 6,
+      "n": 36,
+      "product_factors_checked": 729,
+      "single_exchanges_nondominating": 288,
+      "vertex_deletion_sets_checked": 667
+    },
+    {
+      "edges": 63,
+      "girth": 6,
+      "m": 7,
+      "n": 42,
+      "product_factors_checked": 0,
+      "single_exchanges_nondominating": 392,
+      "vertex_deletion_sets_checked": 904
+    },
+    {
+      "edges": 72,
+      "girth": 6,
+      "m": 8,
+      "n": 48,
+      "product_factors_checked": 0,
+      "single_exchanges_nondominating": 512,
+      "vertex_deletion_sets_checked": 1177
+    },
+    {
+      "edges": 81,
+      "girth": 6,
+      "m": 9,
+      "n": 54,
+      "product_factors_checked": 0,
+      "single_exchanges_nondominating": 648,
+      "vertex_deletion_sets_checked": 1486
+    },
+    {
+      "edges": 90,
+      "girth": 6,
+      "m": 10,
+      "n": 60,
+      "product_factors_checked": 0,
+      "single_exchanges_nondominating": 800,
+      "vertex_deletion_sets_checked": 1831
+    }
+  ],
+  "limitations": [
+    "finite tests of the explicit G_m family, not a census of cubic graphs",
+    "local generator audit only",
+    "no arbitrary-high-girth family construction is asserted"
+  ],
+  "python": "3.13.5",
+  "small_control": {
+    "centers": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        11
+      ]
+    ],
+    "factor": [
+      [
+        0,
+        8,
+        4
+      ],
+      [
+        1,
+        9,
+        5
+      ],
+      [
+        2,
+        10,
+        6
+      ],
+      [
+        3,
+        11,
+        7
+      ]
+    ],
+    "n": 12,
+    "other_centers": [
+      0,
+      5,
+      10,
+      11
+    ],
+    "other_factor": [
+      [
+        8,
+        0,
+        1
+      ],
+      [
+        4,
+        5,
+        9
+      ],
+      [
+        2,
+        10,
+        6
+      ],
+      [
+        3,
+        11,
+        7
+      ]
+    ]
+  },
+  "verdict": "candidate_only"
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762601,
+    "node_id": "R_kgDOUP0SaQ",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "9ff6002285f1cc3ee7bec0a201a09d048dc0fa95a3156120d20aeb9b4177858a",
+  "base_revision": "130057cd97ee53d31d6a0898267bda05b9329e1e",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-root",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-6 Astra Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-opg46613-root-r02",
+    "issue_number": 3,
+    "issue_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3",
+    "pull_request_number": 11,
+    "pull_request_url": "https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/pull/11"
+  },
+  "objective": "Direct root repair: exact center-capacity and port-capacity Hall criteria, permanent counting, minimal Hall-defect constraints, and an explicit cyclically-4-connected specified-center counterexample with its own positive P3 factor.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:opg46613-root-r02-center-capacity",
+      "kind": "proof",
+      "locator": "research/artifacts/candidates/opg46613-root-r02/center-hall.md",
+      "sha256": "491c9b8ced760cd4904cd1bb0c36cba84e975bc6ad44f935af106e68dc0b15b4"
+    },
+    {
+      "candidate_id": "candidate:opg46613-root-r02-m12-center-witness",
+      "kind": "computation",
+      "locator": "research/artifacts/candidates/opg46613-root-r02/m12-center-witness.json",
+      "sha256": "62a5ccb2d77a2b51995bff6caed77ce00a9c9deaeec6682c19d64bfa4bd1f441"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:opg46613-root-r02-center-hall",
+      "text": "A specified size-n/3 center set is realizable exactly when every subset has at least twice as many external neighbors.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r02-boundary-capacity",
+      "text": "After subtracting selected external ports, role consistency, total balance and residual-capacity Hall inequalities characterize each actual local signature, including repeated ports.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r02-permanent",
+      "text": "Local realization counts equal the sum of clone-adjacency permanents divided by the products of residual-capacity factorials.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r02-minimal-defect",
+      "text": "A minimal Hall-defective support with all center external degrees at least two is connected in its incidence graph, has defect one or two, and satisfies defect plus each private-neighbor count at most two.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r02-center-frontier",
+      "text": "For an internally edgeless dominating center set in a cubic cyclically-4-connected root-domain graph, a two-center Hall obstruction cannot occur; excluding 4-cycles also excludes three-center Hall obstructions.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:opg46613-root-r02-m12-witness",
+      "text": "The displayed M12 has cyclic edge connectivity four and a P3-factor, but the displayed dominating size-four center set of induced maximum degree one violates Hall.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "Finite simple graphs and selected, not necessarily induced, two-edge paths.",
+    "A specified center set has exactly one third of all vertices.",
+    "Ports are indexed incidences; A and B roles must be consistent at vertices, including repeated ports.",
+    "The cyclic-connectivity Hall-frontier statement additionally assumes that the center set has no internal edges and dominates its complement.",
+    "Allowed axioms remain finite-graph-basic and finite-combinatorics."
+  ],
+  "risks": [
+    "No proof that every root-domain graph has a center set satisfying all Hall inequalities is supplied.",
+    "The M12 witness invalidates only a specified-center shortcut, not the root; a positive factor is explicit.",
+    "The protected graph retains the obsolete divisible-two-factor dependency. This candidate does not use it or amend records; admission needs trusted dependency repair.",
+    "Fresh computation is local generator-side work, not GitHub command execution or a registered verifier receipt.",
+    "The old partial order-18 checkpoint data is not present in this runtime. R02 does not claim its completion or reproduce the old 57-graph center statistics.",
+    "The earlier p3_boundary.py platform upload block is not evaded or retried by this proof/data packet.",
+    "No novelty claim or uninspected full-paper proof is assumed."
+  ],
+  "open_obligations": [
+    "obligation:opg46613-root",
+    "obligation:opg46613-divisible-two-factor"
+  ],
+  "failed_route_proposal": {
+    "route_fingerprint": "f4bb339a4d0ec7fe2a2f36dd3b65bbf6ed19d83c31c9f47702c0d59972819dc3",
+    "failure_class": "counterexample",
+    "blocker": "For M12 and C={0,1,4,8}, S={1,8} has only external neighbors {2,7,9}. The graph has the explicit P3 factor in the witness file; only the auxiliary specified-center shortcut fails.",
+    "evidence_locators": [
+      "research/artifacts/candidates/opg46613-root-r02/center-hall.md",
+      "research/artifacts/candidates/opg46613-root-r02/m12-center-witness.json"
+    ],
+    "next_obligation": "obligation:opg46613-root"
+  },
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "130057cd97ee53d31d6a0898267bda05b9329e1e",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/records/obligation-graphs.jsonl",
+      "revision": "130057cd97ee53d31d6a0898267bda05b9329e1e",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/candidates/opg46613-root-r01/boundary-theorem.md",
+      "revision": "130057cd97ee53d31d6a0898267bda05b9329e1e",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+      "path": "research/artifacts/source-notes/opg46613-root-r02-hall.md",
+      "revision": "d431a8dce6698bb9d4d7448c46ae92501470a1d7",
+      "relation": "prior_art"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-06T13:06:38.404646Z"
+}

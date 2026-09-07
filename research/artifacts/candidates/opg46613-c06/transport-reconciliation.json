@@ -1,0 +1,60 @@
+{
+  "base_revision": "85f4b0269addb746adad975cedd1fed07565ee96",
+  "byte_check": "Full UTF-8 contents reconstructed from fresh GitHub reads; computed Git blob SHA equals the returned blob SHA for each file; SHA-256 computed from those same bytes.",
+  "created_at": "2026-09-07T00:28:28.165535Z",
+  "files": [
+    {
+      "bytes": 10369,
+      "category": "readback",
+      "git_blob_sha": "9534b2df0ba3df589c5c34d55d537644eee8e7ab",
+      "origin_revision": "03c2933bb50b3c19683968f1cef1d567b7d59085",
+      "path": "research/artifacts/candidates/opg46613-c06/few-claw-centers.md",
+      "sha256": "650650bf6f3407df4f7ed7a78e50d721bbe0ab6bd2ad891f10997effb68e3acd"
+    },
+    {
+      "bytes": 3522,
+      "category": "readback",
+      "git_blob_sha": "1ce9f30c36f74075d0eef959ab8a6ba93229dd1f",
+      "origin_revision": "03c2933bb50b3c19683968f1cef1d567b7d59085",
+      "path": "research/artifacts/source-notes/opg46613-c06-triangles.md",
+      "sha256": "170f78d116397d15120b892517d047aa7f0479bd4d40c25705e6ba91f5218f22"
+    },
+    {
+      "bytes": 7781,
+      "category": "readback",
+      "git_blob_sha": "8c1285f8c4e9d0ac42b49b10012d543c6566d1d6",
+      "origin_revision": "03c2933bb50b3c19683968f1cef1d567b7d59085",
+      "path": "research/artifacts/candidates/opg46613-c06/triangle_audit.py",
+      "sha256": "d2e8e56e68a8ad10d3dde51fe66f0d117ccc19938589802a9740ef3b3d06d77f"
+    }
+  ],
+  "historical_execution": {
+    "declared_cases": 12014,
+    "declared_full_deletion_controls": 13,
+    "declared_planar_samples": 80,
+    "declared_prism_cases": 24,
+    "declared_simple_quotients": 11990,
+    "limitation": "The three-file original branch contains the proof, source, and source note, but no historical stdout, interpreter version record, or execution receipt. None is fabricated here.",
+    "original_stdout_or_receipt_recovered": false,
+    "source": "research/artifacts/candidates/opg46613-c06/few-claw-centers.md",
+    "status": "inherited_unverified_observation"
+  },
+  "issue_number": 3,
+  "mathematical_replay": {
+    "executed_in_this_turn": false,
+    "exit_status": null,
+    "output_sha256": null,
+    "status": "pending_unverified"
+  },
+  "operation": "transport_reconciliation_only",
+  "origin_branch": "web/attempt-opg46613-a01-c06",
+  "origin_head": "03c2933bb50b3c19683968f1cef1d567b7d59085",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "scope": [
+    "No new mathematical research, graph census, Lean, SMT or SAT execution.",
+    "The original three blobs are preserved without mathematical edits.",
+    "External source statements and all proof/faithfulness checks remain pending.",
+    "Successful transport checks do not admit mathematical evidence or close the root."
+  ],
+  "verdict": "candidate_only"
+}
