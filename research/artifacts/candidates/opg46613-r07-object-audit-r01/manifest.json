@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "bytes": 1479,
+      "git_blob_sha1": "becaeebcb8cfb5bfaf509886e3a5f3e57169c30a",
+      "path": "witness.json",
+      "sha256": "de4836f6eba4cb72e3af8dfa31ee1d2e34a7a1a1358ca0157eda38ed9ff5f9cd"
+    },
+    {
+      "bytes": 11873,
+      "git_blob_sha1": "7d5d9ee965f65474e81652fe36d07a650f8512cb",
+      "path": "checker.py",
+      "sha256": "eef22e39fe328fa08741848bbed3fa6373f6ee13ae584bf3993b2370a1121f45"
+    },
+    {
+      "bytes": 2327,
+      "git_blob_sha1": "eae486fde1ccec9c591ece8ec28342e68ae3e2dd",
+      "path": "run_bounded.py",
+      "sha256": "386305aab9c39afa8c0ba0bde386e1625f2923c834c5b080788d22e18126b852"
+    },
+    {
+      "bytes": 4335,
+      "git_blob_sha1": "7b4ff7072b5733812f17948a1329cfcee86ea1a6",
+      "path": "stdout.json",
+      "sha256": "eb2d5e65980b08316d2dfa4720227da2b78117c66dad5f9eb63a100de3cf0c82"
+    },
+    {
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1350,
+      "git_blob_sha1": "d5b4c41c2867eeeade549eff1bd4e2975dfa97f8",
+      "path": "execution.json",
+      "sha256": "f42ade62f50b25892e832716783d884be78abeb4e6d5eb4ca2abc627e2c47f5c"
+    },
+    {
+      "bytes": 13287,
+      "git_blob_sha1": "9032d809a051272c234aa6787b4272793d0a042c",
+      "path": "report.md",
+      "sha256": "abb94a1532d989690c3375da9fe67e1cd97e62e61fbc382b0be48f6eae607e1e"
+    },
+    {
+      "bytes": 2493,
+      "git_blob_sha1": "97aba944b072488ffea036c0bb2359abb7c23425",
+      "path": "source-faithfulness.md",
+      "sha256": "612a286a68eec395f3071bf55ce6bf049f0cd9c32ddd32bbfe6987f078066804"
+    }
+  ],
+  "scope": "new R07 fixed-object package only",
+  "verdict": "candidate_only"
+}

@@ -1,0 +1,37 @@
+{
+  "admission": false,
+  "command": "python3 -I -S checker.py",
+  "elapsed_wall_seconds": 2.07225,
+  "exit_code": 0,
+  "file_sha256": {
+    "checker.py": "eef22e39fe328fa08741848bbed3fa6373f6ee13ae584bf3993b2370a1121f45",
+    "run_bounded.py": "386305aab9c39afa8c0ba0bde386e1625f2923c834c5b080788d22e18126b852",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.json": "eb2d5e65980b08316d2dfa4720227da2b78117c66dad5f9eb63a100de3cf0c82",
+    "witness.json": "de4836f6eba4cb72e3af8dfa31ee1d2e34a7a1a1358ca0157eda38ed9ff5f9cd"
+  },
+  "historical_programs_or_raw_outputs_recovered": false,
+  "kind": "same_generation_domain_execution_observation",
+  "lean_execution": {
+    "axiom_report": null,
+    "elaboration_report": null,
+    "executed": false,
+    "status": "pending_unverified"
+  },
+  "limits": {
+    "address_space_bytes": 268435456,
+    "core_dump_bytes": 0,
+    "cpu_seconds": 25,
+    "per_output_file_bytes": 1048576,
+    "threads": 1,
+    "wall_seconds": 35,
+    "worker_processes": 1
+  },
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "started_at": "2026-09-07T04:39:04.246191+00:00",
+  "timed_out": false,
+  "verdict": "candidate_only",
+  "worker_peak_rss_kib_linux": 74988,
+  "worker_system_cpu_seconds": 0.0040539999999999994,
+  "worker_user_cpu_seconds": 2.039664
+}
