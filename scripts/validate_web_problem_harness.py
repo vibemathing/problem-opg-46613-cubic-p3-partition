@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -13,6 +14,7 @@ from typing import Any
 from jsonschema import Draft202012Validator, FormatChecker
 
 from validate_mathematical_reasoning_discipline import validate as validate_reasoning_discipline
+from vibe_mathing.reasoning import strip_reasoning_agent_overlay
 from vibe_mathing.web_channel import (
     canonical_json_sha256,
     load_json,
@@ -99,14 +101,15 @@ def tree_digest(files: list[dict[str, Any]]) -> str:
 
 def content_snapshot(root: Path) -> dict[str, Any]:
     files = [path for path in sorted(root.rglob("*")) if path.is_file() and not path.is_symlink()]
-    rows = [
-        {
-            "path": path.relative_to(root).as_posix(),
-            "bytes": path.stat().st_size,
-            "sha256": sha256_file(path),
-        }
-        for path in files
-    ]
+    rows = []
+    for path in files:
+        relative = path.relative_to(root).as_posix()
+        source_bytes = strip_reasoning_agent_overlay(relative, path.read_bytes())
+        rows.append({
+            "path": relative,
+            "bytes": len(source_bytes),
+            "sha256": hashlib.sha256(source_bytes).hexdigest(),
+        })
     return {
         "files": len(rows),
         "bytes": sum(item["bytes"] for item in rows),

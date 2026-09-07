@@ -17,13 +17,14 @@ from typing import Any
 from jsonschema import Draft202012Validator, FormatChecker
 
 from build_web_context_bundle import render_context
+from vibe_mathing.reasoning import apply_reasoning_agent_overlays
 from vibe_mathing.web_channel import canonical_json_sha256, sha256_file
 
 ROOT = Path(__file__).resolve().parents[1]
 TASK = ROOT / "governance/tasks/0027-web-gpt-github-chat-research-harness"
 DEFAULT_MANIFEST = TASK / "harness-source-manifest.v1.json"
 DEFAULT_TEMPLATE = TASK / "problem-repository-template"
-BUILDER_VERSION = "1.2.3"
+BUILDER_VERSION = "1.2.4"
 IDENTITY_EXCLUDES = {"HARNESS_SNAPSHOT.json", "HARNESS_SNAPSHOT_HISTORY.json", "WEB_BOOTSTRAP.md"}
 MUTABLE_GENERATED = {
     "research/records/attempts.jsonl",
@@ -283,6 +284,11 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
             raise RuntimeError(f"template target collides with Harness source: {relative}")
         copy_regular(candidate, target)
         file_policy[relative.as_posix()] = ("web_channel", "harness")
+
+    # Container Skill snapshots remain immutable source evidence. Their scoped
+    # AGENTS files receive a generated inheritance overlay only in the built
+    # problem repository, so every effective Agent surface carries the policy.
+    apply_reasoning_agent_overlays(output)
 
     canonical_path = output / "problem-library/records/canonical-problems.jsonl"
     canonical_path.parent.mkdir(parents=True, exist_ok=True)

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "manifest_id": "harness-source:web-research-full",
-  "harness_version": "1.2.3",
+  "harness_version": "1.2.4",
   "profile": "web-research-full",
   "global_excludes": [
     ".git", ".private", ".lake", "__pycache__", "*.pyc", "*.pyo",

@@ -52,3 +52,10 @@ uv run --locked --script scripts/validate_harness.py --operator-library skills/s
 ```
 
 目录职责改变时同步更新根 `AGENTS.md`、`README.md`、`governance/context/CONTEXT-MAP.md` 和本文件。
+
+
+## Mandatory mathematical reasoning discipline
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+This scoped instruction file inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`. Its local rules may only tighten that standard; they cannot omit, replace, or weaken definition/quantifier freeze, traceable dependencies, valid induction and contraposition, explicit witnesses, counterexample pressure tests, invariants, termination, extremal/symmetry/probability/scale checks, or honest evidence ceilings.
