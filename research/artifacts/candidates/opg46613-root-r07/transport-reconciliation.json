@@ -1,0 +1,164 @@
+{
+  "base_revision": "5ca9853dac41da3828b9b6f23c192bb59f0a1e8d",
+  "best_verified_candidate": "none",
+  "best_verified_result": "none",
+  "byte_check": "Full UTF-8 bytes were read from the frozen remote revision; locally recomputed Git blob SHA matches each returned blob identity; SHA-256 is computed from the same exact bytes.",
+  "created_at": "2026-09-07T00:46:36.111989Z",
+  "files": [
+    {
+      "bytes": 9360,
+      "category": "readback",
+      "git_blob_sha": "fbb06ce44fd03eca0a3abcdf8009ff951fa363a2",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/complete-one-defect-cycle-interface.md",
+      "sha256": "aedad2378bd604f5fa29dee1008994a63c14c54cecf693df4c7c20c1120d8ed1"
+    },
+    {
+      "bytes": 17285,
+      "category": "readback",
+      "git_blob_sha": "6e3de9a238c94edc5a1b6a51356e1b746989c101",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/cycle-local-minimum-family.md",
+      "sha256": "399dc3db9c2db1aa78e222cc003b618c4bace279a3580e877a5dbc2fac396da3"
+    },
+    {
+      "bytes": 17079,
+      "category": "readback",
+      "git_blob_sha": "fdcfb17c46d78c3970cfac3b51a51665cd08b3e1",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/cyclic-five-cycle-minima.md",
+      "sha256": "6da0698e824c6ba8e5c05fa3b1b1bc8da77fea824ef60537be489beb91c3a328"
+    },
+    {
+      "bytes": 18735,
+      "category": "readback",
+      "git_blob_sha": "8c16a1f88967377dab2abc133ecb0acaebfd6bbf",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/girth-five-cycle-minima.md",
+      "sha256": "509aca3b99b232d333b8b34fb7729f9e8311dfd5285ae3588741a839fd240aba"
+    },
+    {
+      "bytes": 11500,
+      "category": "readback",
+      "git_blob_sha": "5aa9a823dbb9624b20048b1d1a440168aba1f859",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/neutral-defect-transitions.md",
+      "sha256": "41af11de303d6415b47d0a7d21a0f810873bd61f6f03eedadd0796f92f696020"
+    },
+    {
+      "bytes": 9726,
+      "category": "readback",
+      "git_blob_sha": "b655125f01f3d0fe75f3c538e6fc25599ac023d1",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/one-defect-repair.md",
+      "sha256": "c6467c7891b8caf88466970b05f6094f4b966f7ed921a71cae1212c50a71df79"
+    },
+    {
+      "bytes": 8907,
+      "category": "readback",
+      "git_blob_sha": "4b8197a3b1c1d2c3e318e7a28cfa370e2db01712",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/root-equivalences.md",
+      "sha256": "63a6fb1842fad870c63653f3957a8d4805372d5ccb0f5782547184067274a76a"
+    },
+    {
+      "bytes": 8351,
+      "category": "readback",
+      "git_blob_sha": "cd7c3f5afe9bde16858b7318009d2f769068f7eb",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/source-aware-transits.md",
+      "sha256": "c73cfe89eae030aa659753cee2bb460d5109c0cde53aec792dff254da291097a"
+    },
+    {
+      "bytes": 16125,
+      "category": "readback",
+      "git_blob_sha": "28fbdcd073b1216a1263d9a8ad5a7c6eedc5b6c4",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/candidates/opg46613-root-r07/triangle-free-root-reduction.md",
+      "sha256": "48b8761458a5404d1f2f8925e256a4375dbe4759f4758675adad0431932ae176"
+    },
+    {
+      "bytes": 5157,
+      "category": "readback",
+      "git_blob_sha": "83ba568f11472351eda9bfee85f3f1331dd5d9af",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/source-notes/opg46613-root-r07-statement-boundaries.md",
+      "sha256": "54a78b1ada77b213112ac27b5d6cf115a94a8eb85c5060d29aad3598ac9561a0"
+    },
+    {
+      "bytes": 7773,
+      "category": "readback",
+      "git_blob_sha": "7c0c5b49e2e1b6c1ba8ba97d604cdfe0946e8f42",
+      "origin_revision": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+      "path": "research/artifacts/web-inbox/opg46613-root-r07-resume.md",
+      "sha256": "741c835602f49149fc65457977fc84de6688c3d2f60b16af0446c9ebfb759c12"
+    }
+  ],
+  "historical_material_limits": [
+    {
+      "description": "C06 historical 12014-case stdout, interpreter-version and execution record",
+      "locator": "research/artifacts/candidates/opg46613-c06/transport-reconciliation.json",
+      "scope": "Earlier unresolved C06 tail, now PR17. Numerical claims and pending status preserved in its transport note; no original stdout or receipt is fabricated.",
+      "status": "original_not_recovered"
+    },
+    {
+      "description": "Exploratory one-defect tests mentioned in the ROOT-R06 checkpoint while preparing R07 (136 and 972 repairs; proposed 135 crossing-chord certificate)",
+      "scope": "The complete current R07 branch contains proof-only files. The explicit 18-vertex graph and shorter interlacement certificate are present, but are not claimed to reproduce the absent exploratory program or 135-row output.",
+      "source_locator": "Issue #3 comment 5560590172",
+      "status": "original_program_output_not_recovered"
+    }
+  ],
+  "initial_audit_main": "85f4b0269addb746adad975cedd1fed07565ee96",
+  "issue_number": 3,
+  "limitations": [
+    "Hash equality and CI are transport facts, not proof validity, source-faithfulness or mathematical admission.",
+    "No formerly blocked executable upload was retried or re-encoded.",
+    "No canonical record, schema, Harness, workflow, verifier, EvidenceLink, Result or Solution is modified.",
+    "Original absent historical execution files cannot be recovered from their assertions; retaining an unverified observation is not claiming to recover that original."
+  ],
+  "material_inventory": {
+    "executable_sources_in_r07_branch": [],
+    "execution_receipts_in_r07_branch": [],
+    "explicit_inputs_and_certificates": "Graph edges, initial arcs, update cycles, P3 triples, local tables, attachment rules and finite connectivity/cut arguments are embedded in the nine original proof files and preserved there.",
+    "formalization_sources_in_r07_branch": [],
+    "full_order_census_or_unsat_certificate": "None reported as obtained in the original R07 resume; no such success is inferred.",
+    "mathematical_replay": {
+      "executed_this_turn": false,
+      "exit_status": null,
+      "output_sha256": null,
+      "status": "pending_unverified"
+    },
+    "new_math_or_source_research_this_turn": false,
+    "original_checkpoints": 1,
+    "proof_candidates": 9,
+    "source_faithfulness_notes": 1
+  },
+  "open_obligations": [
+    "obligation:opg46613-divisible-two-factor",
+    "obligation:opg46613-root"
+  ],
+  "operation": "transport_reconciliation_only",
+  "origin_branch": "web/attempt-opg46613-root-r07",
+  "origin_head": "50a71d6f1a648c3f48886d9f1be9460c221741c3",
+  "preservation": "All eleven original blobs are unchanged. Historical uncertainty in the old resume note is superseded by this transport readback, not rewritten.",
+  "previous_completed_transaction": {
+    "base": "85f4b0269addb746adad975cedd1fed07565ee96",
+    "branch": "web/attempt-opg46613-a01-c06",
+    "checkpoint_comment": 5563402911,
+    "checks": {
+      "web-attempt-packet": 101585591759,
+      "web-harness-snapshot": 101585591554,
+      "web-pr-diff-boundary": 101585591782
+    },
+    "final_head": "4c1fe14976480e86527512949c20b0c7a456e3c1",
+    "label": "C06",
+    "merge_sha": "5ca9853dac41da3828b9b6f23c192bb59f0a1e8d",
+    "original_head": "03c2933bb50b3c19683968f1cef1d567b7d59085",
+    "pr": 17,
+    "review": 5127170095,
+    "run": 34070050146,
+    "synchronization_commit": "33b4be44b8c8844050cf43994734321a692b71ae"
+  },
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "verdict": "candidate_only"
+}
