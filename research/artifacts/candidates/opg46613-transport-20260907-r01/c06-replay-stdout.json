@@ -1,0 +1,34 @@
+{
+  "factor_stream_sha256": "fbe6a7a8c7551a2583e6b1877082078004d7e80b37287d596c8360ac040a9692",
+  "frame_case_counts": {
+    "10": 2046,
+    "12": 8196,
+    "4": 30,
+    "6": 132,
+    "8": 510
+  },
+  "full_vertex_deletion_controls": 13,
+  "limitations": [
+    "explicit supplied cycles only; no exhaustive planar or cubic graph census",
+    "source cyclability theorems are external proof dependencies",
+    "local generator-side audit, not a registered verifier receipt"
+  ],
+  "local_signatures": {
+    "A0B1": 6076,
+    "A0B2": 6076,
+    "A1B0": 6076,
+    "A1B2": 6073,
+    "A2B0": 6075,
+    "A2B1": 6072,
+    "UUU": 31286
+  },
+  "petersen_cycle_cases": 1020,
+  "planar_twenty_one_retained_samples": 80,
+  "python": "3.13.5",
+  "quotient_types": {
+    "simple-cubic-3-connected": 11990,
+    "triangular-prism": 24
+  },
+  "total_cases": 12014,
+  "verdict": "candidate_only"
+}
