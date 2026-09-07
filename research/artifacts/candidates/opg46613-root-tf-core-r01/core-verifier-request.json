@@ -1,0 +1,41 @@
+{
+  "axiom_report": null,
+  "executed_as_trusted_verifier": false,
+  "fingerprints": {
+    "checker.py": "a45a16f0c94db89085989463b309a019b0ab57869fa5a413e419246e10969bb1",
+    "execution.json": "f65a8cd352e5e6862d28b991439dbc80811ba8b1cf3a276b6b153f49b56b85b2",
+    "failure-certificates.json": "3a196cbc334c1865f73f60da57e9a858ec0973c340bbda70ba451514e6fdc232",
+    "gap_forest.py": "1db1eea0f8ec4f43c064020b3cd3c7a935cd277f4101fcae80e036845cc0b6f8",
+    "input.json": "b1d177cfe89f6226d7da03c390698a2a775caa46195022dfe196a2222efd31c8",
+    "normal_form.py": "0438cb27f268934dc2906480166ff543a3aa72e64170701150dcd1f89321f5f1",
+    "report.md": "8a965a08eac2464e83d00725f24b6d142f8bc28b8a108cc715b541e3a49cb220",
+    "verify_certificates.py": "b524a96d35b4e2e26d8729e5473c049419f31b48646bfb97b2919eec3879b416"
+  },
+  "formal_obligations": [
+    "Define P3 as a selected noninduced two-edge path; preserve ordered center/leaf roles.",
+    "Prove the fixed-M partition bijection for internal as well as cross-cycle matching edges.",
+    "Prove each gap consumes exactly (d-1) mod3 end vertices, including gap lengths 1/2 and one-active-port cycles.",
+    "Prove allocation iff each demand-one multigraph component is an unmarked unicycle or singly marked tree, including loops/parallel edges.",
+    "Audit the exact count 2^u*3^z and reconstruct actual disjoint P3 paths.",
+    "Check the chordless/single-external-edge scope of the synchronized-port lemma.",
+    "Replay complete failure DAGs only for G0 or the cost<=2 restriction, never relabel either as no factor in G."
+  ],
+  "generator_trust_domain": "web-candidate-generation",
+  "implementation_separation": "Use a bipartite demand-matching/max-flow consumer for fixed subsets S, rather than reusing the new gap-component implementation or earlier verifiers; compare with both exact-cover and cycle-gap code.",
+  "kind": "verifier_and_formalization_request_not_receipt",
+  "lean_elaboration": null,
+  "no_truth_record_authority": true,
+  "obligation_id": "obligation:opg46613-root",
+  "open_mathematical_lemma": "Universal existence of an admissible S remains unproved.",
+  "registry_gap": "Fixture identities are registered, but no accessible scoped mathematical verification/attestation workflow or closure receipt is present. Requests do not self-sign Evidence.",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "request_scope": "General fixed-M gap-forest theorem, synchronized-attachment lemma, 36-vertex limited route obstruction and exact minimum matching-edge usage; NOT universal subset existence.",
+  "required_capabilities": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "source_revision": "d1df88796cc753123f53796f8de5c9e89066e0cc",
+  "trusted_attestation": null,
+  "verdict": "candidate_only"
+}
