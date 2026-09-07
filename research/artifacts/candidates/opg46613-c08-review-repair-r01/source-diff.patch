@@ -1,0 +1,134 @@
+--- original-C08/lean/MathlibTargets.lean
++++ repair-r01/lean/MathlibTargets.lean
+@@ -1,7 +1,8 @@
+ import Mathlib
+ 
+ /-!
+-UNCOMPILED SPECIFICATION ONLY. Not included in the standalone core Lake build.
++VERSIONED REPAIR DRAFT; NOT COMPILED HERE. Original C08 source is unchanged.
++Not included in the standalone core Lake build.
+ Before accepting any result, pin a compatible mathlib commit and compile this
+ file. The definitions below deliberately expose the remaining statements as
+ `def ... : Prop`, NOT as proved theorems or assumed lemmas.
+@@ -73,14 +74,14 @@
+   (u = 3 ∧ v = 17 + 12*q) ∨
+   (u = 4 ∧ v = 13 + 6*q)
+ 
+-def H (q : Nat) : SimpleGraph (Fin (18+12*q)) where
+-  Adj u v := u ≠ v ∧ (forwardEdge q u.val v.val ∨ forwardEdge q v.val u.val)
+-  symm := by
+-    intro u v h
+-    exact ⟨Ne.symm h.1, h.2.symm⟩
+-  loopless := by
+-    intro v h
+-    exact h.1 rfl
++def H (q : Nat) : SimpleGraph (Fin (18+12*q)) :=
++  SimpleGraph.fromRel (fun u v : Fin (18+12*q) => forwardEdge q u.val v.val)
++
++/-- Explicit adjacency contract retained by the constructor repair. -/
++theorem H_adj (q : Nat) (u v : Fin (18+12*q)) :
++    (H q).Adj u v ↔
++      u ≠ v ∧ (forwardEdge q u.val v.val ∨ forwardEdge q v.val u.val) := by
++  rfl
+ 
+ /-- The finite C02 claim, including every required domain predicate. -/
+ def FiniteTarget : Prop :=
+--- original-C08/lean/Local.lean
++++ repair-r01/lean/Local.lean
+@@ -2,7 +2,8 @@
+ import Lean.Elab.Tactic.Omega
+ 
+ /-!
+-Candidate source, NOT compiled in the producing session.
++Versioned repair draft, NOT compiled in this session. The original C08 file is unchanged.
++Only the degree-faithfulness proof and finite heartbeat budget are revised.
+ All exhaustive proof attempts use `decide`, not compiler-trusting evaluation.
+ The state bit ordering is exactly the 12 edges below; boundary bits attach at
+ vertices 0, 3, 4, in that order. No global graph theorem is asserted here.
+@@ -10,7 +11,7 @@
+ namespace R03
+ 
+ set_option maxRecDepth 200000
+-set_option maxHeartbeats 0
++set_option maxHeartbeats 2000000
+ 
+ def bit (mask index : Nat) : Nat := (mask / (2 ^ index)) % 2
+ 
+@@ -53,10 +54,75 @@
+     decide (bit s i = 1 ∧
+       ((internalEdges[i]!).1 = v ∨ (internalEdges[i]!).2 = v)))).length
+ 
+-/-- Prevent a transcription error in the nine hand-written degree equations. -/
++/-- Split only the incident bits; do not enumerate all 4096 masks. -/
++private theorem bit_cases (s i : Nat) : bit s i = 0 ∨ bit s i = 1 := by
++  have h : bit s i < 2 := by
++    unfold bit
++    exact Nat.mod_lt _ (by decide)
++  omega
++
++private theorem degree_row_0 (s : Nat) :
++    internalDegree s 0 = countedInternalDegree s 0 := by
++  rcases bit_cases s 0 with h0 | h0 <;> rcases bit_cases s 1 with h1 | h1 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h0, h1]
++
++private theorem degree_row_1 (s : Nat) :
++    internalDegree s 1 = countedInternalDegree s 1 := by
++  rcases bit_cases s 0 with h0 | h0 <;> rcases bit_cases s 2 with h2 | h2 <;> rcases bit_cases s 3 with h3 | h3 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h0, h2, h3]
++
++private theorem degree_row_2 (s : Nat) :
++    internalDegree s 2 = countedInternalDegree s 2 := by
++  rcases bit_cases s 2 with h2 | h2 <;> rcases bit_cases s 4 with h4 | h4 <;> rcases bit_cases s 5 with h5 | h5 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h2, h4, h5]
++
++private theorem degree_row_3 (s : Nat) :
++    internalDegree s 3 = countedInternalDegree s 3 := by
++  rcases bit_cases s 4 with h4 | h4 <;> rcases bit_cases s 6 with h6 | h6 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h4, h6]
++
++private theorem degree_row_4 (s : Nat) :
++    internalDegree s 4 = countedInternalDegree s 4 := by
++  rcases bit_cases s 7 with h7 | h7 <;> rcases bit_cases s 8 with h8 | h8 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h7, h8]
++
++private theorem degree_row_5 (s : Nat) :
++    internalDegree s 5 = countedInternalDegree s 5 := by
++  rcases bit_cases s 1 with h1 | h1 <;> rcases bit_cases s 9 with h9 | h9 <;> rcases bit_cases s 10 with h10 | h10 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h1, h9, h10]
++
++private theorem degree_row_6 (s : Nat) :
++    internalDegree s 6 = countedInternalDegree s 6 := by
++  rcases bit_cases s 3 with h3 | h3 <;> rcases bit_cases s 7 with h7 | h7 <;> rcases bit_cases s 11 with h11 | h11 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h3, h7, h11]
++
++private theorem degree_row_7 (s : Nat) :
++    internalDegree s 7 = countedInternalDegree s 7 := by
++  rcases bit_cases s 5 with h5 | h5 <;> rcases bit_cases s 8 with h8 | h8 <;> rcases bit_cases s 9 with h9 | h9 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h5, h8, h9]
++
++private theorem degree_row_8 (s : Nat) :
++    internalDegree s 8 = countedInternalDegree s 8 := by
++  rcases bit_cases s 6 with h6 | h6 <;> rcases bit_cases s 10 with h10 | h10 <;> rcases bit_cases s 11 with h11 | h11 <;>
++    simp [internalDegree, countedInternalDegree, internalEdges, List.range_succ, h6, h10, h11]
++
++/-- Same public statement as C08; only its proof implementation changes. -/
+ theorem internal_degree_faithful : ∀ s : Fin 4096, ∀ v : Fin 9,
+     internalDegree s.val v.val = countedInternalDegree s.val v.val := by
+-  decide
++  intro s v
++  have hv : v.val = 0 ∨ v.val = 1 ∨ v.val = 2 ∨ v.val = 3 ∨
++      v.val = 4 ∨ v.val = 5 ∨ v.val = 6 ∨ v.val = 7 ∨ v.val = 8 := by
++    omega
++  rcases hv with h | h | h | h | h | h | h | h | h
++  · simpa only [h] using degree_row_0 s.val
++  · simpa only [h] using degree_row_1 s.val
++  · simpa only [h] using degree_row_2 s.val
++  · simpa only [h] using degree_row_3 s.val
++  · simpa only [h] using degree_row_4 s.val
++  · simpa only [h] using degree_row_5 s.val
++  · simpa only [h] using degree_row_6 s.val
++  · simpa only [h] using degree_row_7 s.val
++  · simpa only [h] using degree_row_8 s.val
+ 
+ /-- An ordered, closed five-vertex cycle certificate in the local fragment.
+ Closure is explicit; a mere 5-cycle sitting inside a larger component would

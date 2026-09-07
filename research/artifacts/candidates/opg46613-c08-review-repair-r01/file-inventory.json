@@ -1,0 +1,46 @@
+{
+  "verdict": "candidate_only",
+  "base_revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+  "files": [
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/MathlibTargets.lean",
+      "bytes": 3799,
+      "sha256": "9b49f32cf9f40c55863f00545f08975c3ca8609f2c6437841927d03e51fd7881",
+      "git_blob_sha": "dd3a35383729528b507ca59370d97b7a4656c3cb"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/Local.lean",
+      "bytes": 8248,
+      "sha256": "3bebbf614fed383be7d386f77a7622402c1526faf390a9a830fc243dfd2f156d",
+      "git_blob_sha": "6b6456d5f1884a1b43b5846c012aa81934eab06e"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/source-diff.patch",
+      "bytes": 6303,
+      "sha256": "27c4b52fe45106023ea69c9d21e2b4acff48bdaadb3bd3b4acfb25e2dbcdcb6b",
+      "git_blob_sha": "8572f5d360f52fc3992e1006e656772db518b781"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/repair-status.json",
+      "bytes": 3459,
+      "sha256": "5401b584ae1e8e2efca9765eede0391f393d0b3545e5aba84ecd2181a97c5a30",
+      "git_blob_sha": "55221dac7d5b7533b7955ee3855a230a778fcc19"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/README.md",
+      "bytes": 4397,
+      "sha256": "4dbb019d5a0e648722dfc2c7316153c720c09087d6d278ddc0e04f89d41a42ac",
+      "git_blob_sha": "43a3642c4e64f28d82d4ab5078317b1e831dff6e"
+    }
+  ],
+  "originals_unchanged": true,
+  "resolved_environment_source": {
+    "revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+    "manifest_path": "fixtures/lean-proof/lake-manifest.json",
+    "manifest_git_blob_sha": "d1580b698c57aa5a2d6b2e8542c8fa3940832116",
+    "lean_toolchain_path": "fixtures/lean-proof/lean-toolchain",
+    "lean_toolchain_git_blob_sha": "025e59548e48cf71f2744154e2890beefe30a258",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "lean": "4.33.0"
+  }
+}

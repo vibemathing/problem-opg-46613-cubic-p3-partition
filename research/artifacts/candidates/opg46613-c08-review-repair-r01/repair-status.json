@@ -1,0 +1,82 @@
+{
+  "verdict": "candidate_only",
+  "source_revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+  "origin_pr": 18,
+  "origin_merge": "14b8dc64ac2d89c98cf3a2bbb2fcba76ced0df6a",
+  "compilation": {
+    "status": "pending",
+    "executed": false,
+    "exit_status": null,
+    "lean": null,
+    "mathlib_commit": null,
+    "reason": "lean_lake_elan_not_found_in_current_runtime"
+  },
+  "user_review_environment": {
+    "lean": "4.33.0",
+    "mathlib_revision_prefix": "db584cd6",
+    "full_mathlib_commit_supplied": false,
+    "original_draft_or_logs_supplied": false,
+    "status": "user_report_only"
+  },
+  "original_sources": [
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-independent-verifier/lean/MathlibTargets.lean",
+      "sha256": "b54003ebde007597e59a9d3b275a4bf59fbbf0e20818fcda9937a81b076de3d9"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-independent-verifier/lean/Local.lean",
+      "sha256": "e32edc8d553a3f924d3ee5a9cb9c77169528510c6a7e1499bcfaca9994ebbcfe"
+    }
+  ],
+  "static_checks": {
+    "old_source_hashes_match_frozen_C08": true,
+    "Local_predicates_and_edge_order_unchanged": true,
+    "ClosedFive_and_all_following_declarations_unchanged": true,
+    "Mathlib_target_definitions_unchanged": true,
+    "escape_tokens_in_Lean_sources": [],
+    "internal_degree_faithful_public_statement_unchanged": true,
+    "maxHeartbeats": 2000000,
+    "maxRecDepth": 200000,
+    "degree_row_case_count": 60
+  },
+  "performance": {
+    "status": "not_measured",
+    "before_after_comparison": null,
+    "memory_reduction_claim": false
+  },
+  "planned_replay": {
+    "commands": [
+      "lake env lean ../../research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/Local.lean",
+      "lake env lean ../../research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/MathlibTargets.lean"
+    ],
+    "execution_directory": "fixtures/lean-proof",
+    "lean_version": "4.33.0 (repository fixture toolchain)",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "per_command_limits": {
+      "cpu_seconds": 600,
+      "wall_seconds": 610,
+      "memory_bytes": 6442450944,
+      "output_bytes": 2097152,
+      "processes": 1
+    },
+    "failure_policy": "Record any compilation, heartbeat, timeout or memory failure; do not silently raise budgets or claim a proof."
+  },
+  "open_work": [
+    "Compile both versioned modules in the full pinned environment.",
+    "If Local still exceeds the finite budget, localize the remaining valid_boundary decidable proofs without weakening their statements.",
+    "Audit declaration axioms and semantic faithfulness after successful compilation.",
+    "Global restriction, matching complement bridge, full family and root are still unproved here."
+  ],
+  "mathematical_admission": false,
+  "repository_environment_pin": {
+    "revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "manifest_path": "fixtures/lean-proof/lake-manifest.json",
+    "manifest_git_blob_sha": "d1580b698c57aa5a2d6b2e8542c8fa3940832116",
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "toolchain_path": "fixtures/lean-proof/lean-toolchain",
+    "toolchain_git_blob_sha": "025e59548e48cf71f2744154e2890beefe30a258",
+    "matches_user_version_and_prefix": true,
+    "meaning": "read-only repository pin for planned replay, not a receipt proving the exact environment of the user run"
+  }
+}
