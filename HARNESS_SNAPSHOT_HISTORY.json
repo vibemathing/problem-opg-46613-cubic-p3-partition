@@ -13,6 +13,13 @@
       "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
       "source_manifest_sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993",
       "tree_sha256": "83d71a4d2845132ca0dce97ae31fb2d5522b0a0228b563fc762b7df146f3d4f1"
+    },
+    {
+      "harness_snapshot_sha256": "c361ab971cb9dc51270888c605adb9dc84d98e8f33316d9fc23d7064a8d24718",
+      "harness_version": "1.2.4",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "fedd664f1ac16c5232eb05076b73f2bab566ed672840e7f2af851c77253813b3",
+      "tree_sha256": "7824ca5c66f65cde8d590b3c5a81ed0e0aa5307a711f132b6c9831fae9de1c5a"
     }
   ],
   "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",

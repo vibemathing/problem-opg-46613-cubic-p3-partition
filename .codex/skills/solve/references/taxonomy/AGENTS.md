@@ -15,3 +15,10 @@ taxonomy/
 
 修改分类轴、默认映射或解析规则时，必须同步更新 `operators/README.md`、`operators/AGENTS.md`、
 `docs/OPERATOR_SPEC.md` 和对应治理 ADR，并运行算子库与治理 strict 校验。
+
+
+## Mandatory mathematical reasoning discipline
+
+<!-- MATHEMATICAL_REASONING_DISCIPLINE_V1 -->
+
+This scoped instruction file inherits `governance/standards/MATHEMATICAL_REASONING_DISCIPLINE.md`. Its local rules may only tighten that standard; they cannot omit, replace, or weaken definition/quantifier freeze, traceable dependencies, valid induction and contraposition, explicit witnesses, counterexample pressure tests, invariants, termination, extremal/symmetry/probability/scale checks, or honest evidence ceilings.

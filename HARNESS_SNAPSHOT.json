@@ -59,10 +59,10 @@
   ],
   "builder": {
     "id": "build-problem-repository",
-    "sha256": "d5866dffe389ea1ae2d15bd8244662bfd005b1ef962734fdedd778905c41b34c",
-    "version": "1.2.3"
+    "sha256": "709148f69964bdf708c9924bfd43f48970e72291f85527d74e9ceeacccb6f8fc",
+    "version": "1.2.4"
   },
-  "built_at": "2026-09-07T10:34:33+08:00",
+  "built_at": "2026-09-07T11:11:48+08:00",
   "digest_excludes": [
     "HARNESS_SNAPSHOT.json",
     "HARNESS_SNAPSHOT_HISTORY.json",
@@ -348,12 +348,12 @@
       "sha256": "74007ddeac312ccb536b5db351e66906b15b1ec9777263f03ef3268e55cf5f3e"
     },
     {
-      "bytes": 506,
+      "bytes": 1026,
       "layer": "math_layer",
       "mode": "0644",
       "owner": "harness",
       "path": ".codex/skills/math-toolchain/AGENTS.md",
-      "sha256": "a15823141c431c85d59d78461613a9d41fee066bb6926ee383f6c83b30708db3"
+      "sha256": "f38e08ac1e59e5ab019618ae814f79947719fb1005c115dbbbf462839d3c6d59"
     },
     {
       "bytes": 436,
@@ -380,12 +380,12 @@
       "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
     },
     {
-      "bytes": 3175,
+      "bytes": 3695,
       "layer": "math_layer",
       "mode": "0644",
       "owner": "harness",
       "path": ".codex/skills/solve/AGENTS.md",
-      "sha256": "1f211c2af2aa9899dd3249546b746d93a9260e43f7f99b33e97539dce3a6b6c4"
+      "sha256": "9aa84a86705c9f2991843996e558f71f2390925d221a42da5e4c8c08d52ec70e"
     },
     {
       "bytes": 4845,
@@ -932,12 +932,12 @@
       "sha256": "42702f92a43153a7c9d5cf3756d3b5df3c79d6821043d441d7142c779e459afb"
     },
     {
-      "bytes": 944,
+      "bytes": 1464,
       "layer": "math_layer",
       "mode": "0644",
       "owner": "harness",
       "path": ".codex/skills/solve/references/taxonomy/AGENTS.md",
-      "sha256": "65bab05e8ad1f209a45a068bd4e6ad2f1eaf8e53824a055f24779e438208cc0b"
+      "sha256": "fb1b04692772fd2e9481a6b90368877a5558d5614c66977c6a0f10ff157b8858"
     },
     {
       "bytes": 28846,
@@ -1257,7 +1257,7 @@
       "mode": "0644",
       "owner": "harness",
       "path": "governance/control-plane/harness-source-manifest.v1.json",
-      "sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993"
+      "sha256": "fedd664f1ac16c5232eb05076b73f2bab566ed672840e7f2af851c77253813b3"
     },
     {
       "bytes": 2275,
@@ -1692,12 +1692,12 @@
       "sha256": "d3e1f8c4b2f99819475c41c57fdfa1636be3ee37b78057719f64392dfa760fa8"
     },
     {
-      "bytes": 26144,
+      "bytes": 26489,
       "layer": "web_channel",
       "mode": "0644",
       "owner": "harness",
       "path": "scripts/build_problem_repository.py",
-      "sha256": "d5866dffe389ea1ae2d15bd8244662bfd005b1ef962734fdedd778905c41b34c"
+      "sha256": "709148f69964bdf708c9924bfd43f48970e72291f85527d74e9ceeacccb6f8fc"
     },
     {
       "bytes": 5361,
@@ -1780,12 +1780,12 @@
       "sha256": "9ab3d2d78b7f2120acd54b26cccd0b1d6a154fb2ab644fabeb8aa063e870add1"
     },
     {
-      "bytes": 25674,
+      "bytes": 25890,
       "layer": "web_channel",
       "mode": "0644",
       "owner": "harness",
       "path": "scripts/validate_web_problem_harness.py",
-      "sha256": "5afab6214db026f517c209963b7fd2fe3ed9d498ef480e7ea7df5eadcfbd8d9c"
+      "sha256": "0133a6319e290ddbfbdb83a543d56f1d31c8016fe4c81da698baf1ddd06fb503"
     },
     {
       "bytes": 2410,
@@ -1868,6 +1868,14 @@
       "sha256": "97eab30dbfc4de20c144774c3da1119fbd6f6565cfab1ef3087b2d102063f5eb"
     },
     {
+      "bytes": 1772,
+      "layer": "research_core",
+      "mode": "0644",
+      "owner": "harness",
+      "path": "scripts/vibe_mathing/reasoning.py",
+      "sha256": "54a36dbaca1acf212771ae94dc26e74eb0f6f30d248cd3d496fabb63499f6f3b"
+    },
+    {
       "bytes": 15933,
       "layer": "research_core",
       "mode": "0644",
@@ -1908,7 +1916,7 @@
       "sha256": "e250018898ae62ffb669974f48b007b688844a23fa5543a5f6e379aaca20bc59"
     }
   ],
-  "harness_version": "1.2.3",
+  "harness_version": "1.2.4",
   "problem": {
     "admission": "canonical_admitted",
     "contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
@@ -1928,10 +1936,10 @@
   "schema_version": "1.1.0",
   "snapshot_id": "harness-snapshot:opg-46613-cubic-p3-partition",
   "source": {
-    "commit": "27a22779f4ea8418115002a4a180553b0f23425b",
+    "commit": "fedd664f1ac16c5232eb05076b73f2bab566ed67",
     "repository": "reviewed-public-export",
-    "source_manifest_sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993",
+    "source_manifest_sha256": "fedd664f1ac16c5232eb05076b73f2bab566ed672840e7f2af851c77253813b3",
     "worktree_dirty": false
   },
-  "tree_sha256": "83d71a4d2845132ca0dce97ae31fb2d5522b0a0228b563fc762b7df146f3d4f1"
+  "tree_sha256": "7824ca5c66f65cde8d590b3c5a81ed0e0aa5307a711f132b6c9831fae9de1c5a"
 }
