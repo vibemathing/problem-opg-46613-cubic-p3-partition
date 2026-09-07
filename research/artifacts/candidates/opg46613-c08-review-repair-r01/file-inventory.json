@@ -1,0 +1,37 @@
+{
+  "verdict": "candidate_only",
+  "base_revision": "04735a4efa1e454a6765983ebedee82554783c1e",
+  "files": [
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/MathlibTargets.lean",
+      "bytes": 3799,
+      "sha256": "9b49f32cf9f40c55863f00545f08975c3ca8609f2c6437841927d03e51fd7881",
+      "git_blob_sha": "dd3a35383729528b507ca59370d97b7a4656c3cb"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/lean/Local.lean",
+      "bytes": 8248,
+      "sha256": "3bebbf614fed383be7d386f77a7622402c1526faf390a9a830fc243dfd2f156d",
+      "git_blob_sha": "6b6456d5f1884a1b43b5846c012aa81934eab06e"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/source-diff.patch",
+      "bytes": 6303,
+      "sha256": "27c4b52fe45106023ea69c9d21e2b4acff48bdaadb3bd3b4acfb25e2dbcdcb6b",
+      "git_blob_sha": "8572f5d360f52fc3992e1006e656772db518b781"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/repair-status.json",
+      "bytes": 2765,
+      "sha256": "0a581f0e151543ea636a233711658be3202cd9a70197ef05820fc70789a029ed",
+      "git_blob_sha": "9eda1f2dc0ea4b38e56e79794a90779b5776f88e"
+    },
+    {
+      "path": "research/artifacts/candidates/opg46613-c08-review-repair-r01/README.md",
+      "bytes": 4003,
+      "sha256": "e8d5f0e317ab9576c549b6d141c3de8879134dd194b399a551c560bb6d1737fe",
+      "git_blob_sha": "6998979d22a0e997bbc3887106604ff2cf6f7289"
+    }
+  ],
+  "originals_unchanged": true
+}
