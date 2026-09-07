@@ -1,0 +1,34 @@
+{
+  "axiom_report": null,
+  "command": "python3 -I -S checker.py",
+  "elapsed_wall_seconds": 0.167385,
+  "exit_code": 0,
+  "kind": "same_generation_domain_execution_observation",
+  "lean_elaboration": null,
+  "limits": {
+    "address_space_bytes": 536870912,
+    "core_dump_bytes": 0,
+    "cpu_seconds": 30,
+    "per_output_file_bytes": 2097152,
+    "threads": 1,
+    "wall_seconds": 40,
+    "worker_processes": 1
+  },
+  "output_sha256": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.json": "962cee38b33231d6847bd33f3357ab84d28290cb4d17ef5e3676ac74afde8a2f"
+  },
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "sha256": {
+    "checker.py": "f80ac65511f58aa9e97a769eabff03f81f790f6a44178507fc5629782a09cc19",
+    "input.json": "60ffcd2ba66072adabdf61ab41ee20866c86d2c31235615c974de2083c54be08",
+    "run_bounded.py": "2f8bdbca5f6c08277b9829f0aec5280590b876c87440a56c702f44a6761c83ac"
+  },
+  "started_at": "2026-09-07T05:41:53.936781+00:00",
+  "timed_out": false,
+  "trusted_attestation": null,
+  "verdict": "candidate_only",
+  "worker_peak_rss_kib_linux": 75060,
+  "worker_system_cpu_seconds": 0.008039,
+  "worker_user_cpu_seconds": 0.152103
+}

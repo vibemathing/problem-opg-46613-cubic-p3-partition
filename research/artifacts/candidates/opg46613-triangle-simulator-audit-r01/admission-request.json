@@ -1,0 +1,70 @@
+{
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "attestation": null,
+  "candidate_fingerprints": {
+    "checker.py": "f80ac65511f58aa9e97a769eabff03f81f790f6a44178507fc5629782a09cc19",
+    "execution.json": "3b6d7a7c28b5c5f726caa33e0959285130b8d316d5c577140f9909f2c6bac2d0",
+    "input.json": "60ffcd2ba66072adabdf61ab41ee20866c86d2c31235615c974de2083c54be08",
+    "report.md": "a7247c8ad62756a160e361b1f4d91a62ad377a58a960c2b8727c6e242da549e2",
+    "run_bounded.py": "2f8bdbca5f6c08277b9829f0aec5280590b876c87440a56c702f44a6761c83ac",
+    "source-faithfulness.md": "ba196269f8e9eb816ac273163e2c0c44d0dbb00ecc510964c5606cdad472c162",
+    "stdout.json": "962cee38b33231d6847bd33f3357ab84d28290cb4d17ef5e3676ac74afde8a2f"
+  },
+  "first_open_gap": "No accessible registered execution route and attestation for this fixed graph/interface package plus its universal proof; fixture registry names alone are not such a receipt.",
+  "historical_limits": "Missing historical code/raw logs and pending C08 Lean remain unresolved; they do not prevent this new fixed-byte audit.",
+  "kind": "admission_request_not_receipt",
+  "local_tool_probe": {
+    "elan": null,
+    "lake": null,
+    "lean": null,
+    "meaning": "executables not found on the current runtime PATH; no elaboration was attempted"
+  },
+  "obligation_id": "obligation:opg46613-root",
+  "permission": "User authorized starting registered verifier and obligation-closure processing, not self-signing.",
+  "prohibited_shortcuts": [
+    "No direct truth-record/result-library/schema/workflow/governance edits.",
+    "No self-signed EvidenceLink, attestation, Result or Solution.",
+    "No Actions dispatch or new verification workflow is introduced by this candidate.",
+    "Do not relabel same-generation-domain Python replay as registered verification."
+  ],
+  "registry_read": {
+    "git_blob_sha": "b93b32955eb94c3b4ee82f045f7bbb85fd900f05",
+    "obligation_acceptance": [
+      "kernel_check",
+      "axiom_escape_audit",
+      "statement_faithfulness"
+    ],
+    "path": "research/verifiers.json",
+    "principals": [
+      "lean-kernel",
+      "lean-axiom-auditor",
+      "lean-faithfulness-reviewer",
+      "sympy-counterexample-verifier"
+    ]
+  },
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "request_state": "pending_registered_scoped_verifier",
+  "requested_scope": "Verify the finite objects and the general reduction lemma only. This lemma by itself cannot close the root or yield a complete Solution.",
+  "required_coordinator_actions": [
+    "Bind the frozen claim to a suitably scoped registered checker or formalization without weakening its statement.",
+    "Replay finite certificates and mutations under a separate admitted verifier identity and save input/code/output fingerprints.",
+    "Obtain separate proof/statement-faithfulness and axiom/escape reviews as required; resolve the legacy DAG dependency through the trusted process, not this candidate.",
+    "Invoke the actual obligation-closure gate only for claims its receipts close; keep root and strengthening open unless independently justified."
+  ],
+  "schema": "r03-scoped-admission-request-v1",
+  "scoped_claim": "The specified T exactly simulates triangle boundary states; the proved replacement gives R iff its triangle-free restriction.",
+  "source_revision": "db657865c432d10c6f57b6355f0ab17c42f57a09",
+  "triggered_trusted_mathematical_workflow": false,
+  "verdict": "candidate_only",
+  "verifier_fingerprint": null,
+  "web_principal_trust_domain": "web-candidate-generation",
+  "workflow_read": {
+    "executes_graph_checker": false,
+    "executes_lean": false,
+    "git_blob_sha": "c232051b6e2332ac5e4a3a7ddde7ec542ca4d9d6",
+    "only_workflow_in_directory": true,
+    "path": ".github/workflows/web-candidate-gate.yml",
+    "purpose": "transport-only",
+    "trigger": "pull_request"
+  }
+}

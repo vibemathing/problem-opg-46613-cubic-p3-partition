@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "bytes": 2880,
+      "git_blob_sha1": "3a95ad3d15d78bbc77b36ed5479b0d16ab826ce0",
+      "path": "input.json",
+      "sha256": "60ffcd2ba66072adabdf61ab41ee20866c86d2c31235615c974de2083c54be08"
+    },
+    {
+      "bytes": 15841,
+      "git_blob_sha1": "b3afc7c5b92369aa718945466b4eeebcfd3e1497",
+      "path": "checker.py",
+      "sha256": "f80ac65511f58aa9e97a769eabff03f81f790f6a44178507fc5629782a09cc19"
+    },
+    {
+      "bytes": 2535,
+      "git_blob_sha1": "174b5592d52b888e465332ab591ae35a24fb3265",
+      "path": "run_bounded.py",
+      "sha256": "2f8bdbca5f6c08277b9829f0aec5280590b876c87440a56c702f44a6761c83ac"
+    },
+    {
+      "bytes": 15472,
+      "git_blob_sha1": "728a87afefcbc615c7aba973e960b1cb7d5824b8",
+      "path": "stdout.json",
+      "sha256": "962cee38b33231d6847bd33f3357ab84d28290cb4d17ef5e3676ac74afde8a2f"
+    },
+    {
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1217,
+      "git_blob_sha1": "48c0c07f750b5babaef9a0e712afd9db2921f059",
+      "path": "execution.json",
+      "sha256": "3b6d7a7c28b5c5f726caa33e0959285130b8d316d5c577140f9909f2c6bac2d0"
+    },
+    {
+      "bytes": 19617,
+      "git_blob_sha1": "3aa5dced17970dd5641a797aaabde0cc44fd5d47",
+      "path": "report.md",
+      "sha256": "a7247c8ad62756a160e361b1f4d91a62ad377a58a960c2b8727c6e242da549e2"
+    },
+    {
+      "bytes": 3270,
+      "git_blob_sha1": "93cb47aca42cd760cb22a8dde1dc6e91a3675413",
+      "path": "source-faithfulness.md",
+      "sha256": "ba196269f8e9eb816ac273163e2c0c44d0dbb00ecc510964c5606cdad472c162"
+    },
+    {
+      "bytes": 3868,
+      "git_blob_sha1": "ac2eefddad3802dc2ec8d1599990f8a76c9ce406",
+      "path": "admission-request.json",
+      "sha256": "9be896c247e332abab6452a7441685bd7c5d1bb6c61aa6fe2b910d8a9d1a5ca1"
+    }
+  ],
+  "manifest_self_hash": "Record externally in packet and Issue checkpoint; no circular self-hash.",
+  "namespace": "opg46613-triangle-simulator-audit-r01",
+  "verdict": "candidate_only"
+}
