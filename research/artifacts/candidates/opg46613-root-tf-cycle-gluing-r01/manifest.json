@@ -1,0 +1,194 @@
+{
+  "archive_semantics": "The21 listed archived members are lossless bytes in replay-data.json, not separate repository paths until decoded. The14 physical candidate files plus one packet are the Git diff.",
+  "archived_files": [
+    {
+      "bytes": 1171,
+      "name": "constructor-execution.json",
+      "sha256": "de5c25cfa35a8831f2ad6662b1ab9341cf99815359348c52293736fdb3454b6f"
+    },
+    {
+      "bytes": 0,
+      "name": "constructor.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 26348,
+      "name": "constructor.stdout.json",
+      "sha256": "a8bf9d2277cf987b24d9b1f0e6c81ab3b21036f20fe105781c932ef761bdabf4"
+    },
+    {
+      "bytes": 907,
+      "name": "exploratory/verify24-initial-execution.json",
+      "sha256": "8865d3a23adec4f311ad1b5df1b665d625929dceeb0471306f3ff8ad7ccb7162"
+    },
+    {
+      "bytes": 5549,
+      "name": "exploratory/verify24-initial.py",
+      "sha256": "7c73769bf23db71d8573d3bee123e8a7073bb54f2c0e96f6ed2cb2ce73d995d2"
+    },
+    {
+      "bytes": 814,
+      "name": "explore24-execution.json",
+      "sha256": "9af1b15197634022367020c07b2db1c003fd1ea83017acea5e95b77d16dfd08a"
+    },
+    {
+      "bytes": 0,
+      "name": "explore24.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5041,
+      "name": "explore24.stdout.json",
+      "sha256": "da5a408d484591b9eb4769ea56ee6501e80cf2ea2c2d69c3defc233694c8a4d5"
+    },
+    {
+      "bytes": 1072,
+      "name": "generate-execution.json",
+      "sha256": "651a0623b8ac91d91dd97de3a38ed88c8ff2f079c42bacc7353f5779373b2b16"
+    },
+    {
+      "bytes": 0,
+      "name": "generate.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 69,
+      "name": "generate.stdout.json",
+      "sha256": "bf189fd87c0975c8a8aa73224b9f9306d893a9220137fc01b53f0200fe4161bc"
+    },
+    {
+      "bytes": 28954,
+      "name": "inputs.json",
+      "sha256": "29af896e2e834b65acbbb975e1836db8e162dc59b5180499a4cdbf906905791d"
+    },
+    {
+      "bytes": 1270,
+      "name": "local_check-execution.json",
+      "sha256": "68b98ee3094709c03a4e875653861030f813744f68f1471925b4a84d15122e03"
+    },
+    {
+      "bytes": 0,
+      "name": "local_check.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 688,
+      "name": "local_check.stdout.json",
+      "sha256": "ec33d5b1c0521d0054dae3c548f8880eeec8db95806c6e7c98f2668ecf60d20c"
+    },
+    {
+      "bytes": 1250,
+      "name": "verify-execution.json",
+      "sha256": "1866e3e90e512663928bed9dbfbbc1ddc4fbced4c6487a1bfcbb5ed7fdb3fdfb"
+    },
+    {
+      "bytes": 0,
+      "name": "verify.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 14702,
+      "name": "verify.stdout.json",
+      "sha256": "1ea4a8d46279914bb771b0319efa9cd9dc54ceabaa15fdaa5416a3060863ae06"
+    },
+    {
+      "bytes": 907,
+      "name": "verify24-execution.json",
+      "sha256": "3d07045768d6e6d190ef122f2a49044cc2e4b8582d0a804b9393ece43de4d7e7"
+    },
+    {
+      "bytes": 0,
+      "name": "verify24.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 6988,
+      "name": "verify24.stdout.json",
+      "sha256": "5b1cbea623e6b2ffc702ad1ab754052ff6e641a8f9b644ec498aaab88555aa56"
+    }
+  ],
+  "base_revision": "0f009927bfffa44335148cb65ae93596288b50c4",
+  "files": [
+    {
+      "bytes": 5285,
+      "git_blob_sha1": "c8388b4466dc47c423ae2f5135b8691cb963ecd4",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/constructor.py",
+      "sha256": "3cf399f13a66d8e561328a37d6366b18ac9cd5de5ee8d5428b187af197f83efa"
+    },
+    {
+      "bytes": 3011,
+      "git_blob_sha1": "75ab43092d4420d14e6fd09c2bc066735496d2b1",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/generate.py",
+      "sha256": "13f215d810b39a92ec0760f88efad820f3e04dbcab29f7eda612b8f8704f9236"
+    },
+    {
+      "bytes": 10981,
+      "git_blob_sha1": "70dd6c40b9f0e801c7dddb67b7258b3ba77fe6b9",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/verify.py",
+      "sha256": "b873d5ee2e101dd0932b70117ccb38d416af0c98366811c1261b92beec7073ed"
+    },
+    {
+      "bytes": 3823,
+      "git_blob_sha1": "2bb88e13ed3edaa86aec5de7b6a0fdce926ddd50",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/local_check.py",
+      "sha256": "e6cbd5c279a7d8dd53d5e505f270884354544398e7b22756fbb1f71ec987f6f7"
+    },
+    {
+      "bytes": 2513,
+      "git_blob_sha1": "30c3641a8afc5edfcdcb60782a467e8bed126e72",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/explore24.py",
+      "sha256": "cde541108acc6d8c972e16508f1076e52b6fc5c7ccb33cdb03bb79e0409446b2"
+    },
+    {
+      "bytes": 5646,
+      "git_blob_sha1": "621c359dcba2627e632d334103b2f079acbf5817",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/verify24.py",
+      "sha256": "1dc2c0e96db5cb3cc1f6c51dcbf4a3d5aad157c55bbf5956b78a1a85236c8f53"
+    },
+    {
+      "bytes": 3062,
+      "git_blob_sha1": "4e3a6ee29f91ff0da92a4c41a0d847885b005707",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/run_bounded.py",
+      "sha256": "d4a11858cf33e04cb85349fd1b7a074a4fa04378f9b7fbb8c3daf3e9f29d24a8"
+    },
+    {
+      "bytes": 2184,
+      "git_blob_sha1": "99e93eac1b63dcbf958c337b51634d287fa00537",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/decode_data.py",
+      "sha256": "c41d56137d7560fa6dc9c9e36f51fe364adfc83b212e3d25dab38635965b71be"
+    },
+    {
+      "bytes": 19260,
+      "git_blob_sha1": "aa0533e3e4122e3a8aba04fa8993da46fd0af6bf",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/report.md",
+      "sha256": "f83f065f2eba2dfc5b00ad1722e89da78f80ea553b0dfad1134c29600fa12b01"
+    },
+    {
+      "bytes": 2115,
+      "git_blob_sha1": "43c3e69132786437a50d445d643938b8d65977f1",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/source-note.md",
+      "sha256": "2a8a7f2628c5623f1c68fae12c1a513f9378ce62f6ddda7ebf23e387ac7948b9"
+    },
+    {
+      "bytes": 24652,
+      "git_blob_sha1": "c52497ff0aca289c41dadb4233da681bafdc9d55",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/replay-data.json",
+      "sha256": "bb288e3c419fc26f63cd71fb610ba05f0ef23e5380c1ac4bc8cead7de4618669"
+    },
+    {
+      "bytes": 4165,
+      "git_blob_sha1": "34cc8853a454ae84a80e9556552f02986f74253c",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/core-verifier-request.json",
+      "sha256": "fe33d04d58e61ec23c5be8b05d75ac4a940623b6e5ce6dd426a9738066c80146"
+    },
+    {
+      "bytes": 1467,
+      "git_blob_sha1": "5792c84d3ab4b4ba27ed02579a097584c5c8dfc3",
+      "path": "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/bridge-verifier-request.json",
+      "sha256": "89e879dd29fc251110d4c1b583d5e3e88a92c8cb67a5f015cb8b2d186a20303f"
+    }
+  ],
+  "manifest_self_hash": "Bound in the packet and Issue checkpoint, not circularly in this file.",
+  "namespace": "opg46613-root-tf-cycle-gluing-r01",
+  "verdict": "candidate_only"
+}

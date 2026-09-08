@@ -1,0 +1,23 @@
+{
+  "attestation": null,
+  "execution_route": null,
+  "existing_audit": "research/artifacts/candidates/opg46613-triangle-simulator-audit-r01/report.md",
+  "existing_audit_sha256": "a7247c8ad62756a160e361b1f4d91a62ad377a58a960c2b8727c6e242da549e2",
+  "forbidden_inferences": [
+    "The bridge proves neither universal root statement.",
+    "An expansive replacement cannot assert a smallest unrestricted counterexample is triangle-free.",
+    "The order18 triangle-free result is not automatically an order18 theorem for arbitrary triangle-containing hosts via this expansion."
+  ],
+  "kind": "separate_existing_bridge_verification_request",
+  "method_request": "Different registered implementation of exact interface composition and full arbitrary-host proof review, with separately bound declaration/axiom/faithfulness reports.",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "scope": "Only the all-host triangle-free equivalence and interface-faithfulness bridge; no repeated generator-side object audit here.",
+  "source_file": "research/artifacts/candidates/opg46613-root-r07/triangle-free-root-reduction.md",
+  "source_git_blob_sha1": "28fbdcd073b1216a1263d9a8ad5a7c6eedc5b6c4",
+  "source_revision": "0f009927bfffa44335148cb65ae93596288b50c4",
+  "status": "pending_registered_execution",
+  "target_obligation": "obligation:opg46613-root",
+  "trusted_closure_receipt": null,
+  "verdict": "candidate_only",
+  "verifier_fingerprint": null
+}

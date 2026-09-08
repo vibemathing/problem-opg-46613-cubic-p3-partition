@@ -1,0 +1,78 @@
+{
+  "admission_gaps": [
+    "Registry entries are fixture-policy identities, not an executed mathematical route for these claims.",
+    "No Lean executable/elaboration/axiom report in this turn.",
+    "Universal feasible-subset lemma X and the root remain open."
+  ],
+  "attestation": null,
+  "base_revision": "0f009927bfffa44335148cb65ae93596288b50c4",
+  "claims": [
+    "Exact one/two-port cycle splitting and three-cycle cost-at-most-two iff theorem.",
+    "In the012 phase-blocked triangle-free root class the order is at least36.",
+    "Every supplied perfect matching on a triangle-free root host of order6,12,18 admits a P3-factor using at most two matching edges.",
+    "The explicit24-vertex host is a positive root instance with minimum supplied-matching usage exactly three.",
+    "Using the classical Petersen dependency, a minimum triangle-free root counterexample has order at least24."
+  ],
+  "formalization_targets": [
+    "cycle_two_port_exact",
+    "three_cycle_cost_two_iff",
+    "tf012_cost_gap_card_ge36",
+    "tf_order_le18_factor_cost_le2",
+    "w24_host_and_matching_cost_three"
+  ],
+  "frozen_files": {
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/constructor.py": "3cf399f13a66d8e561328a37d6366b18ac9cd5de5ee8d5428b187af197f83efa",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/decode_data.py": "c41d56137d7560fa6dc9c9e36f51fe364adfc83b212e3d25dab38635965b71be",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/explore24.py": "cde541108acc6d8c972e16508f1076e52b6fc5c7ccb33cdb03bb79e0409446b2",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/local_check.py": "e6cbd5c279a7d8dd53d5e505f270884354544398e7b22756fbb1f71ec987f6f7",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/replay-data.json": "bb288e3c419fc26f63cd71fb610ba05f0ef23e5380c1ac4bc8cead7de4618669",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/report.md": "f83f065f2eba2dfc5b00ad1722e89da78f80ea553b0dfad1134c29600fa12b01",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/verify.py": "b873d5ee2e101dd0932b70117ccb38d416af0c98366811c1261b92beec7073ed",
+    "research/artifacts/candidates/opg46613-root-tf-cycle-gluing-r01/verify24.py": "1dc2c0e96db5cb3cc1f6c51dcbf4a3d5aad157c55bbf5956b78a1a85236c8f53"
+  },
+  "kind": "verification_and_formalization_request",
+  "limits": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds_max": 30,
+    "per_output_file_bytes": 2097152,
+    "wall_seconds_max": 40,
+    "worker_processes": 1
+  },
+  "no_root_closure_requested_from_partial_results": true,
+  "producer_trust_domain": "web-candidate-generation",
+  "registered_capabilities_requested": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "registered_execution_route": null,
+  "replay_order_note": "Archive restoration preserves original bytes. New run outputs are new observations; execute in an isolated copy, not over original archived observations.",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "requested_replay": [
+    "python3 -I -S decode_data.py",
+    "python3 run_bounded.py constructor",
+    "python3 run_bounded.py verify",
+    "python3 run_bounded.py local_check",
+    "timeout 30s python3 -I -S explore24.py",
+    "timeout 30s python3 -I -S verify24.py"
+  ],
+  "requested_trust_separation": true,
+  "required_reviews": [
+    "All quantifiers and the order18 length-partition case split.",
+    "Direction and complete-coverage gluing.",
+    "Petersen theorem hypothesis mapping and permitted-axiom audit.",
+    "Cost-UNSAT versus root-nonexistence distinction.",
+    "No count through18 or finite sample is extrapolated to arbitrary order."
+  ],
+  "status": "pending_registered_execution",
+  "target_obligation": "obligation:opg46613-root",
+  "toolchain_request": {
+    "declaration_implementation": "pending",
+    "executed": false,
+    "lean": "4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "pin_source": "fixtures/lean-proof/lake-manifest.json"
+  },
+  "verdict": "candidate_only",
+  "verifier_fingerprint": null
+}
