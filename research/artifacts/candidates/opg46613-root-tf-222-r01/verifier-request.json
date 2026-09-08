@@ -1,0 +1,54 @@
+{
+  "archive_representation": "Seven ordered UTF-8 segments reconstruct the exact archive; restore.py checks its length and SHA-256 before decoding all members.",
+  "base_revision": "ed428d8a771ae581bf5175f24e8f8276e6232244",
+  "bound_files": {
+    "allocation.py": "032a8da97316cabc0af719d2ccf9c07beb07cadd1ef1f4c3bd6ad423e50e9b5f",
+    "audit.py": "5083f0febe321e0da125284460934e0338b097bb1ba646fc00c986a7d87d6cbf",
+    "certificate_check.py": "5a81a9e15332a0716acd82584c1b60bc47309e17ef7355e13756ddd4464d29b2",
+    "direct_cover.py": "08f42a49d33d967fb269f1a3b11d6da73042cc72ebb9f7eeb1e51cb9643f19ec",
+    "local_states.py": "11f65a059c35c7503c9a8d5a7ae1fa817db56922fb6aa53758277d2095d54d4b",
+    "objects.json": "9f46cddde95da7e4956f17930f135cbc0870ca70db86345b7fef40df6b8e9bfd",
+    "replay-archive.json": "36925f08d86b46babec3f3bb7c3ec6e08bce10f89cc9d72ba538185e2427ef69",
+    "report.md": "fc857a367fdff7f0ccda0e7c6a302bfd7759f1ba610f8108c2dfe12073edc2ab",
+    "restore.py": "11181f45f75019892035eedac3eab6b30d47b4680bed69c5788c2ac7541576c8"
+  },
+  "closure_requested_only_for_validly_verified_scopes": true,
+  "exact_scopes": [
+    "Complete role/gap iff for any number of cycles with supplied perfect matching.",
+    "Three selected matching edges for 222 admit only (1,1,4)/(1,2,3) active distributions with the specified quotient shapes.",
+    "Frozen G42 is positive, has no factor of specified-M cost <=3 and has exactly 96 factors of cost4.",
+    "Frozen G24 kappa(mask9)=3, all single-toggle neighbors have kappa>=3, but masks9,13,29 give 3,3,0."
+  ],
+  "finite_methods": [
+    "physical-incidence allocation",
+    "unordered-triple residual exact cover",
+    "separate full-DAG consumer",
+    "matrix/partition connectivity",
+    "direct cycle covers versus gap equations"
+  ],
+  "first_admission_gap": "No callable registered workflow for this graph/lemma scope; only transport gates were observed. Request separately admitted execution and semantic review; no self-signing.",
+  "first_mathematical_gap": "Universal feasible matching-subset existence X, including multi-edge exchanges when strict single-toggle descent stalls.",
+  "formalization_targets": [
+    "Define selected P3-factor and supplied-M intersection; prove two-way normalization and physical-incidence lifting.",
+    "Prove h+b=L modulo3 and the complete three-edge quotient classification with loops and repeated quotient edges.",
+    "Check the fixed finite witnesses and DAG; audit the scope of its remaining M budget.",
+    "Prove or leave open universal feasible-S existence; never close root using only the partial claims."
+  ],
+  "kernel_execution": false,
+  "obligation_id": "obligation:opg46613-root",
+  "principal_role": "generator_only",
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "registered_policies_observed": [
+    "lean-kernel-fixture-v1",
+    "lean-axiom-fixture-v1",
+    "lean-statement-fixture-v1"
+  ],
+  "replay_commands": [
+    "python3 restore.py",
+    "python3 run_bounded.py"
+  ],
+  "status": "pending_registered_verification",
+  "trusted_attestation": null,
+  "user_authorized_request": true,
+  "verdict": "candidate_only"
+}
