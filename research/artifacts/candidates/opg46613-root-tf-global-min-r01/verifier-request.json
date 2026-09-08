@@ -1,0 +1,51 @@
+{
+  "execution_sha256": "d6c0d352efe32940f9917205a2eb5a99fe68e9c6246fdff63ffccdbe4d920384",
+  "finite_data_hashes": {
+    "audit-data.json": "9f6171ebd7783cd22090feba7f680056cd6b75a21f86c59db4857b4d43c044bf",
+    "new-hosts.json": "1f028d78990dfebd2f2401ca61acde215484cce5a7c91ecda878cb2a0080e02a"
+  },
+  "finite_source_hashes": {
+    "audit.py": "1bcebf4b68d750c38b78d29bc33832e15b2ddfe5d2afc5710eccdf8e92375338",
+    "check.py": "a62644cdccde5ab773adc94be1d088e8c23ee9c3ebfacb7cd08900bc811ad99e",
+    "local_switches.py": "61dc1231cc53fddc0ffe9edd0f159e881a63ba495e2e61ea4dae456a3d880639",
+    "run_bounded.py": "1159adb735e030384340a6f123eb4c3c3183625e0ff7e321a99a18e56df855ea",
+    "search_hosts.py": "32da55a383af376fed6a31f06b14e8e1a9b8532d0d3a2d43a42a174d6a8c03d8",
+    "surgery.py": "496856e6919894cc565c3cb0158e6e687c084edf396beba039e67e992ca74050"
+  },
+  "first_admission_gap": "No callable scoped mathematical verifier/closure workflow; only candidate transport checks observed.",
+  "first_mathematical_gap": "Exclude both positive global-minimizer types by a physically realizable finite exchange satisfying the strict gain inequality.",
+  "formalization_targets": [
+    "Preserve the exact physical A/B plus left/right gap equations and supplied-M intersection; distinguish slot feasibility from slot labeling counts.",
+    "Prove component rank min(v,e), minimal Hall bicycle classification and kappa=t+b+3u.",
+    "Prove all activation cases including old/new loops, repeated owners, all residue split cases and arbitrary component deficits.",
+    "Prove u=0 at global minima, no value one, and the conditional global-minimum 222 dichotomy {2,3}.",
+    "Prove simultaneous matching-loss/augmentation accounting and all explicitly conditional physical surgeries.",
+    "Leave exchange availability X2/X3 open unless a separate proof is supplied; no root closure from the partial lemmas."
+  ],
+  "kernel_execution": false,
+  "obligation_id": "obligation:opg46613-root",
+  "principal_role": "generator_only",
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "registered_policy_names_observed": [
+    "lean-kernel-fixture-v1",
+    "lean-axiom-fixture-v1",
+    "lean-statement-fixture-v1"
+  ],
+  "replay_commands": [
+    "python3 -I -S restore.py",
+    "python3 -I -S run_bounded.py"
+  ],
+  "report_sha256": "0849e655e169dd54b74021f09a4410563226055da5bb1bea3e3c997f6edf93dc",
+  "required_capabilities": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "source_note_sha256": "d09c447793ef6c52c152c3fb03d2513fb798719177f8eb0bbd0864736ebf16e7",
+  "source_revision": "29e101f446712c4d786251dd2e7943de80bb6fa8",
+  "status": "pending_registered_verification",
+  "trusted_attestation": null,
+  "user_authorized_request": true,
+  "verdict": "candidate_only",
+  "verifier_fingerprint": null
+}
