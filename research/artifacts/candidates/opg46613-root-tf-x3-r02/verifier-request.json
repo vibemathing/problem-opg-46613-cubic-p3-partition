@@ -1,0 +1,34 @@
+{
+  "status": "pending_registered_verification",
+  "verdict": "candidate_only",
+  "principal_role": "generator_only",
+  "trusted_attestation": null,
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "obligation_id": "obligation:opg46613-root",
+  "scope": [
+    "Check all compressed terminal cases with k=1,2,3 and their extra cofactors.",
+    "Audit fixed-hole lifting under subdivision by exactly three vertices, compression of positive port runs and coverage of all unbounded lengths for bounded k.",
+    "Audit different-target terminal cofactor gluing on the unchanged host.",
+    "Check both new physical exchange traces, their loss accounting, the restricted internal-pair failure and its positive full-host factor.",
+    "Verify that the >=30 X3-only size consequence does not become a root-counterexample lower bound."
+  ],
+  "replay": [
+    "python3 restore_archive.py",
+    "python3 run_bounded.py"
+  ],
+  "first_mathematical_gap": "Arbitrary-chord physical existence in hypothetical X3; the bounded-chord subclass does not close three-circle222 or root.",
+  "first_admission_gap": "No actual scoped trusted finite replay, proof/statement-faithfulness, axiom or closure attestation is attached. Transport checks alone do not provide one.",
+  "formalization_targets": [
+    "Selected P3 partitions and two old deleted holes.",
+    "Three-subdivision lift for unused/used/deleted-endpoint edges.",
+    "Compression and terminal relation connectivity lift.",
+    "Different-target port gluing and exact supplied-M intersection.",
+    "Finite pairing/run domain and certificate consumer soundness."
+  ],
+  "kernel_execution": false,
+  "requested_capabilities": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ]
+}
