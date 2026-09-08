@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-opg-46613-cubic-p3-partition",
+  "repository_identity": {"binding_state":"verified","database_id":1358762601,"node_id":"R_kgDOUP0SaQ","default_branch":"main"},
+  "problem_id": "problem:opg-46613-cubic-p3-partition",
+  "problem_contract_sha256": "f22ec1937d8b771614cb85435b6d4e0712afb9a3939780e04b74e4649617c26a",
+  "harness_snapshot_sha256": "c361ab971cb9dc51270888c605adb9dc84d98e8f33316d9fc23d7064a8d24718",
+  "base_revision": "29e101f446712c4d786251dd2e7943de80bb6fa8",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-opg46613-a01",
+  "route_id": "route:two-factor-divisible-cycles-v1",
+  "graph_id": "graph:opg46613-initial-v1",
+  "obligation_id": "obligation:opg46613-root",
+  "generator": {"principal":"chatgpt-web-github","model_label":"GPT-6 Astra Pro","model_fingerprint_status":"unverified"},
+  "transport": {"branch":"web/attempt-opg46613-root-tf-global-min-r01","issue_number":3,"issue_url":"https://github.com/vibemathing/problem-opg-46613-cubic-p3-partition/issues/3","pull_request_number":null,"pull_request_url":null},
+  "objective": "Finish the existing global-min R01 transaction. Reuse the 34 original files plus checkpoint already attached at c2af44064af97ab79a3ca32ea6455ba4fe8ddf3e; do not repeat mathematical executions or file uploads. The manifest binds every original physical and restored replay member.",
+  "candidate_artifacts": [
+    {"candidate_id":"candidate:opg46613-root-tf-global-min-r01-report-md","kind":"proof","locator":"research/artifacts/candidates/opg46613-root-tf-global-min-r01/report.md","sha256":"0849e655e169dd54b74021f09a4410563226055da5bb1bea3e3c997f6edf93dc"},
+    {"candidate_id":"candidate:opg46613-root-tf-global-min-r01-manifest-json","kind":"computation","locator":"research/artifacts/candidates/opg46613-root-tf-global-min-r01/manifest.json","sha256":"bb3491848c5ae6329166731ea40be29795674eae259ddf5aadffab7c4fb6c4be"},
+    {"candidate_id":"candidate:opg46613-root-tf-global-min-r01-restore-py","kind":"computation","locator":"research/artifacts/candidates/opg46613-root-tf-global-min-r01/restore.py","sha256":"9be1856f94171b36ff0b79edb0704f6cc225c15dd5dc93774838905394e57ea5"},
+    {"candidate_id":"candidate:opg46613-root-tf-global-min-r01-verifier-request-json","kind":"computation","locator":"research/artifacts/candidates/opg46613-root-tf-global-min-r01/verifier-request.json","sha256":"4e69ce7c93c99d7bcdcfdceb0c89b48630d9c886fcbaaff049d33408d7178cbb"}
+  ],
+  "atomic_claims": [
+    {"claim_id":"claim:opg46613-root-tf-global-min-r01-rank","status":"candidate","text":"The preserved proof derives kappa=t+b+3u from the connected demand-unit component rank min(v,e), retaining loops, parallel units and isolated owners."},
+    {"claim_id":"claim:opg46613-root-tf-global-min-r01-activation","status":"candidate","text":"The preserved activation proof says every matching edge incident with an untouched bad complementary cycle strictly lowers kappa; global minimizers therefore have u=0."},
+    {"claim_id":"claim:opg46613-root-tf-global-min-r01-dichotomy","status":"candidate","text":"For three complementary cycles of residue 222, the global minimum belongs to {0,2,3}. The two positive alternatives have the stated normal forms but have not been excluded."},
+    {"claim_id":"claim:opg46613-root-tf-global-min-r01-accounting","status":"candidate","text":"Rebuilding simultaneous physical gaps gives Delta kappa <= Delta s+Delta D+3Delta u+2l-2a. This is a certificate rule, not universal availability of an improving exchange."}
+  ],
+  "assumptions": ["Finite simple triangle-free 3-vertex-connected cubic host of positive order divisible by six.","A perfect matching is supplied; every internal matching chord and both physical incidences are retained.","P3 denotes selected noninduced paths on three distinct vertices."],
+  "risks": ["All prior replay observations remain historical and in the generation trust domain; this transport performs no new mathematical replay.","The manifest contains all per-file and restored-member digests; the original checkpoint is preserved.","X2, X3, universal feasible-subset existence, statement-faithfulness and trusted admission remain open.","The orphan exchange-r02 packet is a separate unresolved transaction; its missing originals are not fabricated or imported.","No Lean elaboration, axiom audit, trusted attestation, EvidenceLink, Result or Solution is created by this packet or its CI."],
+  "open_obligations": ["obligation:opg46613-root","obligation:opg46613-divisible-two-factor"],
+  "failed_route_proposal": null,
+  "source_refs": [
+    {"repository":"vibemathing/problem-opg-46613-cubic-p3-partition","path":"problem-library/records/canonical-problems.jsonl","revision":"29e101f446712c4d786251dd2e7943de80bb6fa8","relation":"exact"},
+    {"repository":"vibemathing/problem-opg-46613-cubic-p3-partition","path":"research/records/failed-routes.jsonl","revision":"29e101f446712c4d786251dd2e7943de80bb6fa8","relation":"exact"},
+    {"repository":"vibemathing/problem-opg-46613-cubic-p3-partition","path":"research/artifacts/candidates/opg46613-root-tf-222-r01/report.md","revision":"29e101f446712c4d786251dd2e7943de80bb6fa8","relation":"prior_art"},
+    {"repository":"vibemathing/problem-opg-46613-cubic-p3-partition","path":"research/artifacts/candidates/opg46613-root-tf-global-min-r01/report.md","revision":"c2af44064af97ab79a3ca32ea6455ba4fe8ddf3e","relation":"exact"}
+  ],
+  "requested_verification": ["kernel_check","axiom_escape_audit","statement_faithfulness"],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-09T00:00:00+08:00"
+}
