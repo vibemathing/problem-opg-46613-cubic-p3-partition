@@ -1,0 +1,89 @@
+{
+  "effective_resource_limits": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds": 25,
+    "per_file_bytes": 2097152
+  },
+  "interpreter_sha256": "17b78e0a93175e86f9ac03141924fd7a7f0c0c52e66b34bfa0de20ffef989df1",
+  "no_lean_elaboration": true,
+  "no_trusted_attestation": true,
+  "python_full_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "python_version": "3.13.5",
+  "requested_limits": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds": 25,
+    "per_file_bytes": 2097152,
+    "threads": 1,
+    "wall_seconds": 35,
+    "workers": 1
+  },
+  "schema": "candidate-execution-observation-v1",
+  "source_sha256": {
+    "check.py": "9e160da20fa1569a814d77a0de6b8d3318a7e6a24975c681008c235d21e01532",
+    "core4.py": "d6ed9e3aa5e9c3664db4759d0b3265cb6da720feb05896533c936be5acedf26b",
+    "cover.py": "1c79441cb4a1f408220b66b482942588a0017f9b881a6070e3a8cd224e5070dc",
+    "ear.py": "9dba569d659c78528a1ab7c45074d3095130f28259dc3b83c05ce8eb14f4940f",
+    "produce.py": "9328f66f3a54a295e2b4bb6fa3ccd7e71e60f1870dab92166c4671db68e4b558",
+    "run_bounded.py": "f14d1011035b868da707dd1bd05be4d7f3a314ce5c7b59375bdd51ee52dd82e6"
+  },
+  "stages": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "core4.py"
+      ],
+      "elapsed_wall_seconds": 1.370984,
+      "exit_code": 0,
+      "script": "core4.py",
+      "started_utc": "2026-09-09T02:11:41.862714+00:00",
+      "stderr_bytes": 0,
+      "stderr_file": "core4-stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1163,
+      "stdout_file": "core4-stdout.json",
+      "stdout_sha256": "d2f0ac6864878083d140b4d73f40cac2e3b7676e85165f8e2cc669e8260c6f8a",
+      "wall_timeout": false
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "produce.py"
+      ],
+      "elapsed_wall_seconds": 0.216179,
+      "exit_code": 0,
+      "script": "produce.py",
+      "started_utc": "2026-09-09T02:11:43.234017+00:00",
+      "stderr_bytes": 0,
+      "stderr_file": "produce-stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 364,
+      "stdout_file": "produce-stdout.json",
+      "stdout_sha256": "00a15508fffa002597f880f8602f12a1f8b04b3feef8bb9ae66af3fddf3cef12",
+      "wall_timeout": false
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "check.py"
+      ],
+      "elapsed_wall_seconds": 7.091941,
+      "exit_code": 0,
+      "script": "check.py",
+      "started_utc": "2026-09-09T02:11:43.450473+00:00",
+      "stderr_bytes": 0,
+      "stderr_file": "check-stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1931,
+      "stdout_file": "check-stdout.json",
+      "stdout_sha256": "5410252c1473d8b08be020a361343d93967526e7f00b4125f73922d72bc37811",
+      "wall_timeout": false
+    }
+  ],
+  "trust_domain": "web-candidate-generation"
+}

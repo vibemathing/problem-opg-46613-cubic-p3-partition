@@ -1,0 +1,50 @@
+{
+  "candidate_command": [
+    "python3",
+    "-I",
+    "-S",
+    "run_bounded.py"
+  ],
+  "checker_sha256": "9e160da20fa1569a814d77a0de6b8d3318a7e6a24975c681008c235d21e01532",
+  "closure_gate_receipt": null,
+  "execution_observation_sha256": "b1d3d3b2c0c825368cb480c4bd5a2b73c32b32a043c6c7ee59357c75820bcb84",
+  "finite_certificate_sha256": "1bae9a35184f0e39456a46108125fb8874935d0057556245eceb3ac6b770d4e0",
+  "limitation": "No registered callable workflow for these mathematical obligations was invoked; candidate cannot self-sign trusted evidence.",
+  "mathematical_attestation": null,
+  "physical_certificate_sha256": "24a7df97ab44344416de2d871485c005cb684d1ac68d2f4f2fa8ea4440719c08",
+  "registry_path": "research/verifiers.json",
+  "report_sha256": "45dc8264d21f0a8670acdcde9957a5a36c136d9107fca9013b496f4f00261e2b",
+  "requested_owners": [
+    "lean-kernel",
+    "lean-axiom-auditor",
+    "lean-faithfulness-reviewer"
+  ],
+  "requested_work": [
+    {
+      "items": [
+        "P3 noninduced selection versus local triangles",
+        "relation edge versus actual matching edge",
+        "noncrossing unbounded theorem versus triangle-free four-chord finite base",
+        "local eleven-vertex obstruction is outside host domain",
+        "general X3/X2/root still open"
+      ],
+      "kind": "statement-faithfulness"
+    },
+    {
+      "items": [
+        "finite graph encoding of physical quadrilateral-ear substitution",
+        "all three roles of the reduced port and both deleted-port lifts",
+        "induction on chord count for noncrossing pairings",
+        "exact domain coverage of seven dihedral core cases and all port runs",
+        "positive cofactor certificate elaboration and axiom report",
+        "compose with the frozen prior three-chord dependency before class admission"
+      ],
+      "kind": "formalization-plan"
+    }
+  ],
+  "scope": "X3-R03 ear lifting, noncrossing induction, four-chord local theorem and two physical exchanges; NOT root closure",
+  "source_revision": "091dafa259e69e789338870ce36e9375f002c271",
+  "status": "pending",
+  "target": "obligation:opg46613-root",
+  "verdict": "candidate_only"
+}
