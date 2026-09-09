@@ -1,0 +1,74 @@
+{
+  "interpreter_sha256": "17b78e0a93175e86f9ac03141924fd7a7f0c0c52e66b34bfa0de20ffef989df1",
+  "lean_status": "not_run",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "records": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "produce.py"
+      ],
+      "exit_code": 0,
+      "input_sha256": {},
+      "limits": {
+        "address_space_bytes": 536870912,
+        "cpu_seconds": 25,
+        "per_output_file_bytes": 2097152,
+        "wall_seconds": 35,
+        "workers": 1
+      },
+      "observed_wall_seconds": 0.115048,
+      "source_sha256": "875a755cfc7bb3e94a523a006ba656d69adcd926fee61f4c0ab70dedf9653429",
+      "started_utc": "2026-09-09T05:38:15.135695+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "produce-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 283,
+        "path": "produce-stdout.json",
+        "sha256": "b0261fb19ace8fa648dba080ff9d37560b048495b66c94d4da7743c9d7d47734"
+      },
+      "wall_timeout": false
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "input_sha256": {
+        "certificates.json": "d84f955ae48571b63c0e5bbbb53629dc66e4fe6d9919d21c095471415c98010e"
+      },
+      "limits": {
+        "address_space_bytes": 536870912,
+        "cpu_seconds": 25,
+        "per_output_file_bytes": 2097152,
+        "wall_seconds": 35,
+        "workers": 1
+      },
+      "observed_wall_seconds": 0.617294,
+      "source_sha256": "e90cc18f7afc9f3f92985fa0c321275d1a523e0bb5557a90f75211e7bc61c2c9",
+      "started_utc": "2026-09-09T05:38:15.251243+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "check-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1936,
+        "path": "check-stdout.json",
+        "sha256": "b8f6036dfaf055ef6b0869e6069e1a428cac1ba0c33ebf177cacc68db73f7469"
+      },
+      "wall_timeout": false
+    }
+  ],
+  "trust_domain": "web-candidate-generation",
+  "trusted_attestation": null,
+  "verdict": "candidate_only"
+}

@@ -1,0 +1,20 @@
+{
+  "certificate_sha256": "d84f955ae48571b63c0e5bbbb53629dc66e4fe6d9919d21c095471415c98010e",
+  "closure": "X3, X2 and root remain open; no self-signed evidence",
+  "formalization": "request only; no Lean source was elaborated",
+  "generator_trust_domain": "web-candidate-generation",
+  "registered_capabilities_requested": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "report_sha256": "18f9855ed0a8ed4838b360a58090898948f4c216188066d280a40d3a76d60f4b",
+  "request_status": "pending",
+  "requested_review": [
+    "Check the all-chord clique induction including the circular seam and merging both endpoint gaps.",
+    "Check the universal no-internal-deletion certificate D=4h+3 and the true-port cofactor construction.",
+    "Replay the 120 triple signatures and distinguish restricted negatives from complete host infeasibility.",
+    "Replay physical roles, gaps and lost matching costs; enforce absence of the opposite edge in U54."
+  ],
+  "verdict": "candidate_only"
+}
