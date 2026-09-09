@@ -1,0 +1,28 @@
+{
+  "verdict": "candidate_only",
+  "kind": "verification_request",
+  "base_revision": "43150f0c82a16afe55a612384b6712fc0a21a401",
+  "claim_scope": "Local one-off-phase endpoint terminal theorem and late-exception internal-deletion obstruction; V54 finite exchange, not root closure.",
+  "frozen_report_sha256": "a3d571f1e3b5037ed65d5292e065e628a79bb5e104e99cfe01b4c9311606ce0c",
+  "frozen_archive_sha256": "43198c547ac700ec54e25d913c8cbdf0d50f2eabfc17a017a88912fe711f6472",
+  "requested_principals": [
+    "lean-kernel",
+    "lean-axiom-auditor",
+    "lean-faithfulness-reviewer"
+  ],
+  "requirements": [
+    "Rebuild the exact fixed finite data with separate implementation and declared trust domain.",
+    "Audit all constructive cofactor cases and actual ports, including n=5, missing phase-zero endpoints and reflection.",
+    "Formalize theta<=1 theorem and exact scope; no inference from bounded samples.",
+    "Do not sign a root closure from this local result."
+  ],
+  "execution_receipt": null,
+  "attestation": null,
+  "open_gaps": [
+    "General X3 with at least two off-phase endpoints at every origin",
+    "General X2",
+    "root",
+    "Exact source intake of named X2 expert lemmas",
+    "Registered verifier and closure gates"
+  ]
+}
